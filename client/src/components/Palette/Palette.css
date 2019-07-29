@@ -4,6 +4,8 @@
     background-color: white;
     border: black solid 3px;
     display: inline;
+    right: 0;
+    position: absolute;
 }
 
 .sample-color {

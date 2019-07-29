@@ -15,6 +15,8 @@ import Navbar from './components/Navbar';
 import Sketch from './components/Sketch';
 import Sound from './components/Sound';
 import NatureSound from './components/NatureSounds';
+import Video from './components/Video';
+
 
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
@@ -32,7 +34,12 @@ ReactDOM.render(
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/canvas" component={Sketch} />
             <Route exact path="/animalSounds" component={Sound} />
+<<<<<<< HEAD
             <Route exact path="/natureSounds" component={NatureSound} />
+=======
+            <Route exact path="/videos" component={Video} />
+
+>>>>>>> c999676c532f61f7f6c50315dc26b1ef3debe496
         </div>
     </Router>
     , document.getElementById('root')

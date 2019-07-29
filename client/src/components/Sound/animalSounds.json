@@ -1,0 +1,86 @@
+[
+    {
+    "id": 1,
+    "name": "Sheep",
+    "image": "https://cdn.pixabay.com/photo/2014/04/02/10/19/sheep-303453_960_720.png",
+    "sound": "http://cd.textfiles.com/sbsw/ANIMALS/SHEEP.WAV",
+    "clicked": false
+    },
+    {
+    "id": 2,
+    "name": "Chicken",
+    "image": "https://cdn.pixabay.com/photo/2019/02/15/17/54/hen-3998983_960_720.png",
+    "sound": "http://www.notam02.no/DSP/lyder/hone.wav",
+    "clicked": false
+    },
+    {
+    "id": 3,
+    "name": "Cow",
+    "image": "https://cdn.pixabay.com/photo/2016/07/07/00/21/cow-1501690_960_720.png",
+    "sound": "http://www.theflatnet.de/pub/sgfx/samples/cow.wav",
+    "clicked": false
+    },
+    {
+    "id": 4,
+    "name": "Goat",
+    "image": "https://cdn.pixabay.com/photo/2012/04/16/11/06/animal-35521_960_720.png",
+    "sound": "http://www.notam02.no/DSP/lyder/geit.wav",
+    "clicked": false
+    },
+    {
+    "id": 5,
+    "name": "Pig",
+    "image": "https://cdn.pixabay.com/photo/2016/03/31/15/01/animal-1292929_960_720.png",
+    "sound": "http://izzyweird.com/soundlib1/piggrunt.wav",
+    "clicked": false
+    },
+    {
+    "id": 6,
+    "name": "Cat",
+    "image": "https://cdn.pixabay.com/photo/2018/03/20/23/28/kitty-3245088_960_720.png",
+    "sound": "http://ring-nature.com/tones/cat.mp3",
+    "clicked": false
+    },
+    {
+    "id": 7,
+    "name": "Dog",
+    "image": "https://cdn.pixabay.com/photo/2016/04/03/21/54/dog-1305702_960_720.png",
+    "sound": "http://www.lingolinda.com/music/SE/DOG03.WAV",
+    "clicked": false
+    },
+    {
+    "id": 8,
+    "name": "Duck",
+    "image": "https://cdn.pixabay.com/photo/2013/07/12/16/30/duck-151029_960_720.png",
+    "sound": "http://s1download-universal-soundbank.com/wav/146.wav",
+    "clicked": false
+    },
+    {
+    "id": 9,
+    "name": "Sparrow",
+    "image": "https://cdn.pixabay.com/photo/2015/10/11/19/04/bird-982861_960_720.png",
+    "sound": "http://www.nebo.edu/learning_resources/ppt/sounds/esparrow2.wav",
+    "clicked": false
+    },
+    {
+    "id": 10,
+    "name": "Owl",
+    "image": "https://cdn.pixabay.com/photo/2013/07/13/10/27/bird-157249_960_720.png",
+    "sound": "http://nyfalls.com/dev/wp-content/uploads/2013/04/great-horned-owl-audio1.mp3",
+    "clicked": false
+    },
+    {
+    "id": 11,
+    "name": "Frog",
+    "image": "https://cdn.pixabay.com/photo/2018/10/28/17/28/frog-3779345_960_720.png",
+    "sound": "http://www.ringelkater.de/Sounds/2geraeusche_tiere/frogs.wav",
+    "clicked": false
+    },
+    {
+    "id": 12,
+    "name": "Turkey",
+    "image": "https://cdn.pixabay.com/photo/2018/11/06/20/31/turkey-3799085_960_720.png",
+    "sound": "http://sfxcontent.s3.amazonaws.com/soundfx/Turkey-Gobble5.mp3",
+    "clicked": false
+    }
+    ]

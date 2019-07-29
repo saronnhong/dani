@@ -1,0 +1,109 @@
+import React, { Component } from 'react';
+import Subreddits from "../Subreddits";
+import Card from '../Card';
+// import { createDecipher } from 'crypto';
+
+const subs = [
+    {
+    name: "food",
+    isChosen: true
+    },
+    {
+    name: "funny",
+    isChosen: false
+    },
+    {
+    name: "Pixar",
+    isChosen: false
+    }
+    ]
+
+class Reddit extends Component {
+
+    constructor(props) {
+        super(props);
+        this.foodSubreddit = "food"
+        this.pixarSubreddit = "Pixar"
+        this.funnyReddit = "funny"
+
+        this.url = 'https://www.reddit.com/r/';
+        this.sorts = 'hot';
+    }
+
+    state = {
+        subs,
+        chosenSubreddit: 'food',
+        sort: 'hot',
+        files: [],
+        after: null,
+        before: null,
+        page: 1
+    };
+
+    componentDidMount() {
+        this.changeSubreddit(this.state.chosenSubreddit)
+    }
+
+    nextPage = () => {
+        fetch(this.url + this.state.chosenSubreddit + "/" + this.state.sort + ".json?count=" + (this.state.page * 25) + "&after=" + this.state.after)
+            .then(res => res.json())
+            .then((data) => {
+                this.setState(() => ({
+                    files: data.data.children,
+                    after: data.data.after,
+                    before: data.data.before,
+                    page: this.state.page + 1
+                }))
+            })
+            .catch(console.log)
+    }
+
+    changeSubreddit = sub => {
+        this.setState({
+            files: [],
+            chosenSubreddit: sub,
+            page: 1
+        });
+        fetch(this.url + sub + "/" + this.state.sort + '.json')
+            .then(res => res.json())
+            .then((data) => {
+                this.setState({
+                    files: data.data.children,
+                    after: data.data.after,
+                    before: data.data.before
+                });
+                console.log(data)
+                window.scrollTo(0, 0)
+            })
+            .catch((err) => {
+                console.log(err)
+            })
+    }
+
+
+    render() {
+        return (
+            <div>
+                
+                {this.state.subs.map(sub => (
+                    <Subreddits
+                        changeSubreddit={() => this.changeSubreddit(sub.name)}
+                        name={sub.name}
+                        key={sub.name}
+                    />
+                ))}
+               
+
+
+            </div>
+
+        )
+    }
+}
+
+
+
+
+
+
+export default Reddit;

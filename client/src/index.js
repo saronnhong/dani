@@ -12,7 +12,8 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Navbar from './components/Navbar';
-import Sketch from './components/Sketch'
+import Sketch from './components/Sketch';
+import Reddit from './components/Reddit';
 
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
@@ -29,6 +30,7 @@ ReactDOM.render(
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/canvas" component={Sketch} />
+            <Route exact path="/reddit" component={Reddit} />
         </div>
     </Router>
     , document.getElementById('root')

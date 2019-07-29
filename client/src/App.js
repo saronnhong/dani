@@ -24,7 +24,6 @@ class App extends Component {
     console.log(process.env.REACT_APP_SECRET_CODE);
     return (
       <div className="App">
-        <Sound />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome {this.props.user.email}</h2>

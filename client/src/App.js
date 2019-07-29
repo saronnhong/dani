@@ -3,6 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import AuthService from './components/AuthService';
 import withAuth from './components/withAuth';
+
+import Sound from './components/Sound';
+
 const Auth = new AuthService();
 
 class App extends Component {
@@ -21,6 +24,7 @@ class App extends Component {
     console.log(process.env.REACT_APP_SECRET_CODE);
     return (
       <div className="App">
+        <Sound />
         <div className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <h2>Welcome {this.props.user.email}</h2>

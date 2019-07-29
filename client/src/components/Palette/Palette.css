@@ -1,0 +1,26 @@
+.palette-body {
+    height: 800px;
+    width: 100px;
+    background-color: white;
+    border: black solid 3px;
+    display: inline;
+}
+
+.sample-color {
+    width: 75%;
+    height: 50px;
+    margin: 10px auto;
+    background-color: blue;
+    border: 1px solid black;
+    color: white;
+    text-align: center;
+    padding-top: 12px;
+}
+
+.palette-color {
+    display: block;
+    border: 1px solid black;
+    width: 75%;
+    height: 50px;
+    margin: 10px auto;
+}

@@ -12,7 +12,11 @@ import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Navbar from './components/Navbar';
-import Sketch from './components/Sketch'
+import Sketch from './components/Sketch';
+import Sound from './components/Sound';
+import NatureSound from './components/NatureSounds';
+import Video from './components/Video';
+
 
 // Here is if we have an id_token in localStorage
 if(localStorage.getItem("id_token")) {
@@ -29,6 +33,10 @@ ReactDOM.render(
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/canvas" component={Sketch} />
+            <Route exact path="/animalSounds" component={Sound} />
+            <Route exact path="/natureSounds" component={NatureSound} />
+            <Route exact path="/videos" component={Video} />
+
         </div>
     </Router>
     , document.getElementById('root')

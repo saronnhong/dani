@@ -1,0 +1,30 @@
+
+.wrapper {
+    background: #ECEFF1;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    /* overflow: auto; */
+    margin: 1rem;
+  }
+
+  .card {
+        width: 97%;
+        height: 97%;
+        margin: 1rem;
+        text-align: center;
+        background:rgb(186, 214, 233);
+    
+  }
+
+  a {
+    /* overflow: hidden; */
+    width: 100%;
+    height: 50%;
+    /* width: 100px; */
+    /* margin-top: 2rem; */
+    
+  }

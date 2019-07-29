@@ -7,12 +7,27 @@ class Sketch extends Component {
         color: "rgba(155,50,160,0.7)",
         width: 1000,
         height: 800,
-        brushRadius: 10,
-        lazyRadius: 1
-    }
-    // method() this.setstate({color: bladsjfas})
+        brushRadius: 5,
+        lazyRadius: 1,
+        imgSrc: ""
 
-    // asdfkdasf button: onClick= METHODS()
+    }
+    
+    chooseColor = color => {
+        this.setState({ color: color})
+    };
+
+    brushSizeUp = () => {
+        if(this.state.brushRadius < 20) {
+            this.setState({ brushRadius: this.state.brushRadius + 1})
+        }
+    }
+    brushSizeDown = () => {
+        if(this.state.brushRadius > 1) {
+            this.setState({ brushRadius: this.state.brushRadius - 1})
+        }
+    }
+   
     render() {
         return (
             <div className=" text-center container">
@@ -22,8 +37,14 @@ class Sketch extends Component {
                         brushColor={this.state.color}
                         canvasHeight={this.state.height}
                         canvasWidth={this.state.width}
+                        lazyRadius={this.state.lazyRadius}
+                        brushRadius={this.state.brushRadius}
                     />
-                    <Palette />
+                    <Palette 
+                    colorClick={this.chooseColor} 
+                    brushSizeUp={this.brushSizeUp}
+                    brushSizeDown={this.brushSizeDown}
+                    />
                 </div>
             </div>
         )

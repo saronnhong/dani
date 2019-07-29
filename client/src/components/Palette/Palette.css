@@ -8,7 +8,7 @@
 
 .sample-color {
     width: 75%;
-    height: 50px;
+    height: 75px;
     margin: 10px auto;
     background-color: blue;
     border: 1px solid black;
@@ -21,6 +21,25 @@
     display: block;
     border: 1px solid black;
     width: 75%;
-    height: 50px;
+    height: 60px;
     margin: 10px auto;
+}
+
+.palette-color-selected {
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0);
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
+    box-shadow: 1px 1px 1px 9px rgba(255, 255, 255, 0);
+    border-radius: 15px;
+}
+
+.palette-color-selected:hover {
+    font-weight: bolder;
+    color: rgba(255, 255, 255, 0.993);
+    text-shadow: 2px 2px 5px rgb(0, 0, 0);
+    box-shadow: 1px 1px 1px 9px rgba(255, 255, 255, 0.315);
+}
+
+.fa-paint-brush {
+    margin: 3px auto;
 }

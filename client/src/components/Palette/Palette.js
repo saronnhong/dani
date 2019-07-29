@@ -2,33 +2,60 @@ import React from 'react';
 import './Palette.css';
 
 const colors = [
-   {
-    color: "rgba(0,0,250,0.7)",
-    id: "blue"
-   },
-   {
-    color: "rgba(250,0,0,0.7)",
-    id: "red"
-   },
-   {
-    color: "rgba(0,250,0,0.7)",
-    id: "green"
-   }
+    {
+        color: "rgba(55,115,255,0.9)",
+        id: "blue"
+    },
+    {
+        color: "rgba(225,0,0,0.9)",
+        id: "red"
+    },
+    {
+        color: "rgba(0,175,0,0.9)",
+        id: "green"
+    },
+    {
+        color: "rgba(255,225,15,0.9)",
+        id: "yellow"
+    },
+    {
+        color: "rgba(255,155,0,0.9)",
+        id: "orange"
+    },
+    {
+        color: "rgba(125,0,225,0.9)",
+        id: "purple"
+    },
+    {
+        color: "rgba(225,125,225,0.9)",
+        id: "pink"
+    },
+    {
+        color: "rgba(0,0,0,0.9)",
+        id: "black"
+    },
+    {
+        color: "rgba(255,255,255,0.9)",
+        id: "white"
+    }
 ]
 
 function Palette(props) {
 
-    // function chooseColor() {
-    //     props.color
-    // };
+
 
     return (
         <div className="palette-body">
-            {colors.map(color => 
-                <button href="# " onClick={() => this.chooseColor(color.id)} 
-                key={color.id} style={{backgroundColor: colors.color}} 
-                className="palette-color">{color.id}</button>
+            {colors.map(color =>
+                <button href="# " onClick={() => props.colorClick(color.color)}
+                    key={color.id} style={{ backgroundColor: color.color }}
+                    className="palette-color" onHover={() => props.displayColorName(color.id)}>
+                    <div className="palette-color-selected" >{color.id}</div>
+                </button>
             )}
+            <button onClick={props.brushSizeUp} href="# " className="palette-size-up"><i className="fa fa-plus-square fa-3x"></i></button>
+            <div><i className="fa fa-paint-brush fa-2x"></i></div>
+            <button onClick={props.brushSizeDown} href="# " className="palette-size-down"><i className="fa fa-minus-square fa-3x"></i></button>
         </div>
     )
 }

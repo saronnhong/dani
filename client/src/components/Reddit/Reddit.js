@@ -5,18 +5,18 @@ import Card from '../Card';
 
 const subs = [
     {
-    name: "food",
-    isChosen: true
+        name: "food",
+        isChosen: true
     },
     {
-    name: "funny",
-    isChosen: false
+        name: "funny",
+        isChosen: false
     },
     {
-    name: "Pixar",
-    isChosen: false
+        name: "Pixar",
+        isChosen: false
     }
-    ]
+]
 
 class Reddit extends Component {
 
@@ -72,7 +72,12 @@ class Reddit extends Component {
                     after: data.data.after,
                     before: data.data.before
                 });
-                console.log(data)
+                // for(var i = 0; i < this.state.files.length; i++) {
+                //     if(this.state.files[i].data.preview.enabled) {
+                //         console.log(this.state.files[i])
+                //     }
+                // }
+                console.log(this.state.files)
                 window.scrollTo(0, 0)
             })
             .catch((err) => {
@@ -84,16 +89,25 @@ class Reddit extends Component {
     render() {
         return (
             <div>
-                
+
                 {this.state.subs.map(sub => (
-                    <Subreddits
-                        changeSubreddit={() => this.changeSubreddit(sub.name)}
-                        name={sub.name}
-                        key={sub.name}
+                    <div>
+                        <Subreddits
+                            changeSubreddit={() => this.changeSubreddit(sub.name)}
+                            name={sub.name}
+                            key={sub.name}
+                        />
+                    </div>
+                ))}
+
+                {this.state.files.map(file => (
+                    <Card
+                        file={file}
+                        // image={file.image}
+                        // title={file.data.title}
+                        key={file.data.id}
                     />
                 ))}
-               
-
 
             </div>
 

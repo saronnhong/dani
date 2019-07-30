@@ -3,15 +3,15 @@ import React, { Component } from "react";
 import animals from "./animalSounds.json";
 import "./style.css";
 
-class Sound extends Component {
+class AnimalSound extends Component {
     render() {
         return (
-            <div className="wrapper">
+            // <div className="wrapper">
                 <div className="container">
                     <div className="row">
                 {animals.map((animal) =>
                     <div className="col-md-2">
-                        <div className="card">
+                        <div className="cardAnimals">
                             <a href="# " onClick={() => (new Audio(animal.sound)).play()}>
                                 <img className="animalImg"alt="# " src={animal.image} />
                             </a>
@@ -20,11 +20,11 @@ class Sound extends Component {
                 )}
                 </div>
                 </div>
-            </div>
+            // </div>
         )
     }
 }
 
-export default Sound;
+export default AnimalSound;
 
 

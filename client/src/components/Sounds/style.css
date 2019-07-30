@@ -1,0 +1,23 @@
+.menuButton {
+    padding: 130px;
+    margin-top: 50px;
+    margin-right: 20px;
+   
+}
+.containerSounds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.natureButton {
+    background-color: rgb(247, 120, 41) !important;
+}
+
+.relaxButton {
+    background-color: rgb(0, 97, 172) !important;
+}
+
+#soundsTitle{
+    align-content: center;
+}

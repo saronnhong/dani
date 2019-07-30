@@ -1,0 +1,43 @@
+
+.wrapper {
+    background: #ECEFF1;
+    height: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 20px;
+    justify-content: space-around;
+    align-content: flex-start;
+    overflow: auto;
+    margin: 1rem;
+  }
+
+  .cardRelax {
+        /* width: 105%;
+        height: 95%;
+        margin: 1rem;
+        text-align: center; */
+        margin: 20px;
+        background:rgb(230,230,230);
+        -webkit-transition: -webkit-transform .15s linear;
+        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+        -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    
+  }
+  .cardRelax:hover {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    position: relative;
+    z-index: 5;
+  }
+
+  .relaxImg {
+    width: 240px;
+    height: 240px;
+    padding: 12px 4px 16px 4px;
+    box-sizing: border-box;
+    
+    /* margin-top: 2rem; */
+  }

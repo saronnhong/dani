@@ -13,8 +13,10 @@ import Profile from './pages/Profile';
 import Signup from './pages/Signup';
 import Navbar from './components/Navbar';
 import Sketch from './components/Sketch';
-import Sound from './components/Sound';
+import Sound from './components/Sounds';
+import AnimalSound from './components/AnimalSounds';
 import NatureSound from './components/NatureSounds';
+import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
 
 
@@ -33,8 +35,10 @@ ReactDOM.render(
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/canvas" component={Sketch} />
-            <Route exact path="/animalSounds" component={Sound} />
+            <Route exact path="/Sounds" component={Sound} />
+            <Route exact path="/animalSounds" component={AnimalSound} />
             <Route exact path="/natureSounds" component={NatureSound} />
+            <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
 
         </div>

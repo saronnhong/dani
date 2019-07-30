@@ -103,8 +103,8 @@ class Reddit extends Component {
                 {this.state.files.map(file => (
                     <Card
                         file={file}
-                        // image={file.image}
-                        // title={file.data.title}
+                        image={file.image}
+                        title={file.data.title}
                         key={file.data.id}
                     />
                 ))}

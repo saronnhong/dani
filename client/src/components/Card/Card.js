@@ -21,31 +21,34 @@ let Card = ({ file }) => {
             let image = (file.data.preview.images[0].resolutions[0].url)
             image = image.replace(/&amp;/g,"&");
             console.log(image)
+            return (
+                //     <div className="col-md-3">
+                //     <div className="card">
+                //         <div className="img-container">
+                //             <img alt={file.title} src={file.image} />
+                //         </div>
+                //         <div className="content">
+                //             <p>{file.title}</p>
+                //         </div>
+                //     </div>
+                // </div>
+                <div className="col-md-3">
+                    <div className="card">
+                        <div className="img-container">
+                            <img src={image} alt={file.data.title} />
+                        </div>
+                        <div className="content">
+                            <p>{file.data.title}</p>
+                        </div>
+                    </div>
+                </div>
+        
+            )
         }
         
     }
-    return (
-        //     <div className="col-md-3">
-        //     <div className="card">
-        //         <div className="img-container">
-        //             <img alt={file.title} src={file.image} />
-        //         </div>
-        //         <div className="content">
-        //             <p>{file.title}</p>
-        //         </div>
-        //     </div>
-        // </div>
-        <div className="col-md-3">
-            <div className="card">
-                <div className="img-container">
-                    <img src={file.image} alt={file.data.title} />
-                </div>
-                <div className="content">
-                    <p>{file.data.title}</p>
-                </div>
-            </div>
-        </div>
-
+    return(
+        <div></div>
     )
 }
 

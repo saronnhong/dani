@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { Link } from 'react-router-dom';
 import AuthService from '../AuthService';
 
+import "./style.css";
+
 class Navbar extends Component {
     constructor() {
         super();
@@ -37,7 +39,7 @@ class Navbar extends Component {
 
     render() {
         return (
-            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-success" >
                 <div className="container">
                     <Link className="navbar-brand" to="/">React JWT App</Link>
                     <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

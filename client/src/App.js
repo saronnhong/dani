@@ -4,13 +4,11 @@ import './App.css';
 import AuthService from './components/AuthService';
 import withAuth from './components/withAuth';
 
-import Sound from './components/Sound';
+// import Sound from './components/Sound';
 
 const Auth = new AuthService();
 
 class App extends Component {
-
-
   handleLogout = () => {
     Auth.logout();
     this.props.history.replace('/signup');
@@ -36,5 +34,10 @@ class App extends Component {
     );
   }
 }
+
+
+
+
+
 
 export default withAuth(App);

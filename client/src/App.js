@@ -9,8 +9,6 @@ import withAuth from './components/withAuth';
 const Auth = new AuthService();
 
 class App extends Component {
-
-
   handleLogout = () => {
     Auth.logout();
     this.props.history.replace('/signup');
@@ -36,5 +34,10 @@ class App extends Component {
     );
   }
 }
+
+
+
+
+
 
 export default withAuth(App);

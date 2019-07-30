@@ -36,13 +36,14 @@ ReactDOM.render(
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/profile" component={Profile} />
-            <Route exact path="/canvas" component={Sketch} />
+            <Route exact path="/sketch" component={Sketch} />
             <Route exact path="/reddit" component={Reddit} />
             <Route exact path="/animalSounds" component={AnimalSound} />
             <Route exact path="/natureSounds" component={NatureSound} />
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
-            <Route exact path="/Sounds"
+            
+            <Route exact path="/Listen"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/animalSounds"
                     linkTwo="/natureSounds"
@@ -54,12 +55,32 @@ ReactDOM.render(
             />
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
-                    linkOne="/look"
-                    linkTwo="/Sounds"
+                    linkOne="/Look"
+                    linkTwo="/Listen"
                     linkThree="/Learn"
                     buttonOne="Look"
                     buttonTwo="Listen"
                     buttonThree="Learn"
+                />}
+            />
+            <Route exact path="/Learn"
+                render={(props) => <ButtonPage {...props}
+                    linkOne="/videos"
+                    linkTwo="/Color"
+                    linkThree="/sketch"
+                    buttonOne="Videos"
+                    buttonTwo="Coloring"
+                    buttonThree="Drawing"
+                />}
+            />
+            <Route exact path="/Look"
+                render={(props) => <ButtonPage {...props}
+                    linkOne="/reddit"
+                    linkTwo="/TBD"
+                    linkThree="/TBD"
+                    buttonOne="Images"
+                    buttonTwo="TBD"
+                    buttonThree="TBD"
                 />}
             />
 

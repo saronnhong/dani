@@ -2,19 +2,54 @@ import React, { Component } from "react";
 
 import ReactPlayer from 'react-player'
 import videos from "./videos.json";
+import "./style.css";
+
 
 class Video extends Component {
-    //TO DO: ADD STATE TO SET PLAYING DEFAULT TO FALSE
+    state = {
+       
+        playing: false
+
+    }
+    
+    
+    
     render() {
         return (
-            <div className="wrapper">
-                
-                {videos.map((video) =>
-                //TO DO: DISPLAY VIDEO NAMES FROM ARRAY
-                    <ReactPlayer url={video.video} playing />
-                    
-                )}
+
+            <div>
+                {/* turnery */}
+                {this.state.playing ? (
+
+
+                    <div className="wrapper" >
+                        {videos.map((video) =>
+                            <div className="video-wrapper">
+                                <p>{video.name}</p>
+                                <ReactPlayer onClick={() =>
+                                    this.setState({ playing: false })
+                                }
+                                    url={video.video} playing />
+                            </div>
+                        )}
+                    </div>) : (
+                        <div className="wrapper">
+                            {videos.map((video) =>
+                                <div className="video-wrapper">
+                                     <p>{video.name}</p>
+                                    <ReactPlayer onClick={() =>
+                                        this.setState({ playing: true })
+                                    }
+                                        url={video.video} />
+                                </div>
+                            )}
+                        </div>
+
+                    )}
+
+
             </div>
+
 
 
         )

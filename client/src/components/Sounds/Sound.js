@@ -13,7 +13,7 @@ class Sounds extends Component {
                     
                     <span>
                         <Link to="/animalSounds">
-                        <button type="button" class="btn btn-danger menuButton">Animals</button>
+                        <button type="button" class="btn btn-danger menuButton animalButton">Animals</button>
                         </Link>
                         <Link to="/natureSounds">
                         <button type="button" class="btn btn-secondary menuButton natureButton">Nature</button>

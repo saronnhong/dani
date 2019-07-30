@@ -12,10 +12,10 @@
   }
 
   .cardRelax {
-        /* width: 105%;
+        width: 99%;
         height: 95%;
         margin: 1rem;
-        text-align: center; */
+        text-align: center;
         margin: 20px;
         background:rgb(230,230,230);
         -webkit-transition: -webkit-transform .15s linear;

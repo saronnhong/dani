@@ -18,6 +18,18 @@
     background-color: rgb(0, 97, 172) !important;
 }
 
-#soundsTitle{
-    align-content: center;
+.relaxButton, .natureButton, .aninmalButton {
+    -webkit-transition: -webkit-transform .15s linear;
+        -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+        -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+} 
+
+.relaxButton:hover, .natureButton:hover, .animalButton:hover {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    position: relative;
+    z-index: 5;
 }

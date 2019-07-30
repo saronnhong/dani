@@ -10,7 +10,7 @@ class RelaxSounds extends Component {
             <div className="row">
                 {animals.map((animal) =>
                     <div className="col-md-3">
-                        <div className="card cardRelax">
+                        <div className="cardRelax">
                             <a href="# " onClick={() => (new Audio(animal.sound)).play()}>
                                 <img className= "relaxImg" alt="" src={animal.image} />
                             </a>

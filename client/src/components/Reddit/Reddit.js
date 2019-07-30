@@ -91,7 +91,7 @@ class Reddit extends Component {
             <div>
 
                 {this.state.subs.map(sub => (
-                    <div>
+                    <div className='row'>
                         <Subreddits
                             changeSubreddit={() => this.changeSubreddit(sub.name)}
                             name={sub.name}
@@ -99,15 +99,17 @@ class Reddit extends Component {
                         />
                     </div>
                 ))}
+                <div className='row'>
+                    {this.state.files.map(file => (
+                        <Card
+                            file={file}
+                            image={file.image}
+                            title={file.data.title}
+                            key={file.data.id}
+                        />
+                    ))}
+                </div>
 
-                {this.state.files.map(file => (
-                    <Card
-                        file={file}
-                        image={file.image}
-                        title={file.data.title}
-                        key={file.data.id}
-                    />
-                ))}
 
             </div>
 

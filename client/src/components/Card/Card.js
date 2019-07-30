@@ -33,7 +33,7 @@ let Card = ({ file }) => {
                 //     </div>
                 // </div>
                 <div className="col-md-3">
-                    <div className="card">
+                    <div className="card-subreddit">
                         <div className="img-container">
                             <img src={image} alt={file.data.title} />
                         </div>

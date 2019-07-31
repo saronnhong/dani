@@ -18,7 +18,7 @@ let Card = ({ file }) => {
             console.log(file.data)
             // console.log()
 
-            let image = (file.data.preview.images[0].resolutions[0].url)
+            let image = (file.data.preview.images[0].resolutions[file.data.preview.images[0].resolutions.length - 1].url)
             image = image.replace(/&amp;/g,"&");
             console.log(image)
             return (
@@ -35,11 +35,11 @@ let Card = ({ file }) => {
                 <div className="col-md-3">
                     <div className="card-subreddit">
                         <div className="img-container">
-                            <img src={image} alt={file.data.title} />
+                            <img className="redditimage" src={image} alt={file.data.title} />
                         </div>
-                        <div className="content">
+                        {/* <div className="content">
                             <p>{file.data.title}</p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
         

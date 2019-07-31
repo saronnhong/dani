@@ -3,3 +3,16 @@
     color: white;
 }
 
+.navbar-brand{
+    font-family: 'Pangolin', cursive;
+    font-size: 50px;
+    letter-spacing: 10px;
+}
+
+.navbar-brand{
+    font-family: 'Pangolin', cursive;
+    font-size: 50px;
+    letter-spacing: 10px;
+    text-shadow: 2px 2px gold;
+}
+

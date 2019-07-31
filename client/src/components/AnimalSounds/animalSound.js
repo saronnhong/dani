@@ -26,5 +26,3 @@ class AnimalSound extends Component {
 }
 
 export default AnimalSound;
-
-

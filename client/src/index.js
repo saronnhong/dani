@@ -20,6 +20,7 @@ import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
 import ButtonPage from './components/ButtonPage/ButtonPage';
+import Image360 from './components/Image360/Image360';
 
 
 // Here is if we have an id_token in localStorage
@@ -42,6 +43,7 @@ ReactDOM.render(
             <Route exact path="/natureSounds" component={NatureSound} />
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
+            <Route exact path="/image360" component={Image360} />
             
             
             <Route exact path="/"
@@ -58,10 +60,10 @@ ReactDOM.render(
                 render={(props) => <ButtonPage {...props}
                     linkOne="/reddit"
                     linkTwo="/videos"
-                    linkThree="/TBD"
+                    linkThree="/image360"
                     buttonOne={<div> <i class="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
                     buttonTwo={<div> <i class="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
-                    buttonThree="TBD"
+                    buttonThree={<div> <i class="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }
                 />}
             />
             <Route exact path="/Listen"

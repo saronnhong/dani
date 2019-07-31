@@ -9,27 +9,23 @@ const subs = [
         isChosen: true
     },
     {
-        name: "funny",
-        isChosen: false
-    },
-    {
         name: "Pixar",
         isChosen: false
     },
     {
-        name:"aww",
-        isChosen:false
-    },
-    {
-        name:"wallpaper",
+        name: "aww",
         isChosen: false
     },
     {
-        name:"travel",
+        name: "wallpaper",
         isChosen: false
     },
     {
-        name:"pics",
+        name: "travel",
+        isChosen: false
+    },
+    {
+        name: "pics",
         isChosen: false
     }
 ]
@@ -105,16 +101,17 @@ class Reddit extends Component {
     render() {
         return (
             <div>
+                <div className='row'>
+                    {this.state.subs.map(sub => (
 
-                {this.state.subs.map(sub => (
-                    <div className='row'>
                         <Subreddits
                             changeSubreddit={() => this.changeSubreddit(sub.name)}
                             name={sub.name}
                             key={sub.name}
                         />
-                    </div>
-                ))}
+
+                    ))}
+                </div>
                 <div className='row'>
                     {this.state.files.map(file => (
                         <Card
@@ -125,8 +122,6 @@ class Reddit extends Component {
                         />
                     ))}
                 </div>
-
-
             </div>
 
         )

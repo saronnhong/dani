@@ -26,7 +26,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/appDB', {useNewUrlParser: true, useCreateIndex: true})
+  .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/appDB', { useNewUrlParser: true, useCreateIndex: true })
   .then(() => console.log("MongoDB Connected!"))
   .catch(err => console.error(err));
 
@@ -50,10 +50,10 @@ app.post('/api/signup', (req, res) => {
 // to access
 app.get('/api/user/:id', isAuthenticated, (req, res) => {
   db.User.findById(req.params.id).then(data => {
-    if(data) {
+    if (data) {
       res.json(data);
     } else {
-      res.status(404).send({success: false, message: 'No user found'});
+      res.status(404).send({ success: false, message: 'No user found' });
     }
   }).catch(err => res.status(400).send(err));
 });
@@ -77,12 +77,26 @@ app.use(function (err, req, res, next) {
   }
 });
 
+
+//attempt at getting the drawings to save to mongoDB
+app.post('/api/savedrawing', (req, res) => {
+  console.log(req.user)
+  //drawing is reaching this point, logs correctly. Needs to find the correct user maybe??
+  db.Drawings.create(req.body)
+    .then(newDrawing => {
+      return db.User.findOneAndUpdate({}, { $push: { drawings: newDrawing._id } }, { new: true })
+    })
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+
+});
+
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(path.join(__dirname, "./client/build/index.html"));
 });
 
-app.listen(PORT, function() {
+app.listen(PORT, function () {
   console.log(`🌎 ==> Server now on port ${PORT}!`);
 });

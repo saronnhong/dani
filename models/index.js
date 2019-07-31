@@ -1,3 +1,5 @@
 module.exports = {
-  User: require('./User')
+  User: require('./User'),
+  Colorings: require('./Colorings'),
+  Drawings: require('./Drawings')
 };

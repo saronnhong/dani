@@ -25,7 +25,19 @@ const UserSchema = new Schema({
   createdAt: {
     type: Date,
     default: Date.now
-  }
+  },
+  colorings: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Coloring"
+    }
+  ],
+  drawings: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Drawing"
+    }
+  ]
 });
 
 // Execute before each user.save() call

@@ -1,3 +1,36 @@
-.subButton{
+/* .subButton{
     display: inline;
+} */
+.subButton{
+    font-family: 'Nanum Gothic', sans-serif;
+    font-size: 20px;
+}
+
+.card-subreddit{
+    width: 80%;
+    height: 96%;
+    text-align: center;
+    margin: 10px 0px 20px 0px;
+    background:rgb(230,230,230);
+    -webkit-transition: -webkit-transform .15s linear;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+}
+
+.buttonIcon {
+    width: 10%;
+}
+
+.subFooter{
+    padding: 25px;
+}
+
+.nextButton{
+    float: right;
+    padding: 20px;
+}
+
+.previousButton{
+    float: left;
+    padding: 20px;
 }

@@ -76,6 +76,22 @@ class Reddit extends Component {
             .catch(console.log)
     }
 
+
+    previousPage = () => {
+        fetch(this.url + this.state.chosenSubreddit + "/" + this.state.sort + ".json?count=" + (this.state.page * 25) + "&after=" + this.state.after)
+            .then(res => res.json())
+            .then((data) => {
+                this.setState(() => ({
+                    files: data.data.children,
+                    after: data.data.after,
+                    before: data.data.before,
+                    page: this.state.page - 1
+                }))
+            })
+            .catch(console.log)
+    }
+
+
     changeSubreddit = sub => {
         this.setState({
             files: [],
@@ -103,9 +119,11 @@ class Reddit extends Component {
             })
     }
 
+    
 
     render() {
-        let nextButton = <button className="btn btn-success nextButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-right"></i></button>
+        let nextButton = <button className="btn btn-primary nextButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-right"></i></button>
+        let previousButton = <button className="btn btn-primary previousButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-left"></i></button>
         return (
             <div>
                 <div className='row'>
@@ -131,6 +149,7 @@ class Reddit extends Component {
                     ))}
                 </div>
                 <footer class="subFooter">
+                {previousButton}
                 {nextButton}
                 </footer>
            

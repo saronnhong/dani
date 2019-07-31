@@ -29,3 +29,8 @@
     float: right;
     padding: 20px;
 }
+
+.previousButton{
+    float: left;
+    padding: 20px;
+}

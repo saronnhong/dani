@@ -6,27 +6,33 @@ import Card from '../Card';
 const subs = [
     {
         name: "food",
-        isChosen: true
+        isChosen: true,
+        icon: "https://cdn2.iconfinder.com/data/icons/maki/100/fast-food-512.png"
     },
     {
         name: "Pixar",
-        isChosen: false
+        isChosen: false,
+        icon: "https://www.freeiconspng.com/uploads/video-camera-png-icon-14.png"
     },
     {
         name: "aww",
-        isChosen: false
+        isChosen: false,
+        icon: "https://image.flaticon.com/icons/png/512/64/64431.png"
     },
     {
         name: "wallpaper",
-        isChosen: false
+        isChosen: false,
+        icon: "https://image.flaticon.com/icons/png/512/254/254172.png"
     },
     {
         name: "travel",
-        isChosen: false
+        isChosen: false,
+        icon: "https://image.flaticon.com/icons/png/128/45/45873.png"
     },
     {
         name: "pics",
-        isChosen: false
+        isChosen: false,
+        icon:"https://www.stickpng.com/assets/images/584abf102912007028bd9332.png"
     }
 ]
 
@@ -108,6 +114,7 @@ class Reddit extends Component {
                             changeSubreddit={() => this.changeSubreddit(sub.name)}
                             name={sub.name}
                             key={sub.name}
+                            icon={sub.icon}
                         />
 
                     ))}

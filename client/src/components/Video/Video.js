@@ -7,9 +7,7 @@ import "./style.css";
 
 class Video extends Component {
     state = {
-       
         playing: false
-
     }
     
     
@@ -18,7 +16,7 @@ class Video extends Component {
         return (
 
             <div>
-                {/* turnery */}
+                {/* turnary */}
                 {this.state.playing ? (
 
 
@@ -46,12 +44,7 @@ class Video extends Component {
                         </div>
 
                     )}
-
-
             </div>
-
-
-
         )
     }
 }

@@ -12,12 +12,12 @@
   } */
 
   .cardAnimals {
-    width: 105%;
-    height: 95%;
+    /* width: 105%;
+    height: 95%; */
     margin: 1rem;
-    text-align: center; 
-    margin: 20px;
-    background:rgb(230,230,230);
+    /* text-align: center; 
+    margin: 20px; */
+    /* background:rgb(230,230,230); */
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -34,6 +34,93 @@
 }
   .animalImg {
     width: 160px;
-    margin-top: 2rem;
+    /* margin-top: 2rem; */
+    position: relative;
     
+  }
+  .animalContainer {
+    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0e1e42f1-f090-4f4c-b529-0b7a6ac51dc2/dd8rmix-87c64e98-0c22-4094-8370-f5b3413319dd.png/v1/fill/w_1024,h_732,q_80,strp/background_practice___stardew_valley_by_paralysa_dd8rmix-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvMGUxZTQyZjEtZjA5MC00ZjRjLWI1MjktMGI3YTZhYzUxZGMyXC9kZDhybWl4LTg3YzY0ZTk4LTBjMjItNDA5NC04MzcwLWY1YjM0MTMzMTlkZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.O6JA79PJXYCb-cEblfis-FanA5nC_gXZPTDLHCN5qyg");
+    position: relative;
+    /* top: 80px;
+    right: 100px; */
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+    width: 100%;
+    /* height: 100%; */
+    height: 800px;
+    
+  }
+
+  #Sheep {
+    position: relative;
+    width: 80px;
+    top: 400px;
+    left: 400px;
+  }
+
+  #Duck {
+    position: relative;
+    width: 60px;
+    top: 300px;
+    left: -350px;
+  }
+  #Owl {
+    position: relative;
+    width: 70px;
+    /* top: -200px; */
+    left: 200px;
+  }
+  #Sparrow {
+    position: relative;
+    width: 50px;
+    top: -150px;
+    left: 30px;
+  }
+
+  #Turkey {
+    position: relative;
+    width: 80px;
+    top: 150px;
+    left: 350px;
+  }
+
+  #Chicken {
+    position: relative;
+    width: 70px;
+    top: 250px;
+    left: -40px;
+  }
+
+  #Cow {
+    position: relative;
+    top: 500px;
+  }
+  #Goat {
+    position: relative;
+    width: 80px;
+    left: 700px;
+    top: 250px;
+  }
+  #Pig {
+    position: relative;
+    width: 50px;
+    left: 200px;
+    top: 250px;
+  }
+  #Cat {
+    position: relative;
+    width: 70px;
+    top: 350px;
+    left: -330px;
+  }
+  #Dog {
+    position: relative;
+    width: 80px;
+    top: 300px;
+    left: 250px;
+  }
+  #Frog {
+    position: relative;
+    top: 500px;
+    left: -500px;
   }

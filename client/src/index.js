@@ -19,9 +19,9 @@ import AnimalSound from './components/AnimalSounds';
 import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
-import ButtonPage from './components/ButtonPage/ButtonPage';
+import ButtonPage from './components/ButtonPage';
 
-
+import Spelling from './components/Spelling';
 // Here is if we have an id_token in localStorage
 if (localStorage.getItem("id_token")) {
     // then we will attach it to the headers of each request from react application via axios
@@ -42,7 +42,7 @@ ReactDOM.render(
             <Route exact path="/natureSounds" component={NatureSound} />
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
-            
+            <Route exact path="/spelling" component={Spelling} />
             <Route exact path="/Listen"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/animalSounds"

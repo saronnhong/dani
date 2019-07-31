@@ -19,7 +19,13 @@ import AnimalSound from './components/AnimalSounds';
 import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
+<<<<<<< HEAD
 import ButtonPage from './components/ButtonPage';
+=======
+import ButtonPage from './components/ButtonPage/ButtonPage';
+import Image360 from './components/Image360/Image360';
+
+>>>>>>> 38066abd7af8ff7bcbb1aa4e6feaf0128ae8b4ef
 
 import Spelling from './components/Spelling';
 // Here is if we have an id_token in localStorage
@@ -42,6 +48,7 @@ ReactDOM.render(
             <Route exact path="/natureSounds" component={NatureSound} />
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
+<<<<<<< HEAD
             <Route exact path="/spelling" component={Spelling} />
             <Route exact path="/Listen"
                 render={(props) => <ButtonPage {...props}
@@ -53,36 +60,52 @@ ReactDOM.render(
                     buttonThree="Relax"
                 />}
             />
+=======
+            <Route exact path="/image360" component={Image360} />
+            
+            
+>>>>>>> 38066abd7af8ff7bcbb1aa4e6feaf0128ae8b4ef
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/Look"
                     linkTwo="/Listen"
                     linkThree="/Learn"
-                    buttonOne="Look"
-                    buttonTwo="Listen"
-                    buttonThree="Learn"
+                    buttonOne={<div> <i class="fas fa-eye fa-5x"></i> <p className="font-buttons-text">Look</p> </div> }
+                    buttonTwo={<div> <i class="fas fa-headphones-alt fa-5x"></i> <p className="font-buttons-text">Listen</p> </div> }
+                    buttonThree={<div> <i class="fab fa-leanpub fa-5x"></i> <p className="font-buttons-text">Learn</p> </div> }
+                />}
+            />  
+             <Route exact path="/Look"
+                render={(props) => <ButtonPage {...props}
+                    linkOne="/reddit"
+                    linkTwo="/videos"
+                    linkThree="/image360"
+                    buttonOne={<div> <i class="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
+                    buttonTwo={<div> <i class="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
+                    buttonThree={<div> <i class="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }
+                />}
+            />
+            <Route exact path="/Listen"
+                render={(props) => <ButtonPage {...props}
+                    linkOne="/animalSounds"
+                    linkTwo="/natureSounds"
+                    linkThree="/relaxSounds"
+                    buttonOne={<div> <i class="fas fa-paw fa-5x"></i> <p className="font-buttons-text">Animals</p> </div> }
+                    buttonTwo={<div> <i class="fas fa-leaf fa-5x"></i> <p className="font-buttons-text">Nature</p> </div> }
+                    buttonThree={<div> <i class="fas fa-couch fa-5x"></i> <p className="font-buttons-text">Relax</p> </div> }
                 />}
             />
             <Route exact path="/Learn"
                 render={(props) => <ButtonPage {...props}
-                    linkOne="/videos"
+                    linkOne="/TBD"
                     linkTwo="/Color"
                     linkThree="/sketch"
-                    buttonOne="Videos"
-                    buttonTwo="Coloring"
-                    buttonThree="Drawing"
+                    buttonOne="TBD"
+                    buttonTwo={<div> <i class="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
+                    buttonThree={<div> <i class="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
                 />}
             />
-            <Route exact path="/Look"
-                render={(props) => <ButtonPage {...props}
-                    linkOne="/reddit"
-                    linkTwo="/TBD"
-                    linkThree="/TBD"
-                    buttonOne="Images"
-                    buttonTwo="TBD"
-                    buttonThree="TBD"
-                />}
-            />
+           
 
         </div>
     </Router>

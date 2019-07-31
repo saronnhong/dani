@@ -6,7 +6,7 @@ import "./style.css";
 
 function ButtonPage(props) {
 
-    console.log(props);
+    console.log(window.location);
         return (
             
             <div className="container containerSounds">

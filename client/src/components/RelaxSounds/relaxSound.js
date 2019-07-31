@@ -3,9 +3,6 @@ import React, { Component } from "react";
 import animals from "./relaxSounds.json";
 import "./style.css";
 
-const audioElements = {};
-
-// var oneSound = (new Audio("https://freesound.org/data/previews/390/390879_197130-lq.mp3"));
 
 class Sound extends Component {
 
@@ -20,7 +17,7 @@ class Sound extends Component {
     }
 
     render() {
-        const {animal} = this.props;
+        const { animal } = this.props;
         return (
             <div key={animal.id} className="col-md-3">
                 <div className="cardRelax">
@@ -47,7 +44,6 @@ class RelaxSounds extends Component {
                     }
                     )}
                 </div>
-
             </div>
         )
     }

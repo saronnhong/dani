@@ -105,6 +105,7 @@ class Reddit extends Component {
 
 
     render() {
+        let nextButton = <button className="btn btn-success nextButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-right"></i></button>
         return (
             <div>
                 <div className='row'>
@@ -129,6 +130,10 @@ class Reddit extends Component {
                         />
                     ))}
                 </div>
+                <footer class="subFooter">
+                {nextButton}
+                </footer>
+           
             </div>
 
         )

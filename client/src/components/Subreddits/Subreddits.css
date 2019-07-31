@@ -20,3 +20,12 @@
 .buttonIcon {
     width: 10%;
 }
+
+.subFooter{
+    padding: 25px;
+}
+
+.nextButton{
+    float: right;
+    padding: 20px;
+}

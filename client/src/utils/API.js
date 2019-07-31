@@ -12,6 +12,10 @@ export default {
   //save a new drawing to DB
   saveDrawing: (randName, drawing) => {
     return axios.post('api/savedrawing', {randName: randName, drawing: drawing});
+  },
+
+  loadDrawing: () => {
+    return axios.get('api/loaddrawing');
   }
 
 };

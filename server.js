@@ -80,8 +80,6 @@ app.use(function (err, req, res, next) {
 
 //attempt at getting the drawings to save to mongoDB
 app.post('/api/savedrawing', (req, res) => {
-  console.log(req.user)
-  //drawing is reaching this point, logs correctly. Needs to find the correct user maybe??
   db.Drawings.create(req.body)
     .then(newDrawing => {
       return db.User.findOneAndUpdate({}, { $push: { drawings: newDrawing._id } }, { new: true })
@@ -89,6 +87,12 @@ app.post('/api/savedrawing', (req, res) => {
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 
+});
+
+app.get('/api/loaddrawing', (req, res) => {
+  db.Drawings.find({})
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
 });
 
 // Send every request to the React app

@@ -29,23 +29,30 @@ class Sketch extends Component {
     }
 
     loadDrawing = () => {
-        for (let i = 0; i < localStorage.length; i++){
-            console.log(localStorage)
-            // do something with localStorage.getItem(localStorage.key(i));
-        }
-        this.saveableCanvas.loadSaveData(
-            localStorage.getItem("savedDrawing")
-        );
+        API.loadDrawing()
+            .then(data => {
+                console.log(data)
+                this.saveableCanvas.loadSaveData(
+                    data.data[data.data.length-1].drawing
+                )
+            })
+        // for (let i = 0; i < localStorage.length; i++){
+        //     console.log(localStorage)
+        //     // do something with localStorage.getItem(localStorage.key(i));
+        // }
+        // this.saveableCanvas.loadSaveData(
+        //     localStorage.getItem("savedDrawing")
+        // );
 
     }
 
     saveDrawing = () => {
         // let saveNameRandom = toString(Math.random(100))
         let saveNameRandom = "test save"
-        localStorage.setItem(
-            saveNameRandom,
-            this.saveableCanvas.getSaveData()
-        );
+        // localStorage.setItem(
+        //     saveNameRandom,
+        //     this.saveableCanvas.getSaveData()
+        // );
         API.saveDrawing(saveNameRandom, this.saveableCanvas.getSaveData())
     }
 
@@ -71,7 +78,7 @@ class Sketch extends Component {
                         canvasWidth={(window.outerWidth - 135) || this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
-                        // imgSrc="https://i.pinimg.com/originals/1e/93/95/1e9395f5e6a120b92f3b6546c13fda6a.png"
+                    // imgSrc="https://i.pinimg.com/originals/1e/93/95/1e9395f5e6a120b92f3b6546c13fda6a.png"
                     />
                     <Palette
                         undo={this.undoButton}

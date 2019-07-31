@@ -36,6 +36,9 @@ const subs = [
     }
 ]
 
+
+
+
 class Reddit extends Component {
 
     constructor(props) {
@@ -122,11 +125,11 @@ class Reddit extends Component {
 
 
     render() {
-        let nextButton = <button className="btn btn-primary nextButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-right"></i></button>
+        let nextButton = <button className="btn btn-primary nextButton" type="submit" onClick={this.nextPage}><i className="fas fa-arrow-right"></i></button>
 
         let previousButton;
         if(this.state.page > 1){
-            previousButton = <button className="btn btn-primary previousButton" type="submit" onClick={this.previousPage}><i class="fas fa-arrow-left"></i></button>
+            previousButton = <button className="btn btn-primary previousButton" type="submit" onClick={this.previousPage}><i className="fas fa-arrow-left"></i></button>
         }
         else if(this.state.page <= 1){
             previousButton = ""
@@ -156,7 +159,7 @@ class Reddit extends Component {
                         />
                     ))}
                 </div>
-                <footer class="subFooter">
+                <footer className="subFooter">
                 {previousButton}
                 {nextButton}
                 </footer>

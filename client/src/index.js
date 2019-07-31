@@ -19,13 +19,9 @@ import AnimalSound from './components/AnimalSounds';
 import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
-<<<<<<< HEAD
 import ButtonPage from './components/ButtonPage';
-=======
-import ButtonPage from './components/ButtonPage/ButtonPage';
 import Image360 from './components/Image360/Image360';
 
->>>>>>> 38066abd7af8ff7bcbb1aa4e6feaf0128ae8b4ef
 
 import Spelling from './components/Spelling';
 // Here is if we have an id_token in localStorage
@@ -48,7 +44,6 @@ ReactDOM.render(
             <Route exact path="/natureSounds" component={NatureSound} />
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
-<<<<<<< HEAD
             <Route exact path="/spelling" component={Spelling} />
             <Route exact path="/Listen"
                 render={(props) => <ButtonPage {...props}
@@ -60,11 +55,9 @@ ReactDOM.render(
                     buttonThree="Relax"
                 />}
             />
-=======
             <Route exact path="/image360" component={Image360} />
             
             
->>>>>>> 38066abd7af8ff7bcbb1aa4e6feaf0128ae8b4ef
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/Look"

@@ -3,14 +3,29 @@
 } */
 
 .card-subreddit{
-    width: 50%;
-    height: 97%;
-    margin: auto;
+    width: 80%;
+    height: 98%;
+    margin-top: 20px;
     text-align: center;
     background:rgb(186, 214, 233);
 
 }
 
-.img{
-    width: 100%
+.card-subreddit:hover {
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+
+    -webkit-transform: scale(1.05);
+    -moz-transform: scale(1.05);
+    position: relative;
+    z-index: 5;
+}
+
+
+.redditimage{
+width: 275px;
+height: 300px;
+padding: 8px 0px 20px 0px;
+margin: 4px;
+box-sizing: border-box;
 }

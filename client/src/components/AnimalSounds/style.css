@@ -34,21 +34,16 @@
 }
   .animalImg {
     width: 160px;
-    /* margin-top: 2rem; */
     position: relative;
     
   }
   .animalContainer {
-    background-image: url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/0e1e42f1-f090-4f4c-b529-0b7a6ac51dc2/dd8rmix-87c64e98-0c22-4094-8370-f5b3413319dd.png/v1/fill/w_1024,h_732,q_80,strp/background_practice___stardew_valley_by_paralysa_dd8rmix-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzMyIiwicGF0aCI6IlwvZlwvMGUxZTQyZjEtZjA5MC00ZjRjLWI1MjktMGI3YTZhYzUxZGMyXC9kZDhybWl4LTg3YzY0ZTk4LTBjMjItNDA5NC04MzcwLWY1YjM0MTMzMTlkZC5wbmciLCJ3aWR0aCI6Ijw9MTAyNCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.O6JA79PJXYCb-cEblfis-FanA5nC_gXZPTDLHCN5qyg");
+    background-image: url("./farm.jpg");
     position: relative;
-    /* top: 80px;
-    right: 100px; */
-    /* background-repeat: no-repeat; */
+    top: 5px;
     background-size: cover;
     width: 100%;
-    /* height: 100%; */
-    height: 800px;
-    
+    height: 650px;
   }
 
   #Sheep {

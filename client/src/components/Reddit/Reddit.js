@@ -15,6 +15,22 @@ const subs = [
     {
         name: "Pixar",
         isChosen: false
+    },
+    {
+        name:"aww",
+        isChosen:false
+    },
+    {
+        name:"wallpaper",
+        isChosen: false
+    },
+    {
+        name:"travel",
+        isChosen: false
+    },
+    {
+        name:"pics",
+        isChosen: false
     }
 ]
 

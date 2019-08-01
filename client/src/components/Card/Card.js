@@ -15,12 +15,12 @@ let Card = ({ file }) => {
             // console.log(file.data)
             // let image = (file.data.preview.images[0].resolutions[file.data.preview.images[0].resolutions.length - 1].url).replace(/&amp;/g,"&");
             // console.log(image);
-            console.log(file.data)
+            // console.log(file.data)
             // console.log()
 
             let image = (file.data.preview.images[0].resolutions[file.data.preview.images[0].resolutions.length - 1].url)
             image = image.replace(/&amp;/g,"&");
-            console.log(image)
+            // console.log(image)
             return (
                 //     <div className="col-md-3">
                 //     <div className="card">

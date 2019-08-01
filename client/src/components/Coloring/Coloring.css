@@ -51,3 +51,24 @@
     text-shadow: 2px 2px white;
     color: rgb(0, 175, 66);
 }
+
+.arrows {
+    position: absolute;
+    z-index: 999;
+    top: 520px;
+    text-shadow: 2px 2px gold;
+    color: rgb(0, 175, 66);
+}
+
+.arrows:hover {
+    color: blueviolet;
+    text-shadow: 2px 2px 15px gold;
+}
+
+.arr-left {
+    left: 10px;
+}
+
+.arr-right {
+    right: 110px;
+}

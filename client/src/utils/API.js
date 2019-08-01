@@ -16,6 +16,14 @@ export default {
 
   loadDrawing: () => {
     return axios.get('api/loaddrawing');
+  },
+
+  saveColoring: (randName, coloring) => {
+    return axios.post('api/savecoloring', {randName: randName, coloring: coloring});
+  },
+
+  loadColoring: () => {
+    return axios.get('api/loadcoloring');
   }
 
 };

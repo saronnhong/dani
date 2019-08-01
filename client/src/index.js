@@ -46,16 +46,6 @@ ReactDOM.render(
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
             <Route exact path="/spelling" component={Spelling} />
-            <Route exact path="/Listen"
-                render={(props) => <ButtonPage {...props}
-                    linkOne="/animalSounds"
-                    linkTwo="/natureSounds"
-                    linkThree="/relaxSounds"
-                    buttonOne="Animals"
-                    buttonTwo="Nature"
-                    buttonThree="Relax"
-                />}
-            />
             <Route exact path="/image360" component={Image360} />
             <Route exact path="/coloring" component={Coloring} />
             

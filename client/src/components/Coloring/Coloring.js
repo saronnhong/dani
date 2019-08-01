@@ -12,7 +12,8 @@ class Coloring extends Component {
         height: 800,
         brushRadius: 5,
         lazyRadius: 1,
-        coloringImage: coloringBook[0].path
+        coloringImage: 0,
+        clickFlag: 0
     }
 
     chooseColor = color => {
@@ -45,6 +46,41 @@ class Coloring extends Component {
         API.saveColoring(saveNameRandom, this.saveableCanvas.getSaveData())
     }
 
+    componentWillMount = () => {
+        let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
+        if (typeof savedPage === "number") this.setState({ coloringImage: savedPage })
+    }
+
+    flipColoringBookLeft = () => {
+        this.setState({ clickFlag: this.state.clickFlag + 1 })
+        if (this.state.coloringImage === 0) {
+            this.setState({ coloringImage: coloringBook.length - 1 })
+            let savedPage = this.state.coloringImage
+            localStorage.setItem('ColoringBookPage', savedPage)
+        } else {
+            this.setState({ coloringImage: this.state.coloringImage - 1 })
+            let savedPage = this.state.coloringImage
+            localStorage.setItem('ColoringBookPage', savedPage)
+        }
+        if (this.state.clickFlag >= 1) window.location.reload();
+        setTimeout(()=>{ this.setState({ clickFlag: 0 }) }, 1000);
+    }
+
+    flipColoringBookRight = () => {
+        this.setState({ clickFlag: this.state.clickFlag + 1 })
+        if (this.state.coloringImage === coloringBook.length - 1) {
+            this.setState({ coloringImage: 0 })
+            let savedPage = this.state.coloringImage
+            localStorage.setItem('ColoringBookPage', savedPage)
+        } else {
+            this.setState({ coloringImage: this.state.coloringImage + 1 })
+            let savedPage = this.state.coloringImage
+            localStorage.setItem('ColoringBookPage', savedPage)
+        }
+        if (this.state.clickFlag >= 1) window.location.reload();
+        setTimeout(()=>{ this.setState({ clickFlag: 0 }) }, 1000);
+    }
+
     render() {
         return (
             <div className=" text-center">
@@ -57,6 +93,8 @@ class Coloring extends Component {
                     }}
                 >Oops! -<i className="fa fa-eraser"></i> -Undo</button>
                 <div className="d-flex draw-area">
+                    <i className="fa fa-long-arrow-alt-left fa-5x arrows arr-left"
+                        onClick={() => this.flipColoringBookLeft()}></i>
                     <CanvasDraw
                         hideGrid
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
@@ -68,8 +106,10 @@ class Coloring extends Component {
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
                         imgSrc={"https://raw.githubusercontent.com/RhadMax/ColoringBookHoster/master/ColoringBook/"
-                            + this.state.coloringImage}
+                            + coloringBook[this.state.coloringImage].path}
                     />
+                    <i className="fa fa-long-arrow-alt-right fa-5x arrows arr-right"
+                        onClick={() => this.flipColoringBookRight()}></i>
                     <ColoringPalette
                         undo={this.undoButton}
                         colorClick={this.chooseColor}

@@ -5,6 +5,7 @@ import AlphabetCard from "./components/AlphabetCard";
 import Words from "./wordList.json";
 import Alphabet from "./alphabet.json";
 import "./style.css";
+import { createBrotliCompress } from "zlib";
 
 var wordGuessedArr = [];
 var wordGuess;
@@ -18,7 +19,9 @@ class Spelling extends Component {
 
     }
     componentWillMount() {
-        this.updateWord();
+        this.updateWord()
+        
+        
 
 
 
@@ -27,7 +30,7 @@ class Spelling extends Component {
     updateWord = () => {
         let randomWord = Math.floor((Math.random() * Words.length));
         this.setState({ choosenWord: Words[randomWord].word, choosenImage: Words[randomWord].image, answerKeys: Words[randomWord].answerKeys });
-
+        
     }
 
     spellTheWord = (value) => {
@@ -133,7 +136,7 @@ class Spelling extends Component {
             }
         }
         this.setState({ imgLocation: imgLocation });
-
+        
     }
 
     render() {

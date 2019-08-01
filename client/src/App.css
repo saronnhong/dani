@@ -18,7 +18,62 @@
   font-size: large;
 }
 
+.containerAbout{
+  font-family: 'Pangolin', cursive;
+  
+  color: white;
+  text-shadow: 2px 2px green;
+}
+
+.aboutTitle{
+  text-align: center;
+  margin-top: 2%;
+  letter-spacing: 10px;
+}
+
+.aboutContent{
+  background-color: white;
+  opacity: 0.5;
+  margin: auto;
+  width: 60%;
+}
+
+.aboutParagraph{
+  color: green;
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 6%;
+  margin-bottom: 6%;
+}
+.danielGif{
+  opacity: 0.9;
+  height: 550px;
+  width: 300px;
+  display: block;
+  margin: auto;
+}
+
+.gifDescription{
+  color: green;
+  text-shadow: none;
+  font-size: 20px;
+  display: block;
+  text-align: center;
+  margin-top: 2%;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
+}
+
+@media only screen and (max-width: 1000px) {
+  .aboutContent{
+    background-color: white;
+    opacity: 0.5;
+    margin: auto;
+    width: 100%;
+    font-size: 12px;
+  }
 }

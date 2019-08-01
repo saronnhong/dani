@@ -11,6 +11,7 @@ import axios from "axios";
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup';
+import About from './pages/About';
 import Navbar from './components/Navbar';
 import Sketch from './components/Sketch';
 import Reddit from './components/Reddit';
@@ -38,6 +39,7 @@ ReactDOM.render(
             {/* <Route exact path="/" component={App} /> */}
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
+            <Route exact path="/about" component={About} />
             <Route exact path="/profile" component={Profile} />
             <Route exact path="/sketch" component={Sketch} />
             <Route exact path="/reddit" component={Reddit} />

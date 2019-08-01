@@ -24,6 +24,10 @@ export default {
 
   loadColoring: () => {
     return axios.get('api/loadcoloring');
-  }
+  },
 
+  //adding a value to metrics, use req body to pass along key for schema field and value to input
+  addToMetrics: (key, value) => {
+    return axios.post('api/metrics/', {key: key, value: value});
+  }
 };

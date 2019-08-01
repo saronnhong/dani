@@ -111,6 +111,10 @@ app.get('/api/loadcoloring', (req, res) => {
     .catch(err => res.status(400).json(err));
 });
 
+//route for when metric add happens... puzzling it out still but atm im thinking it may start as a get? and in the .then it can do a post/put with an update to increase the value by one of the field corresponding to the metric being updated.
+app.post('/api/metrics', (req, res) => {
+  db.Metric.update({})
+});
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function (req, res) {

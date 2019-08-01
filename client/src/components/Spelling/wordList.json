@@ -3,12 +3,24 @@
     "id": 1,
     "word": "bee",
     "image": "http://sirmikeofmitchell.com/files/gimgs/th-39_honeybeepromo.jpg",
-    "letters": "beeacda"
+    "answerKeys": "beeacda"
   },
   {
     "id": 2,
-    "word": "DOG",
-    "image": "https://i.dlpng.com/static/png/347968_preview.png",
-    "letters": "DOGABCE"
+    "word": "dog",
+    "image": "https://images-na.ssl-images-amazon.com/images/I/71%2BdU6s7%2BHL._SY679_.jpg",
+    "answerKeys": "dogbace"
+  },
+  {
+    "id": 3,
+    "word": "cat",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNEYjT36irpOlnF9NeSlcDroEDna5yuVgQQ35_pA7X3iHUWMfY",
+    "answerKeys": "hgcatee"
+  },
+  {
+    "id": 4,
+    "word": "pig",
+    "image": "https://i.pinimg.com/originals/5f/6b/64/5f6b64420bbb41837b8d540ac325fb37.jpg",
+    "answerKeys": "edpigud"
   }
 ] 

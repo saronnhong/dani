@@ -4,7 +4,7 @@ import relaxes from "./relaxSounds.json";
 import "./style.css";
 import Player from "../Player";
 
-var playing =true;
+
 // class Player extends Component {
 
 //     audio = new Audio(this.props.relax.sound)
@@ -40,8 +40,7 @@ class RelaxSounds extends Component {
                     {relaxes.map((relax) => {
                         return (
                             <Player relax={relax} />
-                        )
-                    }
+                        )}
                     )}
                 </div>
             </div>

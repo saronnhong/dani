@@ -27,6 +27,107 @@
   {
     "id": 6,
     "letter": "f",
-    "image": "/img/f.png"
+    "image": "/img/F.png"
+  },
+  {
+    "id": 7,
+    "letter": "g",
+    "image": "/img/G.png"
+  },
+  {
+    "id": 8,
+    "letter": "h",
+    "image": "/img/H.png"
+  },
+  {
+    "id": 9,
+    "letter": "i",
+    "image": "/img/I.png"
+  },
+  {
+    "id": 10,
+    "letter": "j",
+    "image": "/img/J.png"
+  },
+  {
+    "id": 11,
+    "letter": "k",
+    "image": "/img/K.png"
+  },
+  {
+    "id": 12,
+    "letter": "l",
+    "image": "/img/L.png"
+  },
+  {
+    "id": 13,
+    "letter": "m",
+    "image": "/img/M.png"
+  },
+  {
+    "id": 14,
+    "letter": "n",
+    "image": "/img/N.png"
+  },
+  {
+    "id": 15,
+    "letter": "o",
+    "image": "/img/O.png"
+  },
+  {
+    "id": 16,
+    "letter": "p",
+    "image": "/img/P.png"
+  },
+  {
+    "id": 17,
+    "letter": "q",
+    "image": "/img/Q.png"
+  },
+  {
+    "id": 18,
+    "letter": "r",
+    "image": "/img/R.png"
+  },
+  {
+    "id": 19,
+    "letter": "s",
+    "image": "/img/S.png"
+  },
+  {
+    "id": 20,
+    "letter": "t",
+    "image": "/img/T.png"
+  },
+  {
+    "id": 21,
+    "letter": "u",
+    "image": "/img/U.png"
+  },
+  {
+    "id": 22,
+    "letter": "v",
+    "image": "/img/V.png"
+  },
+  {
+    "id": 23,
+    "letter": "w",
+    "image": "/img/W.png"
+  },
+  {
+    "id": 24,
+    "letter": "x",
+    "image": "/img/X.png"
+  },
+  {
+    "id": 25,
+    "letter": "y",
+    "image": "/img/Y.png"
+  },
+  {
+    "id": 26,
+    "letter": "z",
+    "image": "/img/Z.png"
   }
+
 ] 

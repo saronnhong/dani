@@ -46,8 +46,10 @@ class Coloring extends Component {
         API.saveColoring(saveNameRandom, this.saveableCanvas.getSaveData())
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
+        console.log(coloringBook[this.state.coloringImage].path)
         let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
+        console.log(typeof this.state.coloringImage)
         if (typeof savedPage === "number") this.setState({ coloringImage: savedPage })
     }
 
@@ -80,8 +82,9 @@ class Coloring extends Component {
         if (this.state.clickFlag >= 1) window.location.reload();
         setTimeout(()=>{ this.setState({ clickFlag: 0 }) }, 1000);
     }
-
+    
     render() {
+        console.log(coloringBook[this.state.coloringImage].path)
         return (
             <div className=" text-center">
                 <h2 className="pangolin-text" onClick={() => this.saveColoring()}>Save Coloring</h2>

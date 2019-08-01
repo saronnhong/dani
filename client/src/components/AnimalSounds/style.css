@@ -123,7 +123,7 @@
     left: -400px;
   }
 
-  #Frog:hover, #Sparrow:hover {
+  #Frog:hover, #Sparrow:hover, #Sheep:hover, #Duck:hover, #Dog:hover, #Cat:hover, #Pig:hover, #Goat:hover, #Cow:hover, #Chicken:hover, #Turkey:hover, #Owl:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
     backface-visibility: hidden;

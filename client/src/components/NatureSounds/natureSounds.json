@@ -32,7 +32,19 @@
   {
     "id": 6,
     "name": "Fire Place",
-    "image": "https://cdn.pixabay.com/photo/2017/11/16/08/35/celebrate-2953723_1280.jpg",
+    "image": "https://cdn.pixabay.com/photo/2016/11/18/17/02/bonfire-1835829_1280.jpg",
     "sound": "https://freesound.org/data/previews/234/234288_3120802-lq.mp3"
+  },
+  {
+    "id": 7,
+    "name": "Woods",
+    "image": "https://cdn.pixabay.com/photo/2015/12/01/20/28/green-1072828_1280.jpg",
+    "sound": "https://freesound.org/data/previews/246/246399_2095593-lq.mp3"
+  },
+  {
+    "id": 8,
+    "name": "Nightingale",
+    "image": "https://cdn.pixabay.com/photo/2019/01/22/17/56/singing-3948645_1280.jpg",
+    "sound": "https://freesound.org/data/previews/188/188065_1648170-lq.mp3"
   }
 ]

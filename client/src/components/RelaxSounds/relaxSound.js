@@ -1,45 +1,45 @@
 import React, { Component } from "react";
 
-import animals from "./relaxSounds.json";
+import relaxes from "./relaxSounds.json";
 import "./style.css";
+import Player from "../Player";
 
+var playing =true;
+// class Player extends Component {
 
-class Sound extends Component {
+//     audio = new Audio(this.props.relax.sound)
 
-    audio = new Audio(this.props.animal.sound)
+//     playSound = () => {
+//         this.audio.play();
+//     }
 
-    playSound = () => {
-        this.audio.play();
-    }
+//     pauseSound = () => {
+//         this.audio.pause();
+//     }
 
-    pauseSound = () => {
-        this.audio.pause();
-    }
+//     render() {
+//         const { relax } = this.props;
+//         return (
+//             <div key={relax.id} className="col-md-3">
+//                 <div className="cardRelax">
+//                     <div onClick={() => playing ? (this.playSound(), playing=false) : (this.pauseSound(), playing=true)}>
+//                         <img className="relaxImg" alt="" src={relax.image} />
+//                     </div>
+//                 </div>
+//             </div>
 
-    render() {
-        const { animal } = this.props;
-        return (
-            <div key={animal.id} className="col-md-3">
-                <div className="cardRelax">
-                    <div onClick={() => this.playSound()}>
-                        <img className="relaxImg" alt="" src={animal.image} />
-                    </div>
-                </div>
-                <button onClick={() => this.pauseSound()}>Stop</button>
-            </div>
-
-        )
-    }
-}
+//         )
+//     }
+// }
 
 class RelaxSounds extends Component {
     render() {
         return (
             <div className="container">
                 <div className="row">
-                    {animals.map((animal) => {
+                    {relaxes.map((relax) => {
                         return (
-                            <Sound animal={animal} />
+                            <Player relax={relax} />
                         )
                     }
                     )}

@@ -10,9 +10,9 @@ const subs = [
         icon: "https://cdn2.iconfinder.com/data/icons/maki/100/fast-food-512.png"
     },
     {
-        name: "Pixar",
+        name: "oddlysatisfying",
         isChosen: false,
-        icon: "https://www.freeiconspng.com/uploads/video-camera-png-icon-14.png"
+        icon: "https://cdn4.iconfinder.com/data/icons/baby-children/24/Lego-Toy-512.png"
     },
     {
         name: "aww",

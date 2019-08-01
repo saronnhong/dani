@@ -1,46 +1,46 @@
 import React from 'react';
-import './Palette.css';
+import './ColoringPalette.css';
 
 const colors = [
     {
-        color: "rgba(55,115,255,0.9)",
+        color: "rgba(55,115,255,0.5)",
         id: "blue"
     },
     {
-        color: "rgba(225,0,0,0.9)",
+        color: "rgba(225,0,0,0.5)",
         id: "red"
     },
     {
-        color: "rgba(0,175,0,0.9)",
+        color: "rgba(0,175,0,0.5)",
         id: "green"
     },
     {
-        color: "rgba(255,225,15,0.9)",
+        color: "rgba(255,225,15,0.5)",
         id: "yellow"
     },
     {
-        color: "rgba(255,155,0,0.9)",
+        color: "rgba(255,155,0,0.5)",
         id: "orange"
     },
     {
-        color: "rgba(125,0,225,0.9)",
+        color: "rgba(125,0,225,0.5)",
         id: "purple"
     },
     {
-        color: "rgba(225,125,225,0.9)",
+        color: "rgba(225,125,225,0.5)",
         id: "pink"
     },
     {
-        color: "rgba(0,0,0,0.9)",
+        color: "rgba(0,0,0,0.5)",
         id: "black"
     },
     {
-        color: "rgba(255,255,255,0.9)",
+        color: "rgba(255,255,255,0.5)",
         id: "white"
     }
 ]
 
-function Palette(props) {
+function ColoringPalette(props) {
 
 
 
@@ -49,7 +49,7 @@ function Palette(props) {
             {colors.map(color =>
                 <button onClick={() => props.colorClick(color.color)}
                     key={color.id} style={{ backgroundColor: color.color }}
-                    className="palette-color" onHover={() => props.displayColorName(color.id)}>
+                    className="palette-color">
                     <div className="palette-color-selected" >{color.id}</div>
                 </button>
             )}
@@ -60,4 +60,4 @@ function Palette(props) {
     )
 }
 
-export default Palette;
+export default ColoringPalette;

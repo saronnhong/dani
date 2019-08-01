@@ -47,8 +47,12 @@ class Coloring extends Component {
     }
 
     componentWillMount = () => {
-        let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
-        if (typeof savedPage === "number") this.setState({ coloringImage: savedPage })
+        if (localStorage.ColoringBookPage) {
+            let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
+            if (typeof savedPage === "number") {
+                this.setState({ coloringImage: savedPage })
+            }
+        }
     }
 
     flipColoringBookLeft = () => {
@@ -63,7 +67,7 @@ class Coloring extends Component {
             localStorage.setItem('ColoringBookPage', savedPage)
         }
         if (this.state.clickFlag >= 1) window.location.reload();
-        setTimeout(()=>{ this.setState({ clickFlag: 0 }) }, 1000);
+        setTimeout(() => { this.setState({ clickFlag: 0 }) }, 1000);
     }
 
     flipColoringBookRight = () => {
@@ -78,7 +82,7 @@ class Coloring extends Component {
             localStorage.setItem('ColoringBookPage', savedPage)
         }
         if (this.state.clickFlag >= 1) window.location.reload();
-        setTimeout(()=>{ this.setState({ clickFlag: 0 }) }, 1000);
+        setTimeout(() => { this.setState({ clickFlag: 0 }) }, 1000);
     }
 
     render() {

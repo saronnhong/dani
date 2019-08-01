@@ -12,12 +12,12 @@
   } */
 
   .cardAnimals {
-    width: 105%;
-    height: 95%;
+    /* width: 105%;
+    height: 95%; */
     margin: 1rem;
-    text-align: center; 
-    margin: 20px;
-    background:rgb(230,230,230);
+    /* text-align: center; 
+    margin: 20px; */
+    /* background:rgb(230,230,230); */
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
@@ -34,6 +34,116 @@
 }
   .animalImg {
     width: 160px;
-    margin-top: 2rem;
+    position: relative;
     
+  }
+  .animalContainer {
+    background-image: url("./farm.jpg");
+    position: relative;
+    margin: 50px auto;
+    top: 5px;
+    /* left: 250px; */
+    background-size: cover;
+    width: 1200px;
+    height: 650px;
+  }
+
+  #Sheep {
+    position: relative;
+    width: 80px;
+    top: 400px;
+    left: 400px;
+  }
+
+  #Duck {
+    position: relative;
+    width: 60px;
+    top: 330px;
+    left: -330px;
+  }
+  #Owl {
+    position: relative;
+    width: 65px;
+    top: 100px;
+    left: 310px;
+  }
+  #Sparrow {
+    position: relative;
+    width: 50px;
+    /* top: -150px; */
+    left: 150px;
+  }
+
+  #Turkey {
+    position: relative;
+    width: 80px;
+    top: 530px;
+    left: -200px;
+  }
+
+  #Chicken {
+    position: relative;
+    width: 70px;
+    top: 270px;
+    left: -40px;
+  }
+
+  #Cow {
+    position: relative;
+    top: 500px;
+  }
+  #Goat {
+    position: relative;
+    width: 80px;
+    left: 790px;
+    top: 280px;
+  }
+  #Pig {
+    position: relative;
+    width: 50px;
+    left: 230px;
+    top: 280px;
+  }
+  #Cat {
+    position: relative;
+    width: 70px;
+    top: 350px;
+    left: -330px;
+  }
+  #Dog {
+    position: relative;
+    width: 80px;
+    top: 300px;
+    left: 380px;
+  }
+  #Frog {
+    position: relative;
+    width: 100px;
+    top: 250px;
+    left: -400px;
+  }
+
+  #Frog:hover, #Sparrow:hover, #Sheep:hover, #Duck:hover, #Dog:hover, #Cat:hover, #Pig:hover, #Goat:hover, #Cow:hover, #Chicken:hover, #Turkey:hover, #Owl:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
   }

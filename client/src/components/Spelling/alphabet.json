@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "letter": "a",
+    "image": "/img/A.png"
+  },
+  {
+    "id": 2,
+    "letter": "b",
+    "image": "/img/B.png"
+  },
+  {
+    "id": 3,
+    "letter": "c",
+    "image": "/img/C.png"
+  },
+  {
+    "id": 4,
+    "letter": "d",
+    "image": "/img/D.png"
+  },
+  {
+    "id": 5,
+    "letter": "e",
+    "image": "/img/E.png"
+  },
+  {
+    "id": 6,
+    "letter": "f",
+    "image": "/img/f.png"
+  }
+] 

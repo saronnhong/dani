@@ -6,21 +6,15 @@ import "./style.css";
 class AnimalSound extends Component {
     render() {
         return (
-            // <div className="wrapper">
-                <div className="container">
-                    <div className="row">
-                {animals.map((animal) =>
-                    <div className="col-md-2">
-                        <div className="cardAnimals">
-                            <a href="# " onClick={() => (new Audio(animal.sound)).play()}>
-                                <img className="animalImg"alt="# " src={animal.image} />
-                            </a>
-                        </div>
-                    </div>
-                )}
+            <div>
+                <div className="animalContainer">
+                    {animals.map((animal) =>
+                        <a onClick={() => (new Audio(animal.sound)).play()}>
+                            <img width="100px" className="animalImg" alt="# " src={animal.image} id={animal.name} />
+                        </a>
+                    )}
                 </div>
-                </div>
-            // </div>
+            </div>
         )
     }
 }

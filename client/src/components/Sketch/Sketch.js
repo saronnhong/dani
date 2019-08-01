@@ -31,7 +31,6 @@ class Sketch extends Component {
     loadDrawing = () => {
         API.loadDrawing()
             .then(data => {
-                console.log(data)
                 this.saveableCanvas.loadSaveData(
                     data.data[data.data.length-1].drawing
                 )
@@ -59,14 +58,14 @@ class Sketch extends Component {
     render() {
         return (
             <div className=" text-center">
-                <button onClick={() => this.saveDrawing()}>Save Drawing</button>
-                <h1 className="d-inline-flex"> Let's Draw!</h1>
-                <button onClick={() => this.loadDrawing()}>Load a Drawing</button>
-                <button className="undo-button"
+                <h2 className="pangolin-text" onClick={() => this.saveDrawing()}>Save Drawing</h2>
+                <h1 className="pangolin-text-title"> Let's Draw!</h1>
+                <h2 className="pangolin-text" onClick={() => this.loadDrawing()}>Load a Drawing</h2>
+                <button className="undo-button pangolin-undo"
                     onClick={() => {
                         this.saveableCanvas.undo();
                     }}
-                >Oops! <i class="fa fa-eraser"></i></button>
+                >Oops! -<i class="fa fa-eraser"></i>- Undo</button>
                 <div className="d-flex draw-area">
                     <CanvasDraw
                         hideGrid

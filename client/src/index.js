@@ -20,7 +20,8 @@ import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
 import ButtonPage from './components/ButtonPage';
-import Image360 from './components/Image360/Image360';
+import Image360 from './components/Image360';
+import Coloring from './components/Coloring';
 
 
 import Spelling from './components/Spelling';
@@ -45,18 +46,8 @@ ReactDOM.render(
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
             <Route exact path="/spelling" component={Spelling} />
-            <Route exact path="/Listen"
-                render={(props) => <ButtonPage {...props}
-                    linkOne="/animalSounds"
-                    linkTwo="/natureSounds"
-                    linkThree="/relaxSounds"
-                    buttonOne="Animals"
-                    buttonTwo="Nature"
-                    buttonThree="Relax"
-                />}
-            />
             <Route exact path="/image360" component={Image360} />
-            
+            <Route exact path="/coloring" component={Coloring} />
             
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
@@ -91,7 +82,7 @@ ReactDOM.render(
             <Route exact path="/Learn"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/TBD"
-                    linkTwo="/Color"
+                    linkTwo="/coloring"
                     linkThree="/sketch"
                     buttonOne="TBD"
                     buttonTwo={<div> <i class="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }

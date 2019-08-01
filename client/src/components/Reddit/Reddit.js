@@ -36,6 +36,9 @@ const subs = [
     }
 ]
 
+
+
+
 class Reddit extends Component {
 
     constructor(props) {
@@ -57,6 +60,7 @@ class Reddit extends Component {
         before: null,
         page: 1
     };
+   
 
     componentDidMount() {
         this.changeSubreddit(this.state.chosenSubreddit)
@@ -72,8 +76,11 @@ class Reddit extends Component {
                     before: data.data.before,
                     page: this.state.page + 1
                 }))
+             
             })
-            .catch(console.log)
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
 
@@ -88,7 +95,9 @@ class Reddit extends Component {
                     page: this.state.page - 1
                 }))
             })
-            .catch(console.log)
+            .catch((err) => {
+                console.log(err)
+            })
     }
 
 
@@ -106,12 +115,6 @@ class Reddit extends Component {
                     after: data.data.after,
                     before: data.data.before
                 });
-                // for(var i = 0; i < this.state.files.length; i++) {
-                //     if(this.state.files[i].data.preview.enabled) {
-                //         console.log(this.state.files[i])
-                //     }
-                // }
-                console.log(this.state.files)
                 window.scrollTo(0, 0)
             })
             .catch((err) => {
@@ -119,11 +122,19 @@ class Reddit extends Component {
             })
     }
 
-    
+
 
     render() {
-        let nextButton = <button className="btn btn-primary nextButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-right"></i></button>
-        let previousButton = <button className="btn btn-primary previousButton" type="submit" onClick={this.nextPage}><i class="fas fa-arrow-left"></i></button>
+        let nextButton = <button className="btn btn-primary nextButton" type="submit" onClick={this.nextPage}><i className="fas fa-arrow-right"></i></button>
+
+        let previousButton;
+        if(this.state.page > 1){
+            previousButton = <button className="btn btn-primary previousButton" type="submit" onClick={this.previousPage}><i className="fas fa-arrow-left"></i></button>
+        }
+        else if(this.state.page <= 1){
+            previousButton = ""
+        }
+        
         return (
             <div>
                 <div className='row'>
@@ -148,7 +159,7 @@ class Reddit extends Component {
                         />
                     ))}
                 </div>
-                <footer class="subFooter">
+                <footer className="subFooter">
                 {previousButton}
                 {nextButton}
                 </footer>

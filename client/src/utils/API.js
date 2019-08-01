@@ -7,6 +7,15 @@ export default {
   // sign up a user to our service
   signUpUser: (username, email, password) => {
     return axios.post('api/signup', {username: username, email: email, password: password});
+  },
+
+  //save a new drawing to DB
+  saveDrawing: (randName, drawing) => {
+    return axios.post('api/savedrawing', {randName: randName, drawing: drawing});
+  },
+
+  loadDrawing: () => {
+    return axios.get('api/loaddrawing');
   }
 
 };

@@ -1,23 +1,48 @@
 import React, { Component } from "react";
 
-import animals from "./relaxSounds.json";
+import relaxes from "./relaxSounds.json";
 import "./style.css";
+import Player from "../Player";
+
+
+// class Player extends Component {
+
+//     audio = new Audio(this.props.relax.sound)
+
+//     playSound = () => {
+//         this.audio.play();
+//     }
+
+//     pauseSound = () => {
+//         this.audio.pause();
+//     }
+
+//     render() {
+//         const { relax } = this.props;
+//         return (
+//             <div key={relax.id} className="col-md-3">
+//                 <div className="cardRelax">
+//                     <div onClick={() => playing ? (this.playSound(), playing=false) : (this.pauseSound(), playing=true)}>
+//                         <img className="relaxImg" alt="" src={relax.image} />
+//                     </div>
+//                 </div>
+//             </div>
+
+//         )
+//     }
+// }
 
 class RelaxSounds extends Component {
     render() {
         return (
             <div className="container">
-            <div className="row">
-                {animals.map((animal) =>
-                    <div className="col-md-3">
-                        <div className="cardRelax">
-                            <a href="# " onClick={() => (new Audio(animal.sound)).play()}>
-                                <img className= "relaxImg" alt="" src={animal.image} />
-                            </a>
-                        </div>
-                    </div>
-                )}
-            </div>
+                <div className="row">
+                    {relaxes.map((relax) => {
+                        return (
+                            <Player relax={relax} />
+                        )}
+                    )}
+                </div>
             </div>
         )
     }

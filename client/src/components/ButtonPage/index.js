@@ -1,1 +1,1 @@
-export { default } from "./Sound";
+export { default } from "./ButtonPage";

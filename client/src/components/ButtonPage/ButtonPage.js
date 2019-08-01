@@ -1,7 +1,6 @@
 import React from "react";
 import {Link} from "react-router-dom";
 
-// import animals from "./relaxSounds.json";
 import "./style.css";
 
 function ButtonPage(props) {

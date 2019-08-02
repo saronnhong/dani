@@ -60,7 +60,7 @@ class Sketch extends Component {
             <div className=" text-center">
                 <h2 className="pangolin-text" onClick={() => this.saveDrawing()}>Save Drawing</h2>
                 <h1 className="pangolin-text-title"> Let's Draw!</h1>
-                <h2 className="pangolin-text" onClick={() => this.loadDrawing()}>Load a Drawing</h2>
+                <h2 className="pangolin-text load-text" onClick={() => this.loadDrawing()}>Load a Drawing</h2>
                 <button className="undo-button pangolin-undo"
                     onClick={() => {
                         this.saveableCanvas.undo();
@@ -73,7 +73,7 @@ class Sketch extends Component {
                         // ref1={canvasDraw => (this.loadableCanvas = canvasDraw)}
                         saveData={""}
                         brushColor={this.state.color}
-                        canvasHeight={this.state.height}
+                        canvasHeight={window.outerHeight || this.state.height}
                         canvasWidth={(window.outerWidth - 135) || this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}

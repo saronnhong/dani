@@ -51,7 +51,7 @@ ReactDOM.render(
             <Route exact path="/Images-360" component={Image360} />
             <Route exact path="/Coloring" component={Coloring} />
             
-            <Route exact path="/"
+            <Route exact path="/Home"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/Look"
                     linkTwo="/Listen"

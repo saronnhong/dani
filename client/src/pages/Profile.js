@@ -47,7 +47,7 @@ class Profile extends Component {
         <br></br><hr></hr>
         <ul>
           {this.state.metrics.map(metric => 
-            <li>Visits to {metric}</li>
+            <li key={metric}>Visits to {metric}</li>
           )}
         </ul>
       </div>

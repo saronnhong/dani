@@ -1,11 +1,13 @@
 [
     {
         "name": "City",
-        "path": "city.jpg"
+        "path": "city.jpg",
+        "url": "http://reznik.lt/wp-content/uploads/2017/09/preview3000.jpg"
     },
     {
-        "name": "Barcelona",
-        "path": "barcelona.jpg"
+        "name": "Canyon",
+        "path": "canyon.jpg",
+        "url": "https://photo-sphere-viewer.js.org/assets/Bryce-Canyon-National-Park-Mark-Doliner.jpg"
     },
     {
         "name": "Park",

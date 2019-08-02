@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { Link } from 'react-router-dom'
 import './style.css';
 import panoramas from "./panoramas.json";
 
@@ -14,14 +14,17 @@ class Panoramas extends React.Component {
     render() {
         return (
             <div className="container">
+                <div className="row">
                 {panoramas.map(image =>
 
-                    <div className="col-md-5">
-                        <a onClick={this.clickedFunction} href={"/Panoramas/" + image.name}>
-                            <img src={process.env.PUBLIC_URL + '/img/panoramaImages/' + image.path} alt="city" />
-                        </a>
+                    <div className="col-md-4">
+                        <Link  to={"/Panoramas/" + image.name.toLowerCase() }>
+                            <img className="img-fluid" src={process.env.PUBLIC_URL + '/img/panoramaImages/' + image.path} alt="city" />
+                        </Link>
+
                     </div>
                 )}
+                </div>
             </div>
 
         )

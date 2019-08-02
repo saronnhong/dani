@@ -44,9 +44,11 @@ class Sketch extends Component {
     loadDrawing = () => {
         API.loadDrawing()
             .then(data => {
+                if (data.data[data.data.length - 1].drawing) {
                 this.saveableCanvas.loadSaveData(
                     data.data[data.data.length-1].drawing
                 )
+                }
             })
         // for (let i = 0; i < localStorage.length; i++){
         //     console.log(localStorage)

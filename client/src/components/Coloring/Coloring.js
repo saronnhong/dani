@@ -47,9 +47,11 @@ class Coloring extends Component {
     loadColoring = () => {
         API.loadColoring()
             .then(data => {
-                this.saveableCanvas.loadSaveData(
-                    data.data[data.data.length - 1].coloring
-                )
+                if (data.data[data.data.length - 1].coloring) {
+                    this.saveableCanvas.loadSaveData(
+                        data.data[data.data.length - 1].coloring
+                    )
+                }
             })
     }
 

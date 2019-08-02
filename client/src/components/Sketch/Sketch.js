@@ -65,7 +65,7 @@ class Sketch extends Component {
                     onClick={() => {
                         this.saveableCanvas.undo();
                     }}
-                >Oops! -<i class="fa fa-eraser"></i>- Undo</button>
+                >Oops! -<i className="fa fa-eraser"></i>- Undo</button>
                 <div className="d-flex draw-area">
                     <CanvasDraw
                         hideGrid

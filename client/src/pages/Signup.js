@@ -21,10 +21,17 @@ class Signup extends Component {
       .then(res => {
         // once the user has signed up
         // send them to the login page
-        this.props.history.replace('/login');
+        this.startMetrics();
       })
       .catch(err => alert(err));
   };
+
+  startMetrics = () => {
+    API.startMetrics()
+    .then(res => {
+      this.props.history.replace('/login');
+    }).catch(err => console.log(err))
+  }
 
   handleChange = event => {
     const {name, value} = event.target;

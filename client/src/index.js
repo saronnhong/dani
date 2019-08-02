@@ -83,10 +83,10 @@ ReactDOM.render(
             />
             <Route exact path="/Learn"
                 render={(props) => <ButtonPage {...props}
-                    linkOne="/TBD"
+                    linkOne="/spelling"
                     linkTwo="/coloring"
                     linkThree="/sketch"
-                    buttonOne="TBD"
+                    buttonOne={<div> <i class="fas fa-certificate fa-5x"></i> <p className="font-buttons-text">Spelling</p> </div> }
                     buttonTwo={<div> <i class="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
                     buttonThree={<div> <i class="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
                 />}

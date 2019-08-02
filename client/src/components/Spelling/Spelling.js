@@ -140,8 +140,22 @@ class Spelling extends Component {
         return (
             <div className="container spellContainer">
                 <div className="row">
-                    <img className="spellImg" width="200px" alt="imagePic" src={this.state.choosenImage} />
-                    <h1>{this.state.answer}</h1>
+                    <div className="imgContainer" onClick={() => {
+                        if (wordGuess === this.state.choosenWord) {
+                            wordGuessedArr.length = 0;
+                            this.updateWord();
+                            alert("You are correct");
+                            this.setState({ answer: "" });
+                        } else {
+                            alert("try again");
+                            wordGuessedArr.length = 0;
+                            this.setState({ answer: "" });
+                        }
+                    }}>
+                        <img className="spellImg" width="200px" alt="imagePic" src={this.state.choosenImage} />
+                    </div>
+
+                    <h1 className="guessKey">{this.state.answer}</h1>
                 </div>
 
                 <div className="row">
@@ -157,21 +171,22 @@ class Spelling extends Component {
                     )}
                 </div>
 
-                <button type="button" class="btn btn-success spellButton" onClick={() => {
+                {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
                     if (wordGuess === this.state.choosenWord) {
                         wordGuessedArr.length = 0;
                         this.updateWord();
                         alert("You are correct");
+                        this.setState({ answer: "" });
                     } else {
                         alert("try again");
                     }
-                }}>Submit</button>
+                }}>Submit</button> */}
 
-                <button type="button" class="btn btn-success spellButton" onClick={() => {
+                {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
                     wordGuessedArr.length = 0;
                     this.setState({ answer: "" });
                 }
-                }>Clear</button>
+                }>Clear</button> */}
             </div>
         )
     }

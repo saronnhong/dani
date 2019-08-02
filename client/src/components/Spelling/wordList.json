@@ -2,25 +2,91 @@
   {
     "id": 1,
     "word": "bee",
-    "image": "http://sirmikeofmitchell.com/files/gimgs/th-39_honeybeepromo.jpg",
+    "image": "/img/bee1.png",
     "answerKeys": "beezyx"
   },
   {
     "id": 2,
     "word": "dog",
-    "image": "https://images-na.ssl-images-amazon.com/images/I/71%2BdU6s7%2BHL._SY679_.jpg",
-    "answerKeys": "dogbace"
+    "image": "/img/dog_shake.png",
+    "answerKeys": "wdpioyg"
   },
   {
     "id": 3,
     "word": "cat",
-    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNEYjT36irpOlnF9NeSlcDroEDna5yuVgQQ35_pA7X3iHUWMfY",
-    "answerKeys": "hgcatee"
+    "image": "/img/cat_bow.png",
+    "answerKeys": "octubax"
   },
   {
     "id": 4,
     "word": "pig",
-    "image": "https://i.pinimg.com/originals/5f/6b/64/5f6b64420bbb41837b8d540ac325fb37.jpg",
+    "image": "/img/pig.png",
     "answerKeys": "edpigud"
+  },
+  {
+    "id": 5,
+    "word": "rabbit",
+    "image": "/img/bunny.png",
+    "answerKeys": "obitwar"
+  },
+  {
+    "id": 6,
+    "word": "bear",
+    "image": "/img/bear3.png",
+    "answerKeys": "rqiuaeb"
+  },
+  {
+    "id": 7,
+    "word": "cow",
+    "image": "/img/cow1.png",
+    "answerKeys": "copwmta"
+  },
+  {
+    "id": 8,
+    "word": "panda",
+    "image": "/img/panda.png",
+    "answerKeys": "unapdeb"
+  },
+  {
+    "id": 9,
+    "word": "lion",
+    "image": "/img/lion.png",
+    "answerKeys": "lihyton"
+  },
+  {
+    "id": 10,
+    "word": "frog",
+    "image": "/img/frog.png",
+    "answerKeys": "goxjrfp"
+  },
+  {
+    "id": 11,
+    "word": "tiger",
+    "image": "/img/tiger.png",
+    "answerKeys": "tisgber"
+  },
+  {
+    "id": 12,
+    "word": "squirrel",
+    "image": "/img/squirrel.png",
+    "answerKeys": "suqeril"
+  },
+  {
+    "id": 13,
+    "word": "whale",
+    "image": "/img/whale.png",
+    "answerKeys": "iwahelo"
+  },
+  {
+    "id": 14,
+    "word": "owl",
+    "image": "/img/owl2.png",
+    "answerKeys": "owilnab"
+  },
+  {
+    "id": 15,
+    "word": "elephant",
+    "image": "/img/elephant1.png",
+    "answerKeys": "etlpnha"
   }
 ] 

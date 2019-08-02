@@ -20,3 +20,23 @@
     width: 100px;
 }
 
+
+@media only screen and (max-width: 1000px) {
+    .navbar-nav{
+    min-width: 200px;
+    display: inline;
+    text-align: center;
+   }
+   li.nav-item{
+       display: inline-block;
+       padding: 8px;
+       font-size: 25px;
+   }
+   .nav-link{
+       display: inline;
+   }
+  }
+  .navbar-brand{
+      width: 100%;
+
+  }

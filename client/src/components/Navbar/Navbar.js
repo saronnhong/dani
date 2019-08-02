@@ -48,15 +48,28 @@ class Navbar extends Component {
             <nav className="navbar navbar-expand-lg navbar-dark bg-success" >
                 <div className="container">
                     <Link className="navbar-brand" to="/">DANI <img alt="puzzle logo" src="https://www.stickpng.com/assets/images/588887b0bc2fc2ef3a1860a0.png" className="puzzlePieces"></img></Link>
-                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
-                    </button>
-                    <div className="collapse navbar-collapse" id="navbarNav">
+                    </button> */}
+                    {/* <div className="collapse navbar-collapse" id="navbarNav">
                         <ul className="navbar-nav mr-auto">
                         </ul>
-                        {this.showNavigation()}
-                    </div>
+                    </div> */}
+                    {this.showNavigation()}
                 </div>
+                {/* <div className="mediaNavItems">
+                    <ul className="navbar-nav">
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/signup">Signup</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/login">Login</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link className="nav-link" to="/about">About</Link>
+                        </li>
+                    </ul>
+                </div> */}
             </nav>
         )
     }

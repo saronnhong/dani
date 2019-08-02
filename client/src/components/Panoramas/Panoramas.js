@@ -17,7 +17,7 @@ class Panoramas extends React.Component {
                 {panoramas.map(image =>
 
                     <div className="col-md-5">
-                        <a onClick={this.clickedFunction} href={"/panoramas/" + image.name}>
+                        <a onClick={this.clickedFunction} href={"/Panoramas/" + image.name}>
                             <img src={process.env.PUBLIC_URL + '/img/panoramaImages/' + image.path} alt="city" />
                         </a>
                     </div>

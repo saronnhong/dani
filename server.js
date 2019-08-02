@@ -89,6 +89,7 @@ app.post('/api/savedrawing', (req, res) => {
 
 });
 
+//currently finding all drawings, methods in component grab the most recent one... isn't user specific yet even though they have an id ref'd by user. To fix need to add to find search object so it finds based on user's saved collection reference ID's. This means adding to didmount/willmount in each page? Or does the isauth pass that along?
 app.get('/api/loaddrawing', (req, res) => {
   db.Drawings.find({})
     .then(data => res.json(data))
@@ -112,9 +113,45 @@ app.get('/api/loadcoloring', (req, res) => {
 });
 
 //route for when metric add happens... puzzling it out still but atm im thinking it may start as a get? and in the .then it can do a post/put with an update to increase the value by one of the field corresponding to the metric being updated.
-app.post('/api/metrics', (req, res) => {
-  db.Metric.update({})
+app.post('/api/startmetrics', (req, res) => {
+  db.Metric.create({})
+    .then(newMetric => {
+      return db.User.findOneAndUpdate({}, { $set: { metric: newMetric._id } }, { new: true })
+    })
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
 });
+
+app.put('/api/addMetrics/:userID/:key', (req, res) => {
+  db.Metric.find({ _id: req.params.userID })
+    .then(data => {
+      let query = {};
+      let queryKey = req.params.key;
+      let queryValue = 0;
+      let dataObject = data[0].toObject();
+      var dataLength = Object.keys(dataObject).length - 2;
+      for (let i = 0; i < dataLength; i++){
+        // console.log("debugging " + i + " " + Object.keys(dataObject)[i] + " is a " + typeof Object.keys(dataObject)[i])
+        if (Object.keys(dataObject)[i] == queryKey) {
+          queryValue = parseInt(Object.values(dataObject)[i]) + 1
+        } 
+      }
+      query[queryKey] = queryValue
+      // console.log(query)
+      db.Metric.findOneAndUpdate({ _id: req.params.userID }, { $set: query }, { new: true })
+        .then(data => {
+          res.status(200).json(data)
+        }).catch(err => console.log(err))
+    }).catch(err => console.log(err))
+});
+
+app.get('/api/getMetrics/:id', (req, res) => {
+  db.Metric.find({ _id: req.params.id })
+    .then(data => res.json(data))
+    .catch(err => res.status(400).json(err));
+});
+
+
 // Send every request to the React app
 // Define any API routes before this runs
 app.get("*", function (req, res) {

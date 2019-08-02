@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import * as Sphere from 'photo-sphere-viewer'
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css'
 
-class SphereComponent extends Component {
+export default class SphereComponent extends Component {
   constructor(props) {
     super(props)
     this.divStyle = {
@@ -43,5 +43,3 @@ class SphereComponent extends Component {
     )
   }
 }
-
-export default SphereComponent;

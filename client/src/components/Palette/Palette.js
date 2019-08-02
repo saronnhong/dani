@@ -49,7 +49,7 @@ function Palette(props) {
             {colors.map(color =>
                 <button onClick={() => props.colorClick(color.color)}
                     key={color.id} style={{ backgroundColor: color.color }}
-                    className="palette-color" onHover={() => props.displayColorName(color.id)}>
+                    className="palette-color">
                     <div className="palette-color-selected" >{color.id}</div>
                 </button>
             )}

@@ -11,7 +11,7 @@ class NatureSounds extends Component {
                 <div className="row">
                     {natures.map((nature) => {
                         return (
-                            <Player player={nature} />
+                            <Player key={nature.name} player={nature} />
                         )
                     }
                     )}

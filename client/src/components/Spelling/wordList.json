@@ -2,91 +2,103 @@
   {
     "id": 1,
     "word": "bee",
-    "image": "/img/bee1.png",
+    "image": "/img/animals/bee1.png",
     "answerKeys": "beezyx"
   },
   {
     "id": 2,
     "word": "dog",
-    "image": "/img/dog_shake.png",
+    "image": "/img/animals/dog_shake.png",
     "answerKeys": "wdpioyg"
   },
   {
     "id": 3,
     "word": "cat",
-    "image": "/img/cat_bow.png",
+    "image": "/img/animals/cat_bow.png",
     "answerKeys": "octubax"
   },
   {
     "id": 4,
     "word": "pig",
-    "image": "/img/pig.png",
+    "image": "/img/animals/pig.png",
     "answerKeys": "edpigud"
   },
   {
     "id": 5,
     "word": "rabbit",
-    "image": "/img/bunny.png",
+    "image": "/img/animals/bunny.png",
     "answerKeys": "obitwar"
   },
   {
     "id": 6,
     "word": "bear",
-    "image": "/img/bear3.png",
+    "image": "/img/animals/bear3.png",
     "answerKeys": "rqiuaeb"
   },
   {
     "id": 7,
     "word": "cow",
-    "image": "/img/cow1.png",
+    "image": "/img/animals/cow1.png",
     "answerKeys": "copwmta"
   },
   {
     "id": 8,
     "word": "panda",
-    "image": "/img/panda.png",
+    "image": "/img/animals/panda.png",
     "answerKeys": "unapdeb"
   },
   {
     "id": 9,
     "word": "lion",
-    "image": "/img/lion.png",
+    "image": "/img/animals/lion.png",
     "answerKeys": "lihyton"
   },
   {
     "id": 10,
     "word": "frog",
-    "image": "/img/frog.png",
+    "image": "/img/animals/frog.png",
     "answerKeys": "goxjrfp"
   },
   {
     "id": 11,
     "word": "tiger",
-    "image": "/img/tiger.png",
+    "image": "/img/animals/tiger.png",
     "answerKeys": "tisgber"
   },
   {
     "id": 12,
     "word": "squirrel",
-    "image": "/img/squirrel.png",
+    "image": "/img/animals/squirrel.png",
     "answerKeys": "suqeril"
   },
   {
     "id": 13,
     "word": "whale",
-    "image": "/img/whale.png",
+    "image": "/img/animals/whale.png",
     "answerKeys": "iwahelo"
   },
   {
     "id": 14,
     "word": "owl",
-    "image": "/img/owl2.png",
+    "image": "/img/animals/owl2.png",
     "answerKeys": "owilnab"
   },
   {
     "id": 15,
     "word": "elephant",
-    "image": "/img/elephant1.png",
+    "image": "/img/animals/elephant1.png",
     "answerKeys": "etlpnha"
+  },
+  {
+    "id": 16,
+    "word": "llama",
+    "image": "/img/animals/llama.png",
+    "answerKeys": "lamauix"
+  },
+  {
+    "id": 17,
+    "word": "crab",
+    "image": "/img/animals/crab.png",
+    "answerKeys": "cbrainj"
   }
 ] 

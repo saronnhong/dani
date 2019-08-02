@@ -2,132 +2,132 @@
   {
     "id": 1,
     "letter": "a",
-    "image": "/img/A.png"
+    "image": "/img/animals/A.png"
   },
   {
     "id": 2,
     "letter": "b",
-    "image": "/img/B.png"
+    "image": "/img/animals/B.png"
   },
   {
     "id": 3,
     "letter": "c",
-    "image": "/img/C.png"
+    "image": "/img/animals/C.png"
   },
   {
     "id": 4,
     "letter": "d",
-    "image": "/img/D.png"
+    "image": "/img/animals/D.png"
   },
   {
     "id": 5,
     "letter": "e",
-    "image": "/img/E.png"
+    "image": "/img/animals/E.png"
   },
   {
     "id": 6,
     "letter": "f",
-    "image": "/img/F.png"
+    "image": "/img/animals/F.png"
   },
   {
     "id": 7,
     "letter": "g",
-    "image": "/img/G.png"
+    "image": "/img/animals/G.png"
   },
   {
     "id": 8,
     "letter": "h",
-    "image": "/img/H.png"
+    "image": "/img/animals/H.png"
   },
   {
     "id": 9,
     "letter": "i",
-    "image": "/img/I.png"
+    "image": "/img/animals/I.png"
   },
   {
     "id": 10,
     "letter": "j",
-    "image": "/img/J.png"
+    "image": "/img/animals/J.png"
   },
   {
     "id": 11,
     "letter": "k",
-    "image": "/img/K.png"
+    "image": "/img/animals/K.png"
   },
   {
     "id": 12,
     "letter": "l",
-    "image": "/img/L.png"
+    "image": "/img/animals/L.png"
   },
   {
     "id": 13,
     "letter": "m",
-    "image": "/img/M.png"
+    "image": "/img/animals/M.png"
   },
   {
     "id": 14,
     "letter": "n",
-    "image": "/img/N.png"
+    "image": "/img/animals/N.png"
   },
   {
     "id": 15,
     "letter": "o",
-    "image": "/img/O.png"
+    "image": "/img/animals/O.png"
   },
   {
     "id": 16,
     "letter": "p",
-    "image": "/img/P.png"
+    "image": "/img/animals/P.png"
   },
   {
     "id": 17,
     "letter": "q",
-    "image": "/img/Q.png"
+    "image": "/img/animals/Q.png"
   },
   {
     "id": 18,
     "letter": "r",
-    "image": "/img/R.png"
+    "image": "/img/animals/R.png"
   },
   {
     "id": 19,
     "letter": "s",
-    "image": "/img/S.png"
+    "image": "/img/animals/S.png"
   },
   {
     "id": 20,
     "letter": "t",
-    "image": "/img/T.png"
+    "image": "/img/animals/T.png"
   },
   {
     "id": 21,
     "letter": "u",
-    "image": "/img/U.png"
+    "image": "/img/animals/U.png"
   },
   {
     "id": 22,
     "letter": "v",
-    "image": "/img/V.png"
+    "image": "/img/animals/V.png"
   },
   {
     "id": 23,
     "letter": "w",
-    "image": "/img/W.png"
+    "image": "/img/animals/W.png"
   },
   {
     "id": 24,
     "letter": "x",
-    "image": "/img/X.png"
+    "image": "/img/animals/X.png"
   },
   {
     "id": 25,
     "letter": "y",
-    "image": "/img/Y.png"
+    "image": "/img/animals/Y.png"
   },
   {
     "id": 26,
     "letter": "z",
-    "image": "/img/Z.png"
+    "image": "/img/animals/Z.png"
   }
 
 ] 

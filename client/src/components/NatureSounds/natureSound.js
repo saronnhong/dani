@@ -2,9 +2,27 @@ import React, { Component } from "react";
 
 import natures from "./natureSounds.json";
 import "./style.css";
+
+import API from './../../utils/API';
+import withAuth from './../withAuth';
 import Player from "../Player";
 
 class NatureSounds extends Component {
+    state = {
+        metricID: "",
+        metrics: []
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
+    }
+
     render() {
         return (
             <div className="container">
@@ -21,6 +39,6 @@ class NatureSounds extends Component {
     }
 }
 
-export default NatureSounds;
+export default withAuth(NatureSounds);
 
 

@@ -3,6 +3,7 @@ import CanvasDraw from "react-canvas-draw";
 import Palette from "../Palette"
 import './Sketch.css';
 import API from "../../utils/API"
+import withAuth from './../withAuth';
 
 class Sketch extends Component {
     state = {
@@ -11,6 +12,18 @@ class Sketch extends Component {
         height: 800,
         brushRadius: 5,
         lazyRadius: 1,
+        metricID: "",
+        metrics: []
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
     }
 
     chooseColor = color => {
@@ -92,4 +105,4 @@ class Sketch extends Component {
 }
 
 
-export default Sketch;
+export default withAuth(Sketch);

@@ -3,6 +3,7 @@ import CanvasDraw from "react-canvas-draw";
 import ColoringPalette from "../ColoringPalette"
 import './Coloring.css';
 import API from "../../utils/API"
+import withAuth from './../withAuth';
 import coloringBook from "./coloringbook.json"
 
 class Coloring extends Component {
@@ -13,7 +14,19 @@ class Coloring extends Component {
         brushRadius: 5,
         lazyRadius: 1,
         coloringImage: 0,
-        clickFlag: 0
+        clickFlag: 0,
+        metricID: "",
+        metrics: []
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
     }
 
     chooseColor = color => {
@@ -127,4 +140,4 @@ class Coloring extends Component {
 }
 
 
-export default Coloring;
+export default withAuth(Coloring);

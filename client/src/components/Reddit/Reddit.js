@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Subreddits from "../Subreddits";
 import Card from '../Card';
+import API from './../../utils/API';
+import withAuth from './../withAuth';
 // import { createDecipher } from 'crypto';
 
 const subs = [
@@ -58,12 +60,22 @@ class Reddit extends Component {
         files: [],
         after: null,
         before: null,
-        page: 1
+        page: 1,
+        metricID: "",
+        metrics: []
     };
    
 
     componentDidMount() {
         this.changeSubreddit(this.state.chosenSubreddit)
+
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
     }
 
     nextPage = () => {
@@ -175,4 +187,4 @@ class Reddit extends Component {
 
 
 
-export default Reddit;
+export default withAuth(Reddit);

@@ -8,7 +8,7 @@ class Profile extends Component {
     username: "",
     email: "",
     metricID: "",
-    metrics: ""
+    metrics: []
   };
 
   componentDidMount() {
@@ -25,10 +25,15 @@ class Profile extends Component {
 
   readMetrics() {
     API.getMetrics(this.state.metricID).then(res => {
-      // let metricsData = []
-
+      let metrics = []
+      for (let [key, value] of Object.entries(res.data[0])) {
+        if (metrics.length == Object.keys(res.data[0]).length - 2) {
+          break
+        }
+        metrics.push(`${key}: ${value}`);
+      }
       this.setState({
-        metrics: Object.values(res.data[0])[0]
+        metrics: metrics
       })
     })
   }
@@ -41,7 +46,9 @@ class Profile extends Component {
         <button onClick={() => this.readMetrics()}>Show my Stats!</button>
         <br></br><hr></hr>
         <ul>
-        <li>Visits to profile: {this.state.metrics}</li>
+          {this.state.metrics.map(metric => 
+            <li>Visits to {metric}</li>
+          )}
         </ul>
       </div>
     )

@@ -39,7 +39,7 @@ class RelaxSounds extends Component {
                 <div className="row">
                     {relaxes.map((relax) => {
                         return (
-                            <Player relax={relax} />
+                            <Player player={relax} />
                         )}
                     )}
                 </div>

@@ -46,6 +46,9 @@
     background-size: cover;
     width: 1200px;
     height: 650px;
+    -webkit-transition: -webkit-transform .15s linear;
+    -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.35);
+    -moz-box-shadow: 0 10px 10px rgba(0,0,0,.35);
   }
 
   #Sheep {

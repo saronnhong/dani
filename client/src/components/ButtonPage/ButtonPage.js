@@ -1,35 +1,51 @@
-import React from "react";
-import {Link} from "react-router-dom";
+import React, { Component } from 'react';
+import withAuth from './../withAuth';
+import API from './../../utils/API';
+import { Link } from "react-router-dom";
 
 import "./style.css";
 
-function ButtonPage(props) {
+class ButtonPage extends Component {
+    state = {
+        metricID: "",
+        metrics: []
+    };
 
-    console.log(window.location);
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
+    }
+
+    render() {
         return (
-            
+
             <div className="container containerSounds">
-                
+
                 <div className="row">
-                    
+
                     <span>
-                        <Link to={props.linkOne}>
-                        <button type="button" className="btn btn-danger menuButton animalButton">{props.buttonOne}</button>
+                        <Link to={this.props.linkOne}>
+                            <button type="button" className="btn btn-danger menuButton animalButton">{this.props.buttonOne}</button>
                         </Link>
-                        <Link to={props.linkTwo}>
-                        <button type="button" className="btn btn-secondary menuButton natureButton">{props.buttonTwo}</button>
+                        <Link to={this.props.linkTwo}>
+                            <button type="button" className="btn btn-secondary menuButton natureButton">{this.props.buttonTwo}</button>
                         </Link>
-                        <Link to={props.linkThree}>
-                        <button type="button" className="btn btn-primary menuButton relaxButton">{props.buttonThree}</button>
+                        <Link to={this.props.linkThree}>
+                            <button type="button" className="btn btn-primary menuButton relaxButton">{this.props.buttonThree}</button>
                         </Link>
-                        
+
                     </span>
                 </div>
             </div>
         )
-    
+    }
 }
 
-export default ButtonPage;
+export default withAuth(ButtonPage);
 
 

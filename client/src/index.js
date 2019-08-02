@@ -40,16 +40,16 @@ ReactDOM.render(
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/about" component={About} />
-            <Route exact path="/profile" component={Profile} />
-            <Route exact path="/sketch" component={Sketch} />
-            <Route exact path="/reddit" component={Reddit} />
-            <Route exact path="/animalSounds" component={AnimalSound} />
-            <Route exact path="/natureSounds" component={NatureSound} />
-            <Route exact path="/relaxSounds" component={RelaxSound} />
-            <Route exact path="/videos" component={Video} />
-            <Route exact path="/spelling" component={Spelling} />
-            <Route exact path="/image360" component={Image360} />
-            <Route exact path="/coloring" component={Coloring} />
+            <Route exact path="/Profile" component={Profile} />
+            <Route exact path="/Drawing" component={Sketch} />
+            <Route exact path="/Images" component={Reddit} />
+            <Route exact path="/Animal-Sounds" component={AnimalSound} />
+            <Route exact path="/Nature-Sounds" component={NatureSound} />
+            <Route exact path="/Relaxing-Sounds" component={RelaxSound} />
+            <Route exact path="/Videos" component={Video} />
+            <Route exact path="/Spelling" component={Spelling} />
+            <Route exact path="/Images-360" component={Image360} />
+            <Route exact path="/Coloring" component={Coloring} />
             
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
@@ -63,9 +63,9 @@ ReactDOM.render(
             />  
              <Route exact path="/Look"
                 render={(props) => <ButtonPage {...props}
-                    linkOne="/reddit"
-                    linkTwo="/videos"
-                    linkThree="/image360"
+                    linkOne="/Images"
+                    linkTwo="/Videos"
+                    linkThree="/Images-360"
                     buttonOne={<div> <i className="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
                     buttonTwo={<div> <i className="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
                     buttonThree={<div> <i className="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }
@@ -73,9 +73,9 @@ ReactDOM.render(
             />
             <Route exact path="/Listen"
                 render={(props) => <ButtonPage {...props}
-                    linkOne="/animalSounds"
-                    linkTwo="/natureSounds"
-                    linkThree="/relaxSounds"
+                    linkOne="/Animal-Sounds"
+                    linkTwo="/Nature-Sounds"
+                    linkThree="/Relaxing-Sounds"
                     buttonOne={<div> <i className="fas fa-paw fa-5x"></i> <p className="font-buttons-text">Animals</p> </div> }
                     buttonTwo={<div> <i className="fas fa-leaf fa-5x"></i> <p className="font-buttons-text">Nature</p> </div> }
                     buttonThree={<div> <i className="fas fa-couch fa-5x"></i> <p className="font-buttons-text">Relax</p> </div> }
@@ -83,15 +83,14 @@ ReactDOM.render(
             />
             <Route exact path="/Learn"
                 render={(props) => <ButtonPage {...props}
-                    linkOne="/TBD"
-                    linkTwo="/coloring"
-                    linkThree="/sketch"
-                    buttonOne="TBD"
+                    linkOne="/Spelling"
+                    linkTwo="/Coloring"
+                    linkThree="/Drawing"
+                    buttonOne={<div> <i class="fas fa-spell-check fa-5x"></i> <p className="font-buttons-text">Spelling</p> </div> }
                     buttonTwo={<div> <i className="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
                     buttonThree={<div> <i className="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
                 />}
             />
-           
 
         </div>
     </Router>

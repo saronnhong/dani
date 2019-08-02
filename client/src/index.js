@@ -56,9 +56,9 @@ ReactDOM.render(
                     linkOne="/Look"
                     linkTwo="/Listen"
                     linkThree="/Learn"
-                    buttonOne={<div> <i class="fas fa-eye fa-5x"></i> <p className="font-buttons-text">Look</p> </div> }
-                    buttonTwo={<div> <i class="fas fa-headphones-alt fa-5x"></i> <p className="font-buttons-text">Listen</p> </div> }
-                    buttonThree={<div> <i class="fab fa-leanpub fa-5x"></i> <p className="font-buttons-text">Learn</p> </div> }
+                    buttonOne={<div> <i className="fas fa-eye fa-5x"></i> <p className="font-buttons-text">Look</p> </div> }
+                    buttonTwo={<div> <i className="fas fa-headphones-alt fa-5x"></i> <p className="font-buttons-text">Listen</p> </div> }
+                    buttonThree={<div> <i className="fab fa-leanpub fa-5x"></i> <p className="font-buttons-text">Learn</p> </div> }
                 />}
             />  
              <Route exact path="/Look"
@@ -66,9 +66,9 @@ ReactDOM.render(
                     linkOne="/reddit"
                     linkTwo="/videos"
                     linkThree="/image360"
-                    buttonOne={<div> <i class="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
-                    buttonTwo={<div> <i class="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
-                    buttonThree={<div> <i class="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }
+                    buttonOne={<div> <i className="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
+                    buttonTwo={<div> <i className="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
+                    buttonThree={<div> <i className="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }
                 />}
             />
             <Route exact path="/Listen"
@@ -76,9 +76,9 @@ ReactDOM.render(
                     linkOne="/animalSounds"
                     linkTwo="/natureSounds"
                     linkThree="/relaxSounds"
-                    buttonOne={<div> <i class="fas fa-paw fa-5x"></i> <p className="font-buttons-text">Animals</p> </div> }
-                    buttonTwo={<div> <i class="fas fa-leaf fa-5x"></i> <p className="font-buttons-text">Nature</p> </div> }
-                    buttonThree={<div> <i class="fas fa-couch fa-5x"></i> <p className="font-buttons-text">Relax</p> </div> }
+                    buttonOne={<div> <i className="fas fa-paw fa-5x"></i> <p className="font-buttons-text">Animals</p> </div> }
+                    buttonTwo={<div> <i className="fas fa-leaf fa-5x"></i> <p className="font-buttons-text">Nature</p> </div> }
+                    buttonThree={<div> <i className="fas fa-couch fa-5x"></i> <p className="font-buttons-text">Relax</p> </div> }
                 />}
             />
             <Route exact path="/Learn"
@@ -87,8 +87,8 @@ ReactDOM.render(
                     linkTwo="/coloring"
                     linkThree="/sketch"
                     buttonOne="TBD"
-                    buttonTwo={<div> <i class="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
-                    buttonThree={<div> <i class="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
+                    buttonTwo={<div> <i className="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
+                    buttonThree={<div> <i className="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
                 />}
             />
            

@@ -16,14 +16,14 @@ import About from './pages/About';
 import Navbar from './components/Navbar';
 import Sketch from './components/Sketch';
 import Reddit from './components/Reddit';
-// import Sound from './components/Sounds';
 import AnimalSound from './components/AnimalSounds';
 import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
 import ButtonPage from './components/ButtonPage';
-import Image360 from './components/Image360';
 import Coloring from './components/Coloring';
+import Panoramas from './components/Panoramas';
+import DisplayPanorama from './components/DisplayPanorama';
 
 
 import Spelling from './components/Spelling';
@@ -49,8 +49,9 @@ ReactDOM.render(
             <Route exact path="/Relaxing-Sounds" component={RelaxSound} />
             <Route exact path="/Videos" component={Video} />
             <Route exact path="/Spelling" component={Spelling} />
-            <Route exact path="/Images-360" component={Image360} />
             <Route exact path="/Coloring" component={Coloring} />
+            <Route exact path="/Panoramas" component={Panoramas} />
+            <Route path="/Panoramas/:image" component={DisplayPanorama} />
             
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
@@ -66,7 +67,7 @@ ReactDOM.render(
                 render={(props) => <ButtonPage {...props}
                     linkOne="/Images"
                     linkTwo="/Videos"
-                    linkThree="/Images-360"
+                    linkThree="/Panoramas"
                     buttonOne={<div> <i className="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
                     buttonTwo={<div> <i className="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
                     buttonThree={<div> <i className="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }

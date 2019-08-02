@@ -12,13 +12,15 @@ class ButtonPage extends Component {
     };
 
     componentDidMount() {
-        API.getUser(this.props.user.id).then(res => {
-            this.setState({
-                metricID: res.data.metric
-            })
-            let pageOn = this.props.history.location.pathname.replace("/", "")
-            API.addToMetrics(res.data.metric, pageOn)
-        });
+        if (this.props.history.location.pathname.length > 1) {
+            API.getUser(this.props.user.id).then(res => {
+                this.setState({
+                    metricID: res.data.metric
+                })
+                let pageOn = this.props.history.location.pathname.replace("/", "")
+                API.addToMetrics(res.data.metric, pageOn)
+            });
+        }
     }
 
     render() {

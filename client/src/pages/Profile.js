@@ -27,7 +27,7 @@ class Profile extends Component {
     API.getMetrics(this.state.metricID).then(res => {
       let metrics = []
       for (let [key, value] of Object.entries(res.data[0])) {
-        if (metrics.length == Object.keys(res.data[0]).length - 2) {
+        if (metrics.length === Object.keys(res.data[0]).length - 2) {
           break
         }
         metrics.push(`${key}: ${value}`);

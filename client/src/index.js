@@ -83,21 +83,12 @@ ReactDOM.render(
             />
             <Route exact path="/Learn"
                 render={(props) => <ButtonPage {...props}
-<<<<<<< HEAD
-                    linkOne="/spelling"
-                    linkTwo="/coloring"
-                    linkThree="/sketch"
-                    buttonOne={<div> <i class="fas fa-certificate fa-5x"></i> <p className="font-buttons-text">Spelling</p> </div> }
-                    buttonTwo={<div> <i class="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
-                    buttonThree={<div> <i class="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
-=======
                     linkOne="/Spelling"
                     linkTwo="/Coloring"
                     linkThree="/Drawing"
                     buttonOne={<div> <i class="fas fa-spell-check fa-5x"></i> <p className="font-buttons-text">Spelling</p> </div> }
                     buttonTwo={<div> <i className="fas fa-paint-brush fa-5x"></i> <p className="font-buttons-text">Coloring</p> </div> }
                     buttonThree={<div> <i className="fas fa-palette fa-5x"></i> <p className="font-buttons-text">Drawing</p> </div> }
->>>>>>> 9e0fc3b50933f4657c9c8d66247e18fbf5189542
                 />}
             />
 

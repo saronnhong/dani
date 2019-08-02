@@ -3,9 +3,75 @@
 }
 
 .spellContainer {
-    margin: 30px 30px 30px 450px;
+    margin: 30px auto;
+    /* margin: 30px 30px 30px 450px; */
+    background-image: url("https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844227_1280.png");
+    background-size: 60%;
+    background-size: cover;
+    width: 1000px;
+    height: 600px;
+    background-position-y: -170px;
+    position: relative;
+    -webkit-transition: -webkit-transform .15s linear;
+    -webkit-box-shadow: 0 16px 16px rgba(0,0,0,.55);
+    -moz-box-shadow: 0 16px 16px rgba(0,0,0,.55);
 }
 
 .spellImg{
     margin: 20px;
+    position: relative;
+    top: 280px;
+    left: 320px;
+    height: 150px;
+    width: auto;
+}
+
+
+.scrabbleChar, .spellButton{
+    position: relative;
+    left: 290px;
+    top: 280px;
+    margin-right: 3px;
+}
+.scrabbleChar:hover {
+    
+        /* -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5); */
+        /* -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5); */
+    
+        -webkit-transform: scale(1.25);
+        -moz-transform: scale(1.25);
+        position: relative;
+        z-index: 5;
+      
+}
+
+.guessKey {
+    position: relative;
+    font-size: 130px;
+    left: 80px;
+}
+
+.spellImg:hover {
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    perspective: 1000px;
+  }
+  
+  @keyframes shake {
+    10%, 90% {
+      transform: translate3d(-1px, 0, 0);
+    }
+    
+    20%, 80% {
+      transform: translate3d(2px, 0, 0);
+    }
+  
+    30%, 50%, 70% {
+      transform: translate3d(-4px, 0, 0);
+    }
+  
+    40%, 60% {
+      transform: translate3d(4px, 0, 0);
+    }
 }

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 // import {Link} from "react-router-dom";
-import AlphabetCard from "./components/AlphabetCard";
+// import AlphabetCard from "./components/AlphabetCard";
 
 import Words from "./wordList.json";
 import Alphabet from "./alphabet.json";
@@ -16,116 +16,117 @@ class Spelling extends Component {
         imgLocation: [{ "image": null, "value": null }],
         answer: ""
 
+
     }
+
     componentWillMount() {
         this.updateWord();
-
-
-
-
     }
+
+    // componentDidMount() {
+    //     this.imageToLetter();
+    // }
+
+    // componentDidUpdate() {
+    //     this.imageToLetter();
+    // }
     updateWord = () => {
-        let randomWord = Math.floor((Math.random() * Words.length));
-        this.setState({ choosenWord: Words[randomWord].word, choosenImage: Words[randomWord].image, answerKeys: Words[randomWord].answerKeys });
-
-    }
-
-    spellTheWord = (value) => {
-        var answer;
-        answer.push(value);
-        console.log(answer)
+        let randomNum = Math.floor((Math.random() * Words.length));
+        this.setState({ choosenWord: Words[randomNum].word, choosenImage: Words[randomNum].image, answerKeys: Words[randomNum].answerKeys }, () => {
+            this.imageToLetter()
+        });
     }
 
     updateAnswer = (value) => {
         this.setState({ answer: value });
     }
 
-
     imageToLetter = () => {
-        // this.setState({letters: Words[1].letters});
         var stringLetters = this.state.answerKeys;
         var arrayLetters = stringLetters.split('');
 
-        var imgLocation = [];
+        const imgLocation = [];
+        imgLocation.length = 0;
+
         for (var i = 0; i < arrayLetters.length; i++) {
             switch (arrayLetters[i]) {
                 case "a":
-                    imgLocation[i] = { "image": "/img/A.png", "value": "a" };
+                    imgLocation[i] = { "image": Alphabet[0].image, "value": Alphabet[0].letter };
                     break;
                 case "b":
-                    imgLocation[i] = { "image": "/img/B.png", "value": "b" };
+                    imgLocation[i] = { "image": Alphabet[1].image, "value": Alphabet[1].letter };
                     break;
                 case "c":
-                    imgLocation[i] = { "image": "/img/C.png", "value": "c" };
+                    imgLocation[i] = { "image": Alphabet[2].image, "value": Alphabet[2].letter };
                     break;
                 case "d":
-                    imgLocation[i] = { "image": "/img/D.png", "value": "d" };
+                    imgLocation[i] = { "image": Alphabet[3].image, "value": Alphabet[3].letter };
                     break;
                 case "e":
-                    imgLocation[i] = { "image": "/img/E.png", "value": "e" };
+                    imgLocation[i] = { "image": Alphabet[4].image, "value": Alphabet[4].letter };
                     break;
                 case "f":
-                    imgLocation[i] = { "image": "/img/F.png", "value": "f" };
+                    imgLocation[i] = { "image": Alphabet[5].image, "value": Alphabet[5].letter };
                     break;
                 case "g":
-                    imgLocation[i] = { "image": "/img/G.png", "value": "g" };
+                    imgLocation[i] = { "image": Alphabet[6].image, "value": Alphabet[6].letter };
                     break;
                 case "h":
-                    imgLocation[i] = { "image": "/img/H.png", "value": "h" };
+                    imgLocation[i] = { "image": Alphabet[7].image, "value": Alphabet[7].letter };
                     break;
                 case "i":
-                    imgLocation[i] = { "image": "/img/I.png", "value": "i" };
+                    imgLocation[i] = { "image": Alphabet[8].image, "value": Alphabet[8].letter };
                     break;
                 case "j":
-                    imgLocation[i] = { "image": "/img/J.png", "value": "j" };
+                    imgLocation[i] = { "image": Alphabet[9].image, "value": Alphabet[9].letter };
                     break;
                 case "k":
-                    imgLocation[i] = { "image": "/img/K.png", "value": "k" };
+                    imgLocation[i] = { "image": Alphabet[10].image, "value": Alphabet[10].letter };
                     break;
                 case "l":
-                    imgLocation[i] = { "image": "/img/L.png", "value": "l" };
+                    imgLocation[i] = { "image": Alphabet[11].image, "value": Alphabet[11].letter };
                     break;
                 case "m":
-                    imgLocation[i] = { "image": "/img/M.png", "value": "m" };
+                    imgLocation[i] = { "image": Alphabet[12].image, "value": Alphabet[12].letter };
                     break;
                 case "n":
-                    imgLocation[i] = { "image": "/img/N.png", "value": "n" };
+                    imgLocation[i] = { "image": Alphabet[13].image, "value": Alphabet[13].letter };
                     break;
                 case "o":
-                    imgLocation[i] = { "image": "/img/O.png", "value": "o" };
+                    imgLocation[i] = { "image": Alphabet[14].image, "value": Alphabet[14].letter };
                     break;
                 case "p":
-                    imgLocation[i] = { "image": "/img/P.png", "value": "p" };
+                    imgLocation[i] = { "image": Alphabet[15].image, "value": Alphabet[15].letter };
                     break;
                 case "q":
-                    imgLocation[i] = { "image": "/img/Q.png", "value": "q" };
+                    imgLocation[i] = { "image": Alphabet[16].image, "value": Alphabet[16].letter };
                     break;
                 case "r":
-                    imgLocation[i] = { "image": "/img/R.png", "value": "r" };
+                    imgLocation[i] = { "image": Alphabet[17].image, "value": Alphabet[17].letter };
                     break;
                 case "s":
-                    imgLocation[i] = { "image": "/img/S.png", "value": "s" };
+                    imgLocation[i] = { "image": Alphabet[18].image, "value": Alphabet[18].letter };
                     break;
                 case "t":
-                    imgLocation[i] = { "image": "/img/T.png", "value": "t" };
+                    imgLocation[i] = { "image": Alphabet[19].image, "value": Alphabet[19].letter };
                     break;
                 case "u":
-                    imgLocation[i] = { "image": "/img/U.png", "value": "u" };
+                    imgLocation[i] = { "image": Alphabet[20].image, "value": Alphabet[20].letter };
                     break;
                 case "v":
-                    imgLocation[i] = { "image": "/img/V.png", "value": "v" };
+                    imgLocation[i] = { "image": Alphabet[21].image, "value": Alphabet[21].letter };
                     break;
                 case "w":
-                    imgLocation[i] = { "image": "/img/W.png", "value": "w" };
+                    imgLocation[i] = { "image": Alphabet[22].image, "value": Alphabet[22].letter };
                     break;
                 case "x":
-                    imgLocation[i] = { "image": "/img/X.png", "value": "x" };
+                    imgLocation[i] = { "image": Alphabet[23].image, "value": Alphabet[23].letter };
                     break;
                 case "y":
-                    imgLocation[i] = { "image": "/img/Y.png", "value": "y" };
+                    imgLocation[i] = { "image": Alphabet[24].image, "value": Alphabet[24].letter };
                     break;
                 case "z":
-                    imgLocation[i] = { "image": "/img/Z.png", "value": "z" };
+                    imgLocation[i] = { "image": Alphabet[25].image, "value": Alphabet[25].letter };
                     break;
 
                 default:
@@ -133,53 +134,59 @@ class Spelling extends Component {
             }
         }
         this.setState({ imgLocation: imgLocation });
-
     }
 
     render() {
-
-
         return (
             <div className="container spellContainer">
-
                 <div className="row">
-                    <img className="spellImg" width="200px" alt="imagePic" src={this.state.choosenImage} />
-                    <h1>{this.state.answer}</h1>
+                    <div className="imgContainer" onClick={() => {
+                        if (wordGuess === this.state.choosenWord) {
+                            wordGuessedArr.length = 0;
+                            this.updateWord();
+                            alert("You are correct");
+                            this.setState({ answer: "" });
+                        } else {
+                            alert("try again");
+                            wordGuessedArr.length = 0;
+                            this.setState({ answer: "" });
+                        }
+                    }}>
+                        <img className="spellImg" width="200px" alt="imagePic" src={this.state.choosenImage} />
+                    </div>
+
+                    <h1 className="guessKey">{this.state.answer}</h1>
                 </div>
 
                 <div className="row">
                     {this.state.imgLocation.map((letter) =>
-                        // <AlphabetCard image={letter.image} value={letter.value} />
                         <div className="scrabbleChar" >
-                            <img className="scrabbleCharImg" src={letter.image} onClick={() => {
+                            <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
                                 wordGuessedArr.push(letter.value);
                                 wordGuess = wordGuessedArr.join('');
                                 this.updateAnswer(wordGuess);
-                                console.log(this.state.word);
                             }
                             } width="40px" />
                         </div>
                     )}
                 </div>
-                {/* <button onClick={() => this.imageToLetter()} >butt</button> */}
-                <button type="button" class="btn btn-success spellButton" onClick={() => {
+
+                {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
                     if (wordGuess === this.state.choosenWord) {
-                        alert("You are correct")
+                        wordGuessedArr.length = 0;
+                        this.updateWord();
+                        alert("You are correct");
+                        this.setState({ answer: "" });
+                    } else {
+                        alert("try again");
                     }
-                }}>Submit</button> 
-                <button type="button" class="btn btn-success spellButton" onClick={() => {
-                    this.imageToLetter();
-                    console.log(this.state);
-                }
-                }>Load</button> 
-                <button type="button" class="btn btn-success spellButton" onClick={() => {
-                    wordGuessedArr.length=0;
-                    this.setState({answer: ""});
+                }}>Submit</button> */}
 
-                    
+                {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
+                    wordGuessedArr.length = 0;
+                    this.setState({ answer: "" });
                 }
-                }>Clear</button>
-
+                }>Clear</button> */}
             </div>
         )
     }

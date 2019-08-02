@@ -36,7 +36,7 @@ export default {
   },
 
   //adding a value to metrics, use req body to pass along key for schema field and value to input
-  addToMetrics: (key, value) => {
-    return axios.post('api/metrics', {key: key, value: value});
+  addToMetrics: (metricID, key) => {
+    return axios.put('api/addMetrics/'+metricID+"/"+key);
   }
 };

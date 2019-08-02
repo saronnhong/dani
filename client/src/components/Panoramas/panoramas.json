@@ -1,0 +1,26 @@
+[
+    {
+        "name": "City",
+        "path": "city.jpg"
+    },
+    {
+        "name": "Barcelona",
+        "path": "barcelona.jpg"
+    },
+    {
+        "name": "Park",
+        "path": "park.jpg"
+    },
+    {
+        "name": "Pier",
+        "path": "pier.jpg"
+    },
+    {
+        "name": "Scandinavia",
+        "path": "scandinavia.jpg"
+    },
+    {
+        "name": "UK",
+        "path": "uk.jpg"
+    }
+]

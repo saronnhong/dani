@@ -22,6 +22,8 @@ import Video from './components/Video';
 import ButtonPage from './components/ButtonPage';
 import Image360 from './components/Image360';
 import Coloring from './components/Coloring';
+import Panoramas from './components/Panoramas';
+import DisplayPanorama from './components/DisplayPanorama';
 
 
 import Spelling from './components/Spelling';
@@ -46,8 +48,9 @@ ReactDOM.render(
             <Route exact path="/relaxSounds" component={RelaxSound} />
             <Route exact path="/videos" component={Video} />
             <Route exact path="/spelling" component={Spelling} />
-            <Route exact path="/image360" component={Image360} />
             <Route exact path="/coloring" component={Coloring} />
+            <Route exact path="/panoramas" component={Panoramas} />
+            <Route path="/panoramas/:image" component={DisplayPanorama} />
             
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}
@@ -63,7 +66,7 @@ ReactDOM.render(
                 render={(props) => <ButtonPage {...props}
                     linkOne="/reddit"
                     linkTwo="/videos"
-                    linkThree="/image360"
+                    linkThree="/panoramas"
                     buttonOne={<div> <i class="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
                     buttonTwo={<div> <i class="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
                     buttonThree={<div> <i class="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }

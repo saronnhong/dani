@@ -1,4 +1,4 @@
-.palette-body {
+.palette-color-body {
     height: 800px;
     width: 100px;
     background-color: white;
@@ -8,7 +8,7 @@
     position: absolute;
 }
 
-.sample-color {
+.sample-color-color {
     width: 75%;
     height: 75px;
     margin: 10px auto;
@@ -19,7 +19,7 @@
     padding-top: 12px;
 }
 
-.palette-color {
+.palette-color-color {
     display: block;
     border: 1px solid black;
     width: 75%;
@@ -27,7 +27,7 @@
     margin: 10px auto;
 }
 
-.palette-color-selected {
+.palette-color-color-selected {
     font-weight: bolder;
     color: rgba(255, 255, 255, 0);
     text-shadow: 2px 2px 5px rgba(0, 0, 0, 0);
@@ -35,7 +35,7 @@
     border-radius: 15px;
 }
 
-.palette-color-selected:hover {
+.palette-color-color-selected:hover {
     font-weight: bolder;
     color: rgba(255, 255, 255, 0.993);
     text-shadow: 2px 2px 5px rgb(0, 0, 0);
@@ -44,4 +44,18 @@
 
 .fa-paint-brush {
     margin: 3px auto;
+}
+
+@media only screen and (max-width: 420px) {
+    .palette-color-body {
+        height: 595px;
+        width: 75px;
+    }
+    .palette-color-color {
+        height: 42px;
+        margin: 10px auto;
+    }
+    .fa-minus-square, .fa-plus-square {
+        font-size: 27px;
+    }
 }

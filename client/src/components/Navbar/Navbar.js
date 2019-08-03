@@ -47,8 +47,13 @@ class Navbar extends Component {
         return (
             <nav className="navbar navbar-expand-lg navbar-dark bg-success" >
                 <div className="container">
+<<<<<<< HEAD
                     <Link className="navbar-brand" to="/">DANI <img alt="puzzle logo" src="https://www.stickpng.com/assets/images/588887b0bc2fc2ef3a1860a0.png" className="puzzlePieces"></img></Link>
                     {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+=======
+                    <Link className="navbar-brand" to="/Home">DANI <img alt="puzzle logo" src="https://www.stickpng.com/assets/images/588887b0bc2fc2ef3a1860a0.png" className="puzzlePieces"></img></Link>
+                    <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+>>>>>>> 7b841e6d8db85ccbb79d864ad3df6482f8f00061
                         <span className="navbar-toggler-icon"></span>
                     </button> */}
                     {/* <div className="collapse navbar-collapse" id="navbarNav">

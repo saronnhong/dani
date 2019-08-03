@@ -3,6 +3,7 @@ import CanvasDraw from "react-canvas-draw";
 import Palette from "../Palette"
 import './Sketch.css';
 import API from "../../utils/API"
+import withAuth from './../withAuth';
 
 class Sketch extends Component {
     state = {
@@ -11,6 +12,30 @@ class Sketch extends Component {
         height: 800,
         brushRadius: 5,
         lazyRadius: 1,
+        metricID: "",
+        metrics: []
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
+    }
+
+    componentWillMount() {
+        if (window.innerHeight < 800) {
+            this.setState({height: window.innerHeight - 142})
+        }
+        if (window.innerWidth < 1200 && window.innerWidth > 600) {
+            this.setState({width: window.innerWidth -100})
+        }
+        if (window.innerWidth < 600) {
+            this.setState({width: window.innerWidth -75})
+        }
     }
 
     chooseColor = color => {
@@ -31,27 +56,16 @@ class Sketch extends Component {
     loadDrawing = () => {
         API.loadDrawing()
             .then(data => {
+                if (data.data[data.data.length - 1]) {
                 this.saveableCanvas.loadSaveData(
                     data.data[data.data.length-1].drawing
                 )
+                }
             })
-        // for (let i = 0; i < localStorage.length; i++){
-        //     console.log(localStorage)
-        //     // do something with localStorage.getItem(localStorage.key(i));
-        // }
-        // this.saveableCanvas.loadSaveData(
-        //     localStorage.getItem("savedDrawing")
-        // );
-
     }
 
     saveDrawing = () => {
-        // let saveNameRandom = toString(Math.random(100))
         let saveNameRandom = "test save"
-        // localStorage.setItem(
-        //     saveNameRandom,
-        //     this.saveableCanvas.getSaveData()
-        // );
         API.saveDrawing(saveNameRandom, this.saveableCanvas.getSaveData())
     }
 
@@ -60,7 +74,7 @@ class Sketch extends Component {
             <div className=" text-center">
                 <h2 className="pangolin-text" onClick={() => this.saveDrawing()}>Save Drawing</h2>
                 <h1 className="pangolin-text-title"> Let's Draw!</h1>
-                <h2 className="pangolin-text" onClick={() => this.loadDrawing()}>Load a Drawing</h2>
+                <h2 className="pangolin-text load-text" onClick={() => this.loadDrawing()}>Load a Drawing</h2>
                 <button className="undo-button pangolin-undo"
                     onClick={() => {
                         this.saveableCanvas.undo();
@@ -70,14 +84,13 @@ class Sketch extends Component {
                     <CanvasDraw
                         hideGrid
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
-                        // ref1={canvasDraw => (this.loadableCanvas = canvasDraw)}
                         saveData={""}
                         brushColor={this.state.color}
-                        canvasHeight={this.state.height}
-                        canvasWidth={(window.outerWidth - 135) || this.state.width}
+                        canvasHeight={ this.state.height
+                        }
+                        canvasWidth={this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
-                    // imgSrc="https://i.pinimg.com/originals/1e/93/95/1e9395f5e6a120b92f3b6546c13fda6a.png"
                     />
                     <Palette
                         undo={this.undoButton}
@@ -92,4 +105,4 @@ class Sketch extends Component {
 }
 
 
-export default Sketch;
+export default withAuth(Sketch);

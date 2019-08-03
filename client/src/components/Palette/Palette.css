@@ -2,8 +2,8 @@
     height: 800px;
     width: 100px;
     background-color: white;
-    border: black solid 3px;
-    display: inline;
+    border: black solid 1px;
+    /* display: inline; */
     right: 0;
     position: absolute;
 }
@@ -22,7 +22,7 @@
 .palette-color {
     display: block;
     border: 1px solid black;
-    width: 75%;
+    width: 80%;
     height: 60px;
     margin: 10px auto;
 }
@@ -44,4 +44,18 @@
 
 .fa-paint-brush {
     margin: 3px auto;
+}
+
+@media only screen and (max-width: 420px) {
+    .palette-body {
+        height: 595px;
+        width: 75px;
+    }
+    .palette-color {
+        height: 42px;
+        margin: 10px auto;
+    }
+    .fa-minus-square, .fa-plus-square {
+        font-size: 27px;
+    }
 }

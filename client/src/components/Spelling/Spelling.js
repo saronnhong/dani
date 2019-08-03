@@ -2,6 +2,8 @@ import React, { Component } from "react";
 // import {Link} from "react-router-dom";
 // import AlphabetCard from "./components/AlphabetCard";
 
+import API from './../../utils/API';
+import withAuth from './../withAuth';
 import Words from "./wordList.json";
 import Alphabet from "./alphabet.json";
 import "./style.css";
@@ -14,9 +16,21 @@ class Spelling extends Component {
         choosenImage: null,
         answerKeys: null,
         imgLocation: [{ "image": null, "value": null }],
-        answer: ""
+        answer: "",
+        metricID: "",
+        metrics: []
 
 
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
     }
 
     componentWillMount() {
@@ -192,6 +206,6 @@ class Spelling extends Component {
     }
 }
 
-export default Spelling;
+export default withAuth(Spelling);
 
 

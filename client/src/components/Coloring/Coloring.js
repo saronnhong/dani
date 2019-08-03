@@ -3,6 +3,7 @@ import CanvasDraw from "react-canvas-draw";
 import ColoringPalette from "../ColoringPalette"
 import './Coloring.css';
 import API from "../../utils/API"
+import withAuth from './../withAuth';
 import coloringBook from "./coloringbook.json"
 
 class Coloring extends Component {
@@ -13,7 +14,19 @@ class Coloring extends Component {
         brushRadius: 5,
         lazyRadius: 1,
         coloringImage: 0,
-        clickFlag: 0
+        clickFlag: 0,
+        metricID: "",
+        metrics: []
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
     }
 
     chooseColor = color => {
@@ -34,9 +47,11 @@ class Coloring extends Component {
     loadColoring = () => {
         API.loadColoring()
             .then(data => {
-                this.saveableCanvas.loadSaveData(
-                    data.data[data.data.length - 1].coloring
-                )
+                if (data.data[data.data.length - 1]) {
+                    this.saveableCanvas.loadSaveData(
+                        data.data[data.data.length - 1].coloring
+                    )
+                }
             })
     }
 
@@ -47,6 +62,15 @@ class Coloring extends Component {
     }
 
     componentWillMount = () => {
+        if (window.innerHeight < 800) {
+            this.setState({height: window.innerHeight - 142})
+        }
+        if (window.innerWidth < 1200 && window.innerWidth > 600) {
+            this.setState({width: window.innerWidth -100})
+        }
+        if (window.innerWidth < 600) {
+            this.setState({width: window.innerWidth -75})
+        }
         if (localStorage.ColoringBookPage) {
             let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
             if (typeof savedPage === "number") {
@@ -86,18 +110,17 @@ class Coloring extends Component {
     }
     
     render() {
-        console.log(coloringBook[this.state.coloringImage].path)
         return (
             <div className=" text-center">
-                <h2 className="pangolin-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
-                <h1 className="pangolin-text-title"> Let's Color!</h1>
-                <h2 className="pangolin-text" onClick={() => this.loadColoring()}>Load Coloring</h2>
-                <button className="undo-button pangolin-undo"
+                <h2 className="pangolin-coloring-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
+                <h1 className="pangolin-coloring-text-title"> Let's Color!</h1>
+                <h2 className="pangolin-coloring-text" onClick={() => this.loadColoring()}>Load Coloring</h2>
+                <button className="undo-coloring-button pangolin-coloring-undo"
                     onClick={() => {
                         this.saveableCanvas.undo();
                     }}
                 >Oops! -<i className="fa fa-eraser"></i> -Undo</button>
-                <div className="d-flex draw-area">
+                <div className="d-flex draw-coloring-area">
                     <i className="fa fa-long-arrow-alt-left fa-5x arrows arr-left"
                         onClick={() => this.flipColoringBookLeft()}></i>
                     <CanvasDraw
@@ -107,7 +130,7 @@ class Coloring extends Component {
                         saveData={""}
                         brushColor={this.state.color}
                         canvasHeight={this.state.height}
-                        canvasWidth={(window.outerWidth - 135) || this.state.width}
+                        canvasWidth={this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
                         imgSrc={"https://raw.githubusercontent.com/RhadMax/ColoringBookHoster/master/ColoringBook/"
@@ -128,4 +151,4 @@ class Coloring extends Component {
 }
 
 
-export default Coloring;
+export default withAuth(Coloring);

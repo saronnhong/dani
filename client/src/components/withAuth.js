@@ -36,6 +36,7 @@ export default function withAuth(AuthComponent) {
                     linkOne={this.props.linkOne} buttonOne={this.props.buttonOne}
                     linkTwo={this.props.linkTwo} buttonTwo={this.props.buttonTwo}
                     linkThree={this.props.linkThree} buttonThree={this.props.buttonThree}
+                    panorama={this.props.panorama}
                     />
                 );
             }

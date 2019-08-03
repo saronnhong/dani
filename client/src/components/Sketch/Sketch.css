@@ -1,7 +1,7 @@
 .draw-area {
     border: solid 2px black;
     touch-action: none;
-    
+    cursor: none;
 }
 .undo-button {
     margin: 0 0 10px 5px;

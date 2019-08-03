@@ -10,3 +10,10 @@ body {
   background-color: rgba(0, 0, 0, 0);
   border: none;
 } */
+
+@media only screen and (max-width: 1000px) {
+ .menuButton{
+   width:100%;
+   align-content: center;
+ }
+}

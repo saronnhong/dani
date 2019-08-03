@@ -2,15 +2,12 @@
     border: solid 2px black;
 }
 .undo-button {
-    /* position: absolute; */
-    /* top: 10px; */
-    margin-top: 15px;
     right: 12px;
 }
 
 .pangolin-undo {
     font-family: 'Pangolin', cursive;
-    /* display: inline-flex; */
+    display: inline-flex;
     letter-spacing: 2px;
     text-shadow: 2px 2px white;
     color: rgb(0, 175, 66);
@@ -58,9 +55,19 @@
         display: block;
     }
   } */
-@media only screen and (max-width: 1170px) {
-    .load-text {
+@media only screen and (min-width: 1220px) {
+    .undo-button {
+        position: absolute;
+    }
+    
+}
+
+@media only screen and (max-width: 1219px) {
+    /* .load-text {
         display: block;
+    } */
+    .pangolin-text {
+        padding: 0px;
     }
 }
 
@@ -74,6 +81,6 @@
 
   }
   .pangolin-text-title {
-    font-size: 16px;
+    font-size: 18px;
   }
 }

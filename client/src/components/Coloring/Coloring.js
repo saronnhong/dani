@@ -103,15 +103,15 @@ class Coloring extends Component {
     render() {
         return (
             <div className=" text-center">
-                <h2 className="pangolin-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
-                <h1 className="pangolin-text-title"> Let's Color!</h1>
-                <h2 className="pangolin-text" onClick={() => this.loadColoring()}>Load Coloring</h2>
-                <button className="undo-button pangolin-undo"
+                <h2 className="pangolin-coloring-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
+                <h1 className="pangolin-coloring-text-title"> Let's Color!</h1>
+                <h2 className="pangolin-coloring-text" onClick={() => this.loadColoring()}>Load Coloring</h2>
+                <button className="undo-coloring-button pangolin-coloring-undo"
                     onClick={() => {
                         this.saveableCanvas.undo();
                     }}
                 >Oops! -<i className="fa fa-eraser"></i> -Undo</button>
-                <div className="d-flex draw-area">
+                <div className="d-flex draw-coloring-area">
                     <i className="fa fa-long-arrow-alt-left fa-5x arrows arr-left"
                         onClick={() => this.flipColoringBookLeft()}></i>
                     <CanvasDraw

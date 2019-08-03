@@ -88,7 +88,7 @@ class Reddit extends Component {
                     before: data.data.before,
                     page: this.state.page + 1
                 }))
-             
+                window.scrollTo(0, 0)
             })
             .catch((err) => {
                 console.log(err)
@@ -106,6 +106,7 @@ class Reddit extends Component {
                     before: data.data.before,
                     page: this.state.page - 1
                 }))
+                window.scrollTo(0, 0)
             })
             .catch((err) => {
                 console.log(err)

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import redImages from "./redImages.png"
 // import App from './App';
 
 import registerServiceWorker from './registerServiceWorker';
@@ -50,11 +51,11 @@ ReactDOM.render(
             <Route exact path="/Videos" component={Video} />
             <Route exact path="/Spelling" component={Spelling} />
             <Route exact path="/Coloring" component={Coloring} />
-            <Route exact path="/Panoramas" component={Panoramas} />
+            <Route exact path="/Images-360" component={Panoramas} />
             <Route path="/Panoramas/:image" component={DisplayPanorama} />
             <Route path="/Landing" component={Landing} />
             
-            <Route exact path="/"
+            <Route exact path="/Home"
                 render={(props) => <ButtonPage {...props}
                     linkOne="/Look"
                     linkTwo="/Listen"
@@ -68,7 +69,7 @@ ReactDOM.render(
                 render={(props) => <ButtonPage {...props}
                     linkOne="/Images"
                     linkTwo="/Videos"
-                    linkThree="/Panoramas"
+                    linkThree="/Images-360"
                     buttonOne={<div> <i className="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
                     buttonTwo={<div> <i className="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
                     buttonThree={<div> <i className="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }

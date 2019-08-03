@@ -1,11 +1,11 @@
 .draw-area {
     border: solid 2px black;
+    touch-action: none;
+    
 }
 .undo-button {
-    position: absolute;
-    /* top: 10px; */
-    margin-top: 15px;
-    right: 12px;
+    margin: 0 0 10px 5px;
+    
 }
 
 .pangolin-undo {
@@ -30,17 +30,14 @@
     text-shadow: 2px 2px rgb(0, 175, 66);
     color: white;
     padding: 10px;
+    cursor: pointer;
 }
 
 .pangolin-text:hover {
     font-family: 'Pangolin', cursive;
     display: inline-flex;
-    margin: 0 45px 0 26px;
-    font-size: 42px;
-    letter-spacing: 3px;
     text-shadow: 2px 2px rgb(0, 175, 66);
     color: blueviolet;
-    padding: 0px;
 }
 
 .pangolin-text-title {
@@ -50,4 +47,29 @@
     letter-spacing: 5px;
     text-shadow: 2px 2px white;
     color: rgb(0, 175, 66);
+}
+
+@media only screen and (max-width: 1219px) {
+    .pangolin-text {
+        padding: 0px;
+        float: left;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .pangolin-text {
+    font-size: 14px;
+    margin: 0px 0px;
+    float: left;
+    margin-top: 5px;
+  }
+  .pangolin-text-title {
+    font-size: 18px;
+  }
+  .undo-button {
+    font-size: 14px;
+    margin: 2px 0 10px 2px;
+    padding: 0px;
+}
 }

@@ -2,15 +2,27 @@ import React, { Component } from "react";
 
 import ReactPlayer from 'react-player'
 import videos from "./videos.json";
+import API from './../../utils/API';
+import withAuth from './../withAuth';
 import "./style.css";
 
 
 class Video extends Component {
     state = {
-        playing: false
+        playing: false,
+        metricID: "",
+        metrics: []
     }
     
-    
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
+    }
     
     render() {
         return (
@@ -49,4 +61,4 @@ class Video extends Component {
     }
 }
 
-export default Video;
+export default withAuth(Video);

@@ -45,12 +45,12 @@ function ColoringPalette(props) {
 
 
     return (
-        <div className="palette-body">
+        <div className="palette-color-body">
             {colors.map(color =>
                 <button onClick={() => props.colorClick(color.color)}
                     key={color.id} style={{ backgroundColor: color.color }}
-                    className="palette-color">
-                    <div className="palette-color-selected" >{color.id}</div>
+                    className="palette-color-color">
+                    <div className="palette-color-color-selected" >{color.id}</div>
                 </button>
             )}
             <button onClick={props.brushSizeUp} className="palette-size-up"><i className="fa fa-plus-square fa-3x"></i></button>

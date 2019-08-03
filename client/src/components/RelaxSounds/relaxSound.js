@@ -1,6 +1,9 @@
 import React, { Component } from "react";
 
 import relaxes from "./relaxSounds.json";
+
+import API from './../../utils/API';
+import withAuth from './../withAuth';
 import "./style.css";
 import Player from "../Player";
 
@@ -33,6 +36,21 @@ import Player from "../Player";
 // }
 
 class RelaxSounds extends Component {
+    state = {
+        metricID: "",
+        metrics: []
+    }
+
+    componentDidMount() {
+        API.getUser(this.props.user.id).then(res => {
+            this.setState({
+                metricID: res.data.metric
+            })
+            let pageOn = this.props.history.location.pathname.replace("/", "")
+            API.addToMetrics(res.data.metric, pageOn)
+        });
+    }
+
     render() {
         return (
             <div className="container">
@@ -48,6 +66,6 @@ class RelaxSounds extends Component {
     }
 }
 
-export default RelaxSounds;
+export default withAuth(RelaxSounds);
 
 

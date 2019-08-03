@@ -32,10 +32,10 @@ class Video extends Component {
                 {this.state.playing ? (
 
 
-                    <div className="wrapper" >
+                    <div className="wrapper wrap-background" >
                         {videos.map((video) =>
                             <div key={video.name} className="video-wrapper">
-                                <p>{video.name}</p>
+                                <p className="video-name">{video.name}</p>
                                 <ReactPlayer onClick={() =>
                                     this.setState({ playing: false })
                                 }
@@ -43,10 +43,10 @@ class Video extends Component {
                             </div>
                         )}
                     </div>) : (
-                        <div className="wrapper">
+                        <div className="wrapper wrap-background">
                             {videos.map((video) =>
                                 <div key={video.name} className="video-wrapper">
-                                     <p>{video.name}</p>
+                                     <p className="video-name">{video.name}</p>
                                     <ReactPlayer onClick={() =>
                                         this.setState({ playing: true })
                                     }

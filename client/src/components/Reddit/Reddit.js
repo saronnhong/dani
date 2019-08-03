@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Subreddits from "../Subreddits";
+import { Link } from "react-router-dom";
 import Card from '../Card';
+import Back from '../Back'
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 // import { createDecipher } from 'crypto';
@@ -34,7 +36,7 @@ const subs = [
     {
         name: "pics",
         isChosen: false,
-        icon:"https://www.stickpng.com/assets/images/584abf102912007028bd9332.png"
+        icon: "https://www.stickpng.com/assets/images/584abf102912007028bd9332.png"
     }
 ]
 
@@ -64,7 +66,7 @@ class Reddit extends Component {
         metricID: "",
         metrics: []
     };
-   
+
 
     componentDidMount() {
         this.changeSubreddit(this.state.chosenSubreddit)
@@ -141,13 +143,13 @@ class Reddit extends Component {
         let nextButton = <button className="btn btn-primary nextButton" type="submit" onClick={this.nextPage}><i className="fas fa-arrow-right"></i></button>
 
         let previousButton;
-        if(this.state.page > 1){
+        if (this.state.page > 1) {
             previousButton = <button className="btn btn-primary previousButton" type="submit" onClick={this.previousPage}><i className="fas fa-arrow-left"></i></button>
         }
-        else if(this.state.page <= 1){
+        else if (this.state.page <= 1) {
             previousButton = ""
         }
-        
+
         return (
             <div>
                 <div className='row'>
@@ -173,10 +175,25 @@ class Reddit extends Component {
                     ))}
                 </div>
                 <footer className="subFooter">
-                {previousButton}
-                {nextButton}
+                    <div className="row">
+                        <div className='col-md-4 previousColumn'>
+                            {previousButton}
+                        </div>
+                        <div className="col-md-4 backColumn">
+                            <Link to="/Look">
+                                <Back className="backImages" />
+                            </Link>
+                        </div>
+                        <div className="col-md-4 nextColumn">
+                            {nextButton}
+                        </div>
+                       
+
+
+                    </div>
+
                 </footer>
-           
+
             </div>
 
         )

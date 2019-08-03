@@ -1,8 +1,8 @@
-import React, { Component } from 'react'
+import React, { Component } from "react";
 import * as Sphere from 'photo-sphere-viewer'
 import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css'
 
-export default class SphereComponent extends Component {
+class SphereComponent extends Component {
   constructor(props) {
     super(props)
     this.divStyle = {
@@ -15,7 +15,7 @@ export default class SphereComponent extends Component {
     this.sphereDiv.appendChild = elem => {
       this.subDiv.appendChild(elem)
     }
-  } 
+  }
 
   componentDidMount() {
     this.psv = Sphere({
@@ -43,3 +43,5 @@ export default class SphereComponent extends Component {
     )
   }
 }
+
+export default SphereComponent;

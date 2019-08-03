@@ -1,10 +1,9 @@
 .draw-coloring-area {
     border: solid 2px black;
+    touch-action: none;
 }
 .undo-coloring-button {
-    position: absolute;
-    margin-top: 15px;
-    right: 12px;
+    margin: 0 0 10px 5px;
 }
 
 .pangolin-coloring-undo {
@@ -29,17 +28,14 @@
     text-shadow: 2px 2px rgb(0, 175, 66);
     color: white;
     padding: 10px;
+    cursor: pointer;
 }
 
 .pangolin-coloring-text:hover {
     font-family: 'Pangolin', cursive;
     display: inline-flex;
-    margin: 0 45px 0 26px;
-    font-size: 42px;
-    letter-spacing: 3px;
     text-shadow: 2px 2px rgb(0, 175, 66);
     color: blueviolet;
-    padding: 0px;
 }
 
 .pangolin-coloring-text-title {
@@ -70,4 +66,29 @@
 
 .arr-right {
     right: 110px;
+}
+
+@media only screen and (max-width: 1219px) {
+    .pangolin-coloring-text {
+        padding: 0px;
+        float: left;
+        margin-top: 2px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+  .pangolin-coloring-text {
+    font-size: 14px;
+    margin: 0px 0px;
+    float: left;
+    margin-top: 5px;
+  }
+  .pangolin-coloring-text-title {
+    font-size: 18px;
+  }
+  .undo-coloring-button {
+    font-size: 14px;
+    margin: 2px 0 10px 2px;
+    padding: 0px;
+}
 }

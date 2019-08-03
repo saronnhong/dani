@@ -20,3 +20,11 @@
     width: 100px;
 }
 
+@media only screen and (max-width: 600px) {
+    .navbar-brand{
+        font-size: 25px;
+    }
+    .puzzlePieces{
+        width: 50px;
+    }
+}

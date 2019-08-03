@@ -1,31 +1,47 @@
 import React, { Component } from "react";
-import API from './../../utils/API';
-import withAuth from './../withAuth';
+import * as Sphere from 'photo-sphere-viewer'
+import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css'
 
-
-class Image360 extends Component {
-    state = {
-        metricID: "",
-        metrics: []
+class SphereComponent extends Component {
+  constructor(props) {
+    super(props)
+    this.divStyle = {
+      width: '100%',
+      height: '600px'
     }
-
-    componentDidMount() {
-        API.getUser(this.props.user.id).then(res => {
-            this.setState({
-                metricID: res.data.metric
-            })
-            let pageOn = this.props.history.location.pathname.replace("/", "")
-            API.addToMetrics(res.data.metric, pageOn)
-        });
+    this.sphereDiv = element => {
+      this.photoSphereViewer = element
     }
+    this.sphereDiv.appendChild = elem => {
+      this.subDiv.appendChild(elem)
+    }
+  }
 
-    render() {
-        return (
-            <div>
-                <iframe title="360 demo" src="https://marinadelkovamoro.github.io/360viewer/"></iframe>
-            </div>
-        )
+  componentDidMount() {
+    this.psv = Sphere({
+      parent: this,
+      container: this.sphereDiv,
+      panorama: this.props.panorama,
+      navbar: ['autorotate', 'zoom', 'fullscreen']
+    })
+  }
 
+  // when the component updates
+  componentDidUpdate(prevProps) {
+    // check if there is a new value for the panorama prop
+    if (prevProps.panorama !== this.props.panorama) {
+      // load a new panoramic image in the viewer
+      this.psv.setPanorama(this.props.panorama)
+    }
+  }
+
+  render() {
+    return (
+      <div style={this.divStyle} ref={this.sphereDiv} id="viewer">
+        <div ref={node => (this.subDiv = node)} style={this.divStyle} />
+      </div>
+    )
+  }
 }
-}
-export default withAuth(Image360);
+
+export default SphereComponent;

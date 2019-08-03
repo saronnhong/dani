@@ -99,8 +99,9 @@ class Coloring extends Component {
         if (this.state.clickFlag >= 1) window.location.reload();
         setTimeout(() => { this.setState({ clickFlag: 0 }) }, 1000);
     }
-
+    
     render() {
+        console.log(coloringBook[this.state.coloringImage].path)
         return (
             <div className=" text-center">
                 <h2 className="pangolin-coloring-text" onClick={() => this.saveColoring()}>Save Coloring</h2>

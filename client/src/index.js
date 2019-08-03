@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
+import redImages from "./redImages.png"
 // import App from './App';
 
 import registerServiceWorker from './registerServiceWorker';
@@ -15,14 +16,14 @@ import About from './pages/About';
 import Navbar from './components/Navbar';
 import Sketch from './components/Sketch';
 import Reddit from './components/Reddit';
-// import Sound from './components/Sounds';
 import AnimalSound from './components/AnimalSounds';
 import NatureSound from './components/NatureSounds';
 import RelaxSound from './components/RelaxSounds';
 import Video from './components/Video';
 import ButtonPage from './components/ButtonPage';
-import Image360 from './components/Image360';
 import Coloring from './components/Coloring';
+import Panoramas from './components/Panoramas';
+import DisplayPanorama from './components/DisplayPanorama';
 
 
 import Spelling from './components/Spelling';
@@ -48,8 +49,9 @@ ReactDOM.render(
             <Route exact path="/Relaxing-Sounds" component={RelaxSound} />
             <Route exact path="/Videos" component={Video} />
             <Route exact path="/Spelling" component={Spelling} />
-            <Route exact path="/Images-360" component={Image360} />
             <Route exact path="/Coloring" component={Coloring} />
+            <Route exact path="/Images-360" component={Panoramas} />
+            <Route path="/Panoramas/:image" component={DisplayPanorama} />
             
             <Route exact path="/Home"
                 render={(props) => <ButtonPage {...props}

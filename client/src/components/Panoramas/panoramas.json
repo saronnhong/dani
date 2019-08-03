@@ -1,0 +1,28 @@
+[
+    {
+        "name": "City",
+        "path": "city.jpg",
+        "url": "http://reznik.lt/wp-content/uploads/2017/09/preview3000.jpg"
+    },
+    {
+        "name": "Canyon",
+        "path": "canyon.jpg",
+        "url": "https://photo-sphere-viewer.js.org/assets/Bryce-Canyon-National-Park-Mark-Doliner.jpg"
+    },
+    {
+        "name": "Park",
+        "path": "park.jpg"
+    },
+    {
+        "name": "Pier",
+        "path": "pier.jpg"
+    },
+    {
+        "name": "Scandinavia",
+        "path": "scandinavia.jpg"
+    },
+    {
+        "name": "UK",
+        "path": "uk.jpg"
+    }
+]

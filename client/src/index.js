@@ -23,6 +23,7 @@ import ButtonPage from './components/ButtonPage';
 import Coloring from './components/Coloring';
 import Panoramas from './components/Panoramas';
 import DisplayPanorama from './components/DisplayPanorama';
+import Landing from './components/Landing';
 
 
 import Spelling from './components/Spelling';
@@ -51,6 +52,7 @@ ReactDOM.render(
             <Route exact path="/Coloring" component={Coloring} />
             <Route exact path="/Panoramas" component={Panoramas} />
             <Route path="/Panoramas/:image" component={DisplayPanorama} />
+            <Route path="/Landing" component={Landing} />
             
             <Route exact path="/"
                 render={(props) => <ButtonPage {...props}

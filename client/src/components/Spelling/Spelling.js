@@ -15,8 +15,6 @@ class Spelling extends Component {
         answerKeys: null,
         imgLocation: [{ "image": null, "value": null }],
         answer: ""
-
-
     }
 
     componentWillMount() {

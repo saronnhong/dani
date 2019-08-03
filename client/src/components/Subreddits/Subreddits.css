@@ -2,8 +2,26 @@
     display: inline;
 } */
 .subButton{
-    font-family: 'Nanum Gothic', sans-serif;
+    font-family: 'Pangolin', cursive;
     font-size: 20px;
+    text-shadow: 2px 2px rgb(0, 175, 66);
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.subButton{
+    font-family: 'Pangolin', cursive;
+    font-size: 20px;
+    text-shadow: 2px 2px rgb(0, 175, 66);
+    cursor: pointer;
+    letter-spacing: 3px;
+}
+
+.subButton:hover{
+    font-family: 'Pangolin', cursive;
+    font-size: 30px;
+    text-shadow: 2px 2px rgb(0, 175, 66);
+    letter-spacing: 1px;
 }
 
 .card-subreddit{

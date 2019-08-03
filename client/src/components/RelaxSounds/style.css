@@ -1,5 +1,5 @@
 
-.wrapper {
+/* .wrapper {
     background: #ECEFF1;
     height: 100%;
     display: flex;
@@ -9,7 +9,7 @@
     align-content: flex-start;
     overflow: auto;
     margin: 1rem;
-  }
+  } */
 
   .cardRelax {
         width: 99%;
@@ -40,4 +40,47 @@
     box-sizing: border-box;
     
     /* margin-top: 2rem; */
+  }
+
+  @media screen and (max-width: 1200px) {
+    .relaxImg {
+      width: 200px;
+      height: 200px;
+  
+      }
+
+  }
+
+  @media screen and (max-width: 812px) {
+    .relaxImg {
+      width: 150px;
+      height: 150px;
+  
+      }
+
+  }
+
+  @media screen and (max-width: 700px) {
+    .relaxImg {
+      width: 450px;
+      height: 450px;
+  
+      }
+  
+
+      .cardRelax {
+        width: 95%;
+        height: 99%;
+        margin: 20px;
+  
+    
+  }
+  @media screen and (max-width: 375px) {
+    .relaxImg {
+      width: 250px;
+      height: 250px;
+  
+      }
+   
+  }
   }

@@ -1,29 +1,5 @@
 
-/* .wrapper {
-    background: #ECEFF1;
-    height: 100%;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 20px;
-    justify-content: space-around;
-    align-content: flex-start;
-    overflow: auto;
-    margin: 1rem;
-  }
-*/
-  /* .card {
-        width: 97%;
-        height: 97%;
-        margin: 1rem;
-        text-align: center;
-        background:rgb(186, 214, 233);
-    
-  }  */
 
-  /* .natureImg {
-    width: 300px;
-    margin-top: 2rem;
-  } */
 
   .cardNature {
     width: 80%;
@@ -55,3 +31,4 @@ box-sizing: border-box;
 
 /* margin-top: 2rem; */
 }
+

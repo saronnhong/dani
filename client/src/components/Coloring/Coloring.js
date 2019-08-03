@@ -65,6 +65,9 @@ class Coloring extends Component {
         if (window.innerHeight < 800) {
             this.setState({height: window.innerHeight - 142})
         }
+        if (window.innerWidth > 1199) {
+            this.setState({width: window.innerWidth -120})
+        }
         if (window.innerWidth < 1200 && window.innerWidth > 600) {
             this.setState({width: window.innerWidth -100})
         }

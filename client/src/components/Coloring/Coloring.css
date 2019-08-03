@@ -92,3 +92,15 @@
     padding: 0px;
 }
 }
+
+@media only screen and (max-width: 420px) {
+    .arr-left {
+        font-size: 42px;
+        left: 5px;
+    }
+    
+    .arr-right {
+        font-size: 42px;
+        right: 80px;
+    }
+}

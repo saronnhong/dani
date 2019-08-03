@@ -62,6 +62,18 @@ class Coloring extends Component {
     }
 
     componentWillMount = () => {
+        if (window.innerHeight < 800) {
+            this.setState({height: window.innerHeight - 142})
+        }
+        if (window.innerWidth > 1199) {
+            this.setState({width: window.innerWidth -120})
+        }
+        if (window.innerWidth < 1200 && window.innerWidth > 600) {
+            this.setState({width: window.innerWidth -100})
+        }
+        if (window.innerWidth < 600) {
+            this.setState({width: window.innerWidth -75})
+        }
         if (localStorage.ColoringBookPage) {
             let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
             if (typeof savedPage === "number") {
@@ -101,7 +113,6 @@ class Coloring extends Component {
     }
     
     render() {
-        console.log(coloringBook[this.state.coloringImage].path)
         return (
             <div className=" text-center">
                 <h2 className="pangolin-coloring-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
@@ -122,7 +133,7 @@ class Coloring extends Component {
                         saveData={""}
                         brushColor={this.state.color}
                         canvasHeight={this.state.height}
-                        canvasWidth={(window.outerWidth - 135) || this.state.width}
+                        canvasWidth={this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
                         imgSrc={"https://raw.githubusercontent.com/RhadMax/ColoringBookHoster/master/ColoringBook/"

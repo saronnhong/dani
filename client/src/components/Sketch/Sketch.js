@@ -26,6 +26,21 @@ class Sketch extends Component {
         });
     }
 
+    componentWillMount() {
+        if (window.innerHeight < 800) {
+            this.setState({height: window.innerHeight - 142})
+        }
+        if (window.innerWidth > 1199) {
+            this.setState({width: window.innerWidth -120})
+        }
+        if (window.innerWidth < 1200 && window.innerWidth > 600) {
+            this.setState({width: window.innerWidth -100})
+        }
+        if (window.innerWidth < 600) {
+            this.setState({width: window.innerWidth -75})
+        }
+    }
+
     chooseColor = color => {
         this.setState({ color: color })
     };
@@ -76,7 +91,7 @@ class Sketch extends Component {
                         brushColor={this.state.color}
                         canvasHeight={ this.state.height
                         }
-                        canvasWidth={(window.outerWidth - 135) || this.state.width}
+                        canvasWidth={this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
                     />

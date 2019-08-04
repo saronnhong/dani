@@ -4,35 +4,49 @@
 
 .spellContainer {
     margin: 30px auto;
-    /* margin: 30px 30px 30px 450px; */
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844227_1280.png");
-    background-size: 60%;
+    
+    background-image: url("/img/animals/greenfields.png");
+    /* background-size: 80%; */
     background-size: cover;
-    width: 1000px;
-    height: 600px;
-    background-position-y: -170px;
+    width: 100%;
+    height: auto;
+    background-position-y: -220px;
     position: relative;
     -webkit-transition: -webkit-transform .15s linear;
     -webkit-box-shadow: 0 16px 16px rgba(0,0,0,.55);
     -moz-box-shadow: 0 16px 16px rgba(0,0,0,.55);
 }
 
+/* .spellContainer { 
+  background: url("/img/animals/greenfields.png") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+
 .spellImg{
-    margin: 20px;
-    position: relative;
-    top: 280px;
-    left: 320px;
-    height: 150px;
-    width: auto;
+    /* margin: 20px; */
+    /* position: relative; */
+    /* top: 280px; */
+    /* left: 320px; */
+    /* height: 150px;
+    width: auto; */
 }
 
 
 .scrabbleChar, .spellButton{
-    position: relative;
+    /* position: relative;
     left: 290px;
-    top: 280px;
-    margin-right: 3px;
+    top: 280px; */
+    /* margin-right: 3px; */
+    margin-bottom: 25px;
+   
 }
+.groupKeys{
+  justify-content: center;
+}
+
 .scrabbleChar:hover {
     
         /* -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5); */
@@ -51,6 +65,15 @@
     left: 80px;
 }
 
+.guessedLetters {
+  margin: 0 auto;
+}
+
+.animalImg{
+  margin: 100px auto 30px auto;
+  width: 100%;
+
+}
 .spellImg:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
@@ -75,3 +98,4 @@
       transform: translate3d(4px, 0, 0);
     }
 }
+

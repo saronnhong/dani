@@ -2,49 +2,49 @@
   {
     "id": 1,
     "name": "Inca Spa",
-    "image": "https://cdn.pixabay.com/photo/2015/10/11/12/08/landscape-982178_1280.jpg",
+    "image": "/img/sounds/inca.png",
     "sound": "https://freesound.org/data/previews/390/390879_197130-lq.mp3"
   },
   {
     "id": 2,
     "name": "Chimes",
-    "image": "https://cdn.pixabay.com/photo/2014/10/07/13/48/mt-fuji-477832_1280.jpg",
+    "image": "/img/sounds/chimes.png",
     "sound": "https://freesound.org/data/previews/208/208106_3597112-lq.mp3"
   },
   {
     "id": 3,
     "name": "Meditative Ringing",
-    "image": "https://cdn.pixabay.com/photo/2019/06/28/01/44/nature-4303321_1280.jpg",
+    "image": "/img/sounds/Meditative.png",
     "sound": "https://freesound.org/data/previews/457/457074_7662885-lq.mp3"
   },
   {
     "id": 4,
     "name": "Native American Flute",
-    "image": "https://cdn.pixabay.com/photo/2016/03/09/09/15/forest-1245692_1280.jpg",
+    "image": "/img/sounds/naflute.png",
     "sound": "https://freesound.org/data/previews/191/191556_1015240-lq.mp3"
   },
   {
     "id": 5,
     "name": "Flute",
-    "image": "https://cdn.pixabay.com/photo/2016/01/08/18/00/antelope-canyon-1128815_1280.jpg",
+    "image": "/img/sounds/antelope.png",
     "sound": "https://freesound.org/data/previews/348/348351_6365165-lq.mp3"
   },
   {
     "id": 6,
     "name": "World Melody",
-    "image": "https://cdn.pixabay.com/photo/2016/02/13/12/26/aurora-1197753_1280.jpg",
+    "image": "/img/sounds/aurora.png",
     "sound": "https://freesound.org/data/previews/208/208992_3906328-lq.mp3"
   },
   {
     "id": 7,
     "name": "Ambient",
-    "image": "https://cdn.pixabay.com/photo/2017/03/02/16/54/iceland-2111810_1280.jpg",
+    "image": "/img/sounds/iceland.png",
     "sound": "https://freesound.org/data/previews/427/427728_8295394-lq.mp3"
   },
   {
     "id": 8,
     "name": "Relaxed Mood",
-    "image": "https://cdn.pixabay.com/photo/2016/08/31/17/41/sunrise-1634197_1280.jpg",
+    "image": "/img/sounds/sunrise.png",
     "sound": "https://freesound.org/data/previews/136/136742_2244250-lq.mp3"
   }
 ]

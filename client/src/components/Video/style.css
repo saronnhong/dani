@@ -1,5 +1,6 @@
 .video-wrapper {
     margin-bottom: 3%;
+    background-color:#FCD000;
 }
 
 .wrap-background {
@@ -15,3 +16,9 @@
     text-shadow: 2px 2px white;
     color: rgb(0, 175, 66);
 }
+
+.video-player {
+    margin: 0 auto;
+    text-align: center;
+}
+

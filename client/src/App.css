@@ -63,6 +63,43 @@
   margin-top: 2%;
 }
 
+.Profile .pangolin-text-title {
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  display: block;
+}
+
+.metrics-list-display, .metrics-pie-display {
+  font-family: 'Pangolin', cursive;
+    display: inline-flex;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 1px black;
+    color: rgb(0, 175, 66);
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 3px rgb(0, 175, 66);
+    position: relative;
+}
+
+.metrics-list-display {
+  left: 30%;
+}
+
+.metrics-pie-display { 
+  left: 50%;
+}
+
+.is-hidden-element {
+  display: none
+}
+
+.metrics-list-container {
+  border: 2px solid rgb(0, 175, 66);
+}
+
+.metrics-list-display:hover {
+  box-shadow: 0px 0px 9px 3px blueviolet;
+}
+
 @keyframes App-logo-spin {
   from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }

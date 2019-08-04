@@ -38,17 +38,30 @@ class Profile extends Component {
     })
   }
 
+  comingSoon() {
+    // document.getElementsByClassName("metrics-list-container").classList.remove("is-hidden-element");
+    this.setState({metrics: ["... nothing! Under construction! This will be a pie chart displaying metrics data."]})
+  }
+
+
   render() {
     return (
       <div className="container Profile">
-        <h1>Welcome to your profile {this.state.username}</h1>
-        <p>Your Email: {this.state.email}</p>
-        <button onClick={() => this.readMetrics()}>Show my Stats!</button>
+        <br></br>
+        <h1 className="pangolin-text-title" >Welcome to your DANI profile {this.state.username}...</h1>
+        <br></br><p className="pangolin-text-title">Your Email: {this.state.email}</p>
+        <br></br><br></br>
+        <h3 className="pangolin-text-title">Press one of the options below to see your stats!</h3>
         <br></br><hr></hr>
+        <button className="metrics-list-display" onClick={() => this.readMetrics()}>As a List...   <i className="fas fa-list">   </i></button>
+        <button className="metrics-pie-display" onClick={() => this.comingSoon()}>Coming Soon!...  <i className="fas fa-wrench"></i></button>
+        <hr></hr>
         <ul>
+          <div className="metrics-list-container">
           {this.state.metrics.map(metric => 
-            <li key={metric}>Visits to {metric}</li>
+            <li className="pangolin-text-title" key={metric}>Visits to {metric}</li>
           )}
+          </div>
         </ul>
       </div>
     )

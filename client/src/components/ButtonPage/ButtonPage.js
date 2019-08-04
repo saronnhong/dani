@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import withAuth from './../withAuth';
 import API from './../../utils/API';
 import { Link } from "react-router-dom";
-import Back from '../Back'
+import Back from '../Back';
 
 import "./style.css";
 

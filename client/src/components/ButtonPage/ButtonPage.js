@@ -28,7 +28,7 @@ class ButtonPage extends Component {
 
             <div className="container containerSounds">
                 <div className="row">
-                    <div className="col-md-12">
+                    <div className="col-md">
                         <span>
                             <Link to={this.props.linkOne}>
                                 <button type="button" className="btn btn-danger menuButton animalButton">{this.props.buttonOne}</button>

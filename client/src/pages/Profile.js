@@ -49,7 +49,7 @@ class Profile extends Component {
     return (
       <div className="container Profile">
         <div className="row">
-          <div className="col-md-12">
+          <div className="col-md">
             <br></br>
             <h1 className="pangolin-text-title" >Welcome to your DANI profile, {this.state.username} !</h1>
             {/* <br></br><p className="pangolin-text-title">Your Email: {this.state.email}</p> */}

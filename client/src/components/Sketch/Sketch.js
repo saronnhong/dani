@@ -15,12 +15,14 @@ class Sketch extends Component {
         brushRadius: 5,
         lazyRadius: 1,
         metricID: "",
-        metrics: []
+        metrics: [],
+        recentSave: ""
     }
 
     componentDidMount() {
         API.getUser(this.props.user.id).then(res => {
             this.setState({
+                recentSave: res.data.drawings[res.data.drawings.length - 1],
                 metricID: res.data.metric
             })
             let pageOn = this.props.history.location.pathname.replace("/", "")
@@ -30,16 +32,16 @@ class Sketch extends Component {
 
     componentWillMount() {
         if (window.innerHeight < 800) {
-            this.setState({height: window.innerHeight - 142})
+            this.setState({ height: window.innerHeight - 142 })
         }
         if (window.innerWidth > 1199) {
-            this.setState({width: window.innerWidth -120})
+            this.setState({ width: window.innerWidth - 120 })
         }
         if (window.innerWidth < 1200 && window.innerWidth > 600) {
-            this.setState({width: window.innerWidth -100})
+            this.setState({ width: window.innerWidth - 100 })
         }
         if (window.innerWidth < 600) {
-            this.setState({width: window.innerWidth -75})
+            this.setState({ width: window.innerWidth - 75 })
         }
     }
 
@@ -59,19 +61,24 @@ class Sketch extends Component {
     }
 
     loadDrawing = () => {
-        API.loadDrawing()
+        API.loadDrawing(this.state.recentSave)
             .then(data => {
                 if (data.data[data.data.length - 1]) {
-                this.saveableCanvas.loadSaveData(
-                    data.data[data.data.length-1].drawing
-                )
+                    this.saveableCanvas.loadSaveData(
+                        data.data[data.data.length - 1].drawing
+                    )
                 }
             })
     }
 
     saveDrawing = () => {
         let saveNameRandom = "test save"
-        API.saveDrawing(saveNameRandom, this.saveableCanvas.getSaveData())
+        API.saveDrawing(this.props.user.id, saveNameRandom, this.saveableCanvas.getSaveData())
+            .then(res => {
+                this.setState({
+                    recentSave: res.data.drawings[res.data.drawings.length - 1],
+                })
+            })
     }
 
     render() {
@@ -91,7 +98,7 @@ class Sketch extends Component {
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
                         saveData={""}
                         brushColor={this.state.color}
-                        canvasHeight={ this.state.height
+                        canvasHeight={this.state.height
                         }
                         canvasWidth={this.state.width}
                         lazyRadius={this.state.lazyRadius}

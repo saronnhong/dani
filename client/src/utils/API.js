@@ -10,20 +10,20 @@ export default {
   },
 
   //save a new drawing to DB
-  saveDrawing: (randName, drawing) => {
-    return axios.post('api/savedrawing', {randName: randName, drawing: drawing});
+  saveDrawing: (id, randName, drawing) => {
+    return axios.post('api/savedrawing/' + id, {randName: randName, drawing: drawing});
   },
 
-  loadDrawing: () => {
-    return axios.get('api/loaddrawing');
+  loadDrawing: (id) => {
+    return axios.get('api/loaddrawing/' + id);
   },
 
-  saveColoring: (randName, coloring) => {
-    return axios.post('api/savecoloring', {randName: randName, coloring: coloring});
+  saveColoring: (id, randName, coloring) => {
+    return axios.post('api/savecoloring/' + id, {randName: randName, coloring: coloring});
   },
 
-  loadColoring: () => {
-    return axios.get('api/loadcoloring');
+  loadColoring: (id) => {
+    return axios.get('api/loadcoloring/' + id);
   },
 
 

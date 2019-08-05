@@ -19,12 +19,15 @@ class Coloring extends Component {
         coloringImage: 0,
         clickFlag: 0,
         metricID: "",
-        metrics: []
+        metrics: [],
+        recentSave: ""
     }
 
     componentDidMount() {
         API.getUser(this.props.user.id).then(res => {
+            console.log(res)
             this.setState({
+                recentSave: res.data.colorings[res.data.colorings.length - 1],
                 metricID: res.data.metric
             })
             let pageOn = this.props.history.location.pathname.replace("/", "")
@@ -48,7 +51,7 @@ class Coloring extends Component {
     }
 
     loadColoring = () => {
-        API.loadColoring()
+        API.loadColoring(this.state.recentSave)
             .then(data => {
                 if (data.data[data.data.length - 1]) {
                     this.saveableCanvas.loadSaveData(
@@ -60,8 +63,12 @@ class Coloring extends Component {
 
     saveColoring = () => {
         let saveNameRandom = "test save"
-
-        API.saveColoring(saveNameRandom, this.saveableCanvas.getSaveData())
+        API.saveColoring(this.props.user.id, saveNameRandom, this.saveableCanvas.getSaveData())
+            .then(res => {
+                this.setState({
+                    recentSave: res.data.colorings[res.data.colorings.length - 1],
+                })
+            })
     }
 
     componentWillMount = () => {

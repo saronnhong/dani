@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import Back from "../Back";
+import { Link } from "react-router-dom";
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import animals from "./animalSounds.json";
@@ -31,6 +32,15 @@ class AnimalSound extends Component {
                         </a>
                     )}
                 </div>
+                <div className="row">
+                        <div className="column-lg-12 animalBackCol">
+                            <footer className="animalFooter">
+                                <Link to="/Listen">
+                                    <Back />
+                                </Link>
+                            </footer>
+                        </div>
+                    </div>
             </div>
         )
     }

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
+import Back from "../Back";
 import natures from "./natureSounds.json";
 import "./style.css";
 
@@ -33,6 +34,15 @@ class NatureSounds extends Component {
                         )
                     }
                     )}
+                </div>
+                <div className="row">
+                    <div className="column-lg-12 natureBackCol">
+                        <footer className="natureFooter relaxFooter">
+                            <Link to="/Listen">
+                                <Back />
+                            </Link>
+                        </footer>
+                    </div>
                 </div>
             </div>
         )

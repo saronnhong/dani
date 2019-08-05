@@ -4,6 +4,8 @@ import Palette from "../Palette"
 import './Sketch.css';
 import API from "../../utils/API"
 import withAuth from './../withAuth';
+import Back from "../Back";
+import { Link } from "react-router-dom";
 
 class Sketch extends Component {
     state = {
@@ -101,6 +103,16 @@ class Sketch extends Component {
                         brushSizeUp={this.brushSizeUp}
                         brushSizeDown={this.brushSizeDown}
                     />
+                </div>
+
+                <div className="row">
+                    <div className="column-lg-12 colorBackCol">
+                        <footer className="colorFooter">
+                            <Link to="/Learn">
+                                <Back />
+                            </Link>
+                        </footer>
+                    </div>
                 </div>
             </div>
         )

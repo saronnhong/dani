@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 
 // import animals from "./animalSounds.json";
 import "./style.css";
-import Navbar from '../Navbar';
 
 // componentWillUnmount() {
 
@@ -13,7 +12,7 @@ import Navbar from '../Navbar';
 class Landing extends Component {
     
     render() {
-        console.log(window.location)
+        console.log(this.props)
         return (
             <div>
                 <br /><br /><br />

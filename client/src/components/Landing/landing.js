@@ -12,7 +12,6 @@ import "./style.css";
 class Landing extends Component {
 
     render() {
-        console.log(this.props)
         return (
             <div>
                 <br /><br /><br />
@@ -33,12 +32,15 @@ class Landing extends Component {
                         <h3 className="quote">"Developing And Nurturing Interface, A Place For Eager Minds To Stay Engaged"</h3>
                     </div>
                 </div>
+                <br /><br /><br />
+                <br /><br /><br />
+                <br /><br /><br />
                 <div className="footer-container">
                     <p>
-                        DANI developed by <a className="footer-text-link" href="https://github.com/RhadMax"><i className="fab fa-github"></i> Max Patten,</a>
-                        <a className="footer-text-link" href="https://github.com/rschle"><i class="fab fa-github"></i> Rebecca Schleimer,</a>
-                        <a className="footer-text-link" href="https://github.com/marinadelkovamoro"><i class="fab fa-github"></i> Marina Delkova-Moro,</a> and
-                        <a className="footer-text-link" href="https://github.com/saronnhong"><i class="fab fa-github"></i> Saron Nhong</a>
+                        DANI developed by <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/RhadMax"><i className="fab fa-github"></i> Max Patten,</a>
+                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/rschle"><i class="fab fa-github"></i> Rebecca Schleimer,</a>
+                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/marinadelkovamoro"><i class="fab fa-github"></i> Marina Delkova-Moro,</a> and
+                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/saronnhong"><i class="fab fa-github"></i> Saron Nhong</a>
                     </p>
                 </div>
             </div>

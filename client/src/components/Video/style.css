@@ -16,6 +16,19 @@
   }
 
   .vidBackCol{
-    width: 100%;
+    width: 60%;
     margin-top: 5%;
+    margin-bottom: 2%;
+  }
+
+  @media only screen and (max-width: 600px) {
+  
+  .vidBackCol{
+    width: 100%;
+  }
+
+  .vidFooter{
+    width: 100%;
+  }
+
   }

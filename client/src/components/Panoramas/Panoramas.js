@@ -38,8 +38,8 @@ class Panoramas extends React.Component {
                     )}
                 </div>
                 <div className="row">
-                    <div className="column-lg-12 360BackCol">
-                        <footer className="360Footer">
+                    <div className="column-lg-12 panBackCol">
+                        <footer className="panFooter">
                             <Link to="/Look">
                                 <Back />
                             </Link>

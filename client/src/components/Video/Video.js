@@ -1,9 +1,9 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 import ReactPlayer from 'react-player'
 import videos from "./videos.json";
 import Back from "../Back"
-import { Link } from "react-router-dom"
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import "./style.css";
@@ -28,47 +28,58 @@ class Video extends Component {
 
     render() {
         return (
+            <div className="container">
+                <div className="row">
+                    <div className="col-md">
 
-            <div>
-                {/* turnary */}
-                {this.state.playing ? (
-
-
-                    <div className="wrapper wrap-background" >
-                        {videos.map((video) =>
-                            <div key={video.name} className="video-wrapper">
-                                <p className="video-name">{video.name}</p>
-                                <ReactPlayer onClick={() =>
-                                    this.setState({ playing: false })
-                                }
-                                    url={video.video} playing />
-                            </div>
-                        )}
-                    </div>) : (
-                        <div className="wrapper wrap-background">
-                            {videos.map((video) =>
-                                <div key={video.name} className="video-wrapper">
-                                    <p className="video-name">{video.name}</p>
-                                    <ReactPlayer onClick={() =>
-                                        this.setState({ playing: true })
-                                    }
-                                        url={video.video} />
+                        {/* turnary */}
+                        {this.state.playing ? (
+                            <div className="container-fluid">
+                                <div className="row">
+                                    <div className="wrapper wrap-background">
+                                        {videos.map((video) =>
+                                            <div key={video.name} className="video-wrapper">
+                                                <p className="video-name">{video.name}</p>
+                                                <div>
+                                                    <ReactPlayer onClick={() =>
+                                                        this.setState({ playing: false })
+                                                    }
+                                                        url={video.video} playing />
+                                                </div>
+                                            </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>) : (
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="wrapper wrap-background">
+                                            {videos.map((video) =>
+                                                <div key={video.name} className="video-wrapper">
+                                                    <p className="video-name">{video.name}</p>
+                                                    <div>
+                                                        <ReactPlayer onClick={() =>
+                                                            this.setState({ playing: true })
+                                                        }
+                                                            url={video.video} />
+                                                    </div>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
                                 </div>
                             )}
-
-                            <div className="row">
-                                <div className="column-lg-12 vidBackCol">
-                                    <footer className="vidFooter">
-                                        <Link to="/Look">
-                                            <Back />
-                                        </Link>
-                                    </footer>
-                                </div>
+                        <div className="row">
+                            <div className="column-lg-12 360BackCol">
+                                <footer className="360Footer">
+                                    <Link to="/Look">
+                                        <Back />
+                                    </Link>
+                                </footer>
                             </div>
                         </div>
-
-
-                    )}
+                    </div>
+                </div>
             </div>
         )
     }

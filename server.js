@@ -79,10 +79,10 @@ app.use(function (err, req, res, next) {
 
 
 //attempt at getting the drawings to save to mongoDB
-app.post('/api/savedrawing', (req, res) => {
+app.post('/api/savedrawing/:id', (req, res) => {
   db.Drawings.create(req.body)
     .then(newDrawing => {
-      return db.User.findOneAndUpdate({}, { $push: { drawings: newDrawing._id } }, { new: true })
+      return db.User.findOneAndUpdate({_id:req.params.id}, { $push: { drawings: newDrawing._id } }, { new: true })
     })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
@@ -90,24 +90,24 @@ app.post('/api/savedrawing', (req, res) => {
 });
 
 //currently finding all drawings, methods in component grab the most recent one... isn't user specific yet even though they have an id ref'd by user. To fix need to add to find search object so it finds based on user's saved collection reference ID's. This means adding to didmount/willmount in each page? Or does the isauth pass that along?
-app.get('/api/loaddrawing', (req, res) => {
-  db.Drawings.find({})
+app.get('/api/loaddrawing/:id', (req, res) => {
+  db.Drawings.find({_id: req.params.id})
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 });
 
-app.post('/api/savecoloring', (req, res) => {
+app.post('/api/savecoloring/:id', (req, res) => {
   db.Colorings.create(req.body)
     .then(newColoring => {
-      return db.User.findOneAndUpdate({}, { $push: { colorings: newColoring._id } }, { new: true })
+      return db.User.findOneAndUpdate({_id:req.params.id}, { $push: { colorings: newColoring._id } }, { new: true })
     })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 
 });
 
-app.get('/api/loadcoloring', (req, res) => {
-  db.Colorings.find({})
+app.get('/api/loadcoloring/:id', (req, res) => {
+  db.Colorings.find({_id: req.params.id})
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));
 });

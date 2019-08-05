@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import * as Sphere from 'photo-sphere-viewer'
-import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css'
+import * as Sphere from 'photo-sphere-viewer';
+import 'photo-sphere-viewer/dist/photo-sphere-viewer.min.css';
+import Back from "../Back";
+import { Link } from "react-router-dom";
+import "./Image360.css"
 
 class SphereComponent extends Component {
   constructor(props) {
@@ -37,9 +40,22 @@ class SphereComponent extends Component {
 
   render() {
     return (
-      <div style={this.divStyle} ref={this.sphereDiv} id="viewer">
-        <div ref={node => (this.subDiv = node)} style={this.divStyle} />
+      <div className="360-container">
+        <div style={this.divStyle} ref={this.sphereDiv} id="viewer">
+          <div ref={node => (this.subDiv = node)} style={this.divStyle} />
+        </div>
+        <div className="row">
+          <div className="column-lg-12 360BackCol">
+            <footer className="360Footer">
+              <Link to="/Look">
+                <Back />
+              </Link>
+            </footer>
+          </div>
+        </div>
       </div>
+
+
     )
   }
 }

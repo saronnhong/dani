@@ -2,49 +2,49 @@
   {
     "id": 1,
     "name": "Water Fall",
-    "image": "https://cdn.pixabay.com/photo/2016/11/19/15/38/creek-1839924_1280.jpg",
+    "image": "/img/sounds/creek.png",
     "sound": "https://freesound.org/data/previews/365/365915_5121236-lq.mp3"
   },
   {
     "id": 2,
     "name": "Rain Fall",
-    "image": "https://cdn.pixabay.com/photo/2015/08/02/15/05/drip-871152_1280.jpg",
+    "image": "/img/sounds/rainfall.png",
     "sound": "https://freesound.org/data/previews/252/252804_4388723-lq.mp3"
   },
   {
     "id": 3,
     "name": "Bird Chirping",
-    "image": "https://cdn.pixabay.com/photo/2018/05/27/18/19/animal-3434123_1280.jpg",
+    "image": "/img/sounds/birds2.png",
     "sound": "https://freesound.org/data/previews/327/327445_4028726-lq.mp3"
   },
   {
     "id": 4,
     "name": "Bird Chirping in Cambodia",
-    "image": "https://cdn.pixabay.com/photo/2019/03/07/19/16/birds-4040877_1280.jpg",
+    "image": "/img/sounds/cambodia.png",
     "sound": "https://freesound.org/data/previews/221/221170_1645319-lq.mp3"
   },
   {
     "id": 5,
     "name": "Lake Waves",
-    "image": "https://cdn.pixabay.com/photo/2015/05/04/13/57/swan-752449_1280.jpg",
+    "image": "/img/sounds/swan.png",
     "sound": "https://freesound.org/data/previews/67/67883_634166-lq.mp3"
   },
   {
     "id": 6,
     "name": "Fire Place",
-    "image": "https://cdn.pixabay.com/photo/2016/11/18/17/02/bonfire-1835829_1280.jpg",
+    "image": "/img/sounds/bonfire.png",
     "sound": "https://freesound.org/data/previews/234/234288_3120802-lq.mp3"
   },
   {
     "id": 7,
     "name": "Woods",
-    "image": "https://cdn.pixabay.com/photo/2015/12/01/20/28/green-1072828_1280.jpg",
+    "image": "/img/sounds/greenforest.png",
     "sound": "https://freesound.org/data/previews/246/246399_2095593-lq.mp3"
   },
   {
     "id": 8,
     "name": "Nightingale",
-    "image": "https://cdn.pixabay.com/photo/2019/01/22/17/56/singing-3948645_1280.jpg",
+    "image": "/img/sounds/singing.png",
     "sound": "https://freesound.org/data/previews/188/188065_1648170-lq.mp3"
   }
 ]

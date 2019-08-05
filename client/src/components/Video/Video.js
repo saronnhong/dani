@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 
 import ReactPlayer from 'react-player'
 import videos from "./videos.json";
+import Back from "../Back"
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import "./style.css";
@@ -27,7 +28,6 @@ class Video extends Component {
 
     render() {
         return (
-
             <div className="container">
                 <div className="row">
                     <div className="col-md">
@@ -69,10 +69,15 @@ class Video extends Component {
                                     </div>
                                 </div>
                             )}
-<br />
-                        <button type="button" className="btn btn-success">
-                            <Link className="back-btn" to="/Look"> BACK </Link>
-                        </button>
+                        <div className="row">
+                            <div className="column-lg-12 vidBackCol">
+                                <footer className="vidFooter">
+                                    <Link to="/Look">
+                                        <Back />
+                                    </Link>
+                                </footer>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

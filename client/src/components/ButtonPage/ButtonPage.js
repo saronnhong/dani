@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import withAuth from './../withAuth';
 import API from './../../utils/API';
 import { Link } from "react-router-dom";
+import Back from '../Back';
 
 import "./style.css";
 
@@ -42,6 +43,15 @@ class ButtonPage extends Component {
                         </span>
                     </div>
                 </div>
+
+                <footer>
+                    <div className="row">
+                            <Link to={this.props.backLink}>
+                                <div>{this.props.backButton}</div>
+                            </Link>
+                    </div>
+                </footer>
+
             </div>
         )
     }

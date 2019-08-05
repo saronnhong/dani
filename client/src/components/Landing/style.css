@@ -1,7 +1,6 @@
 
 
 .logoImg {
-
   display: block;
 }
 
@@ -10,7 +9,6 @@
     float:right;
 }
 .puzzleImg {
-
     justify-content: center;
     width: 100%;
 }
@@ -20,6 +18,38 @@
   transform: translate3d(0, 0, 0);
   backface-visibility: hidden;
   perspective: 1000px;
+}
+
+.brand-landing-text {
+  text-align: center;
+  font-size: 72px;
+  color: white;
+  text-shadow: 2px 2px rgb(0, 175, 66);
+  font-family: 'Pangolin', cursive;
+}
+
+.quote {
+  text-align: center;
+  color: rgb(0, 175, 66);
+  text-shadow: 2px 2px white;
+  font-family: 'Pangolin', cursive;
+}
+
+.footer-container {
+  background-color: rgb(0, 175, 66);
+  text-align: center;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  color: white;
+  padding-top: 15px;
+}
+
+.footer-text-link {
+  color: white;
+  text-decoration: underline;
+  padding: 5px;
+
 }
 
 @keyframes shake {
@@ -39,10 +69,11 @@
     transform: translate3d(4px, 0, 0);
   }
 }
-.quote {
-  margin: 30px;
-}
 
-.footerText {
-  color: white;
+
+/* @media only screen and (max-width: 420px) {
+  .puzzle-landing-image {
+    width: 100%;
+    margin: 0 auto;
 }
+} */

@@ -5,6 +5,7 @@ import './style.css';
 import panoramas from "./panoramas.json";
 import API from './../../utils/API';
 import withAuth from './../withAuth';
+import Back from "../Back"
 
 
 
@@ -36,9 +37,15 @@ class Panoramas extends React.Component {
                         </div>
                     )}
                 </div>
-                < button type="button" className="btn btn-success" >
-                    <Link className="back-btn" to="/Look"> BACK </Link>
-                </button >
+                <div className="row">
+                    <div className="column-lg-12 360BackCol">
+                        <footer className="360Footer">
+                            <Link to="/Look">
+                                <Back />
+                            </Link>
+                        </footer>
+                    </div>
+                </div>
             </div>
         )
     }

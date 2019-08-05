@@ -1,8 +1,8 @@
 .menuButton {
-    padding: 130px;
+    padding: 110px;
     margin-top: 50px;
     margin-right: 20px;
-   
+    border: none;
 }
 .containerSounds {
     display: flex;
@@ -27,7 +27,6 @@
 .relaxButton:hover, .natureButton:hover, .animalButton:hover {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
-
     -webkit-transform: scale(1.05);
     -moz-transform: scale(1.05);
     position: relative;

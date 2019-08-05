@@ -60,9 +60,11 @@ ReactDOM.render(
                     linkOne="/Look"
                     linkTwo="/Listen"
                     linkThree="/Learn"
-                    buttonOne={<div> <i className="fas fa-eye fa-5x"></i> <p className="font-buttons-text">Look</p> </div>}
-                    buttonTwo={<div> <i className="fas fa-headphones-alt fa-5x"></i> <p className="font-buttons-text">Listen</p> </div>}
-                    buttonThree={<div> <i className="fab fa-leanpub fa-5x"></i> <p className="font-buttons-text">Learn</p> </div>}
+                    buttonOne={<div> <i className="fas fa-eye fa-5x"></i> <p className="font-buttons-text">Look</p> </div> }
+                    buttonTwo={<div> <i className="fas fa-headphones-alt fa-5x"></i> <p className="font-buttons-text">Listen</p> </div> }
+                    buttonThree={<div> <i className="fab fa-leanpub fa-5x"></i> <p className="font-buttons-text">Learn</p> </div> }
+                    backButton=''
+                    backLink=''
                 />}
             />
             <Route exact path="/Look"
@@ -70,9 +72,11 @@ ReactDOM.render(
                     linkOne="/Images"
                     linkTwo="/Videos"
                     linkThree="/Images-360"
-                    buttonOne={<div> <i className="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div>}
-                    buttonTwo={<div> <i className="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div>}
-                    buttonThree={<div> <i className="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div>}
+                    buttonOne={<div> <i className="fas fa-camera fa-5x"></i> <p className="font-buttons-text">Images</p> </div> }
+                    buttonTwo={<div> <i className="fas fa-video fa-5x"></i> <p className="font-buttons-text">Videos</p> </div> }
+                    buttonThree={<div> <i className="fas fa-expand-arrows-alt fa-5x"></i> <p className="font-buttons-text">360</p> </div> }
+                    backLink="/Home"
+                    backButton={<button type="button" className="btn btn-success backButton">Go Back</button>}
                 />}
             />
             <Route exact path="/Listen"

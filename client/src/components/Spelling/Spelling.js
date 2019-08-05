@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 // import {Link} from "react-router-dom";
 // import AlphabetCard from "./components/AlphabetCard";
-
+import { Link } from "react-router-dom";
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import Words from "./wordList.json";
 import Alphabet from "./alphabet.json";
+import Back from "../Back"
 import "./style.css";
 
 var wordGuessedArr = [];
@@ -184,6 +185,7 @@ class Spelling extends Component {
                         </div>
                     )}
                 </div>
+               
 
                 {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
                     if (wordGuess === this.state.choosenWord) {
@@ -201,6 +203,12 @@ class Spelling extends Component {
                     this.setState({ answer: "" });
                 }
                 }>Clear</button> */}
+
+                <footer className="spellFooter">
+                <Link to="/Learn">
+                        <Back />
+                </Link>
+                </footer>
             </div>
         )
     }

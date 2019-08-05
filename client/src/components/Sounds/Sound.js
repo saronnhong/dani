@@ -1,16 +1,12 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
-
-// import animals from "./relaxSounds.json";
 import "./style.css";
 
 class Sounds extends Component {
     render() {
         return (
             <div className="container containerSounds">
-                
                 <div ClassName="row">
-                    
                     <span>
                         <Link to="/animalSounds">
                         <button type="button" class="btn btn-danger menuButton animalButton">Animals</button>
@@ -21,7 +17,6 @@ class Sounds extends Component {
                         <Link to="/relaxSounds">
                         <button type="button" class="btn btn-primary menuButton relaxButton">Relax</button>
                         </Link>
-                        
                     </span>
                 </div>
             </div>

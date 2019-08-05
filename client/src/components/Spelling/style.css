@@ -1,43 +1,50 @@
+.scoreText {
+  font-size: 24px;
+}
+
 .spellButton {
     margin: 10px 2px;
 }
 
 .spellContainer {
     margin: 30px auto;
-    /* margin: 30px 30px 30px 450px; */
-    background-image: url("https://cdn.pixabay.com/photo/2016/11/21/03/56/landscape-1844227_1280.png");
-    background-size: 60%;
+    
+    background-image: url("/img/animals/greenfields.png");
+    /* background-size: 80%; */
     background-size: cover;
-    width: 1000px;
-    height: 600px;
-    background-position-y: -170px;
+    width: 100%;
+    height: auto;
+    background-position-y: -220px;
+    background-repeat: no-repeat;
     position: relative;
     -webkit-transition: -webkit-transform .15s linear;
-    -webkit-box-shadow: 0 16px 16px rgba(0,0,0,.55);
-    -moz-box-shadow: 0 16px 16px rgba(0,0,0,.55);
+    -webkit-box-shadow: 0 10px 10px rgba(0,0,0,.55);
+    -moz-box-shadow: 0 10px 10px rgba(0,0,0,.55);
+    border: 5px dashed firebrick;
+
+
 }
 
 .spellImg{
-    margin: 20px;
-    position: relative;
-    top: 280px;
-    left: 320px;
-    height: 150px;
-    width: auto;
+    height: 200px;
 }
 
 
 .scrabbleChar, .spellButton{
-    position: relative;
-    left: 290px;
-    top: 280px;
-    margin-right: 3px;
+    margin-right: 5px;
+    margin-bottom: 80px;
+
+   
 }
+.scrabbleCharImg{
+  width: 50px;
+  height: 50px;
+}
+.groupKeys{
+  justify-content: center;
+}
+
 .scrabbleChar:hover {
-    
-        /* -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5); */
-        /* -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5); */
-    
         -webkit-transform: scale(1.25);
         -moz-transform: scale(1.25);
         position: relative;
@@ -47,10 +54,23 @@
 
 .guessKey {
     position: relative;
-    font-size: 130px;
-    left: 80px;
+    font-size: 100px;
+    /* left: 70px; */
 }
 
+.guessedLetters {
+  text-align: center;
+}
+
+.animalImg{
+  margin: 100px auto 30px auto;
+  width: 100%;
+
+}
+.imgContainer{
+  display: flex;
+  justify-content: center;
+}
 .spellImg:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
@@ -60,8 +80,13 @@
 
   .spellFooter{
     padding: 25px;
-    margin-top: 50%;
+    margin-top: 10%;
+    width: 60%;
+    margin: auto;
+  }
+  .spellBackCol{
     width: 100%;
+    margin: auto;
   }
   
   @keyframes shake {
@@ -80,4 +105,56 @@
     40%, 60% {
       transform: translate3d(4px, 0, 0);
     }
+}
+
+@media screen and (max-width: 750px) {
+  .spellContainer {
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position-y: 80%;
+  }
+  .scoreText {
+    font-size: 16px;
+  }
+  .guessKey {
+    margin: 30px auto 0 20px;
+    font-size: 40px;
+  }
+  .spellImg {
+  height: 100px;
+  }
+  .animalImg {
+    margin: 120px auto 80px auto;
+  }
+  .scrabbleCharImg{
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media screen and (min-width: 750px) and (max-width: 1100px) {
+  .spellContainer {
+    background-repeat: no-repeat;
+    width: auto;
+    height: auto;
+    background-size: auto;
+    background-position-y: 80%;
+  }
+  .scoreText {
+    font-size: 16px;
+  }
+  .guessKey {
+    margin: 30px auto 0 20px;
+    font-size: 40px;
+  }
+  .spellImg {
+  height: 100px;
+  }
+  .animalImg {
+    margin: 300px auto 80px auto;
+  }
+  .scrabbleCharImg{
+    width: 40px;
+    height: 40px;
+  }
 }

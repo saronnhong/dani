@@ -4,23 +4,27 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import API from './../../utils/API';
 import withAuth from './../withAuth';
-import Words from "./wordList.json";
+import EasyWords from "./easyWordList.json";
+import MedWords from "./medWordList.json";
+import HardWords from "./hardWordList.json";
 import Alphabet from "./alphabet.json";
 import Back from "../Back"
 import "./style.css";
 
 var wordGuessedArr = [];
 var wordGuess;
+var wrongCount = 0;
+
 class Spelling extends Component {
     state = {
         choosenWord: null,
         choosenImage: null,
         answerKeys: null,
         imgLocation: [{ "image": null, "value": null }],
-        answer: "",
+        answer: "Start",
+        score: 0,
         metricID: "",
         metrics: []
-
 
     }
 
@@ -38,23 +42,38 @@ class Spelling extends Component {
         this.updateWord();
     }
 
-    // componentDidMount() {
-    //     this.imageToLetter();
-    // }
-
-    // componentDidUpdate() {
-    //     this.imageToLetter();
-    // }
     updateWord = () => {
-        let randomNum = Math.floor((Math.random() * Words.length));
-        this.setState({ choosenWord: Words[randomNum].word, choosenImage: Words[randomNum].image, answerKeys: Words[randomNum].answerKeys }, () => {
-            this.imageToLetter()
-        });
+        wrongCount = 0;
+        if (this.state.score < 10) {
+            let randomNum = Math.floor((Math.random() * EasyWords.length));
+            this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
+                this.imageToLetter()
+            });
+        } else if (this.state.score >= 10 && this.state.score < 20) {
+            let randomNum = Math.floor((Math.random() * MedWords.length));
+            this.setState({ choosenWord: MedWords[randomNum].word, choosenImage: MedWords[randomNum].image, answerKeys: MedWords[randomNum].answerKeys }, () => {
+                this.imageToLetter()
+            });
+        } else if (this.state.score >= 20) {
+            let randomNum = Math.floor((Math.random() * HardWords.length));
+            this.setState({ choosenWord: HardWords[randomNum].word, choosenImage: HardWords[randomNum].image, answerKeys: HardWords[randomNum].answerKeys }, () => {
+                this.imageToLetter()
+            });
+        }
+
     }
 
     updateAnswer = (value) => {
         this.setState({ answer: value });
+
     }
+
+    myFunction = () => {
+        var popup = document.getElementById("myPopup");
+        popup.classList.toggle("show");
+    }
+
+
 
     imageToLetter = () => {
         var stringLetters = this.state.answerKeys;
@@ -151,64 +170,80 @@ class Spelling extends Component {
         this.setState({ imgLocation: imgLocation });
     }
 
+
+
     render() {
         return (
-            <div className="container spellContainer">
-                <div className="row">
-                    <div className="imgContainer" onClick={() => {
-                        if (wordGuess === this.state.choosenWord) {
-                            wordGuessedArr.length = 0;
-                            this.updateWord();
-                            alert("You are correct");
-                            this.setState({ answer: "" });
-                        } else {
-                            alert("try again");
-                            wordGuessedArr.length = 0;
-                            this.setState({ answer: "" });
-                        }
-                    }}>
-                        <img className="spellImg" width="200px" alt="imagePic" src={this.state.choosenImage} />
+            <div>
+                <div className="container spellContainer">
+                    <div className="row">
+                        <div className="col-md-3">
+                            <div className="scoreText">Score: {this.state.score}</div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12 guessedLetters">
+                            <div className="guessKey">{this.state.answer}</div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12 animalImg" >
+                            <div className="imgContainer" >
+                                <img className="spellImg" alt="imagePic" src={this.state.choosenImage} />
+                            </div>
+                        </div>
                     </div>
 
-                    <h1 className="guessKey">{this.state.answer}</h1>
-                </div>
+                    <div className="row groupKeys">
+                        {this.state.imgLocation.map((letter) =>
+                            <div className="scrabbleChar" >
+                                <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
+                                    wordGuessedArr.push(letter.value);
+                                    wordGuess = wordGuessedArr.join('');
+                                    this.updateAnswer(wordGuess);
 
+                                    if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess === this.state.choosenWord)) {
+                                        wordGuessedArr.length = 0;
+                                        this.updateWord();
+                                        this.setState({ score: this.state.score + 1 });
+                                        wrongCount = 0;
+                                        setTimeout(() => { this.setState({ answer: "Winner!" }); }, 500);
+                                    } else if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess !== this.state.choosenWord)) {
+                                        wordGuessedArr.length = 0;
+                                        // Makes sure the score doesn't drop below 0
+                                        if (this.state.score <= 0) {
+                                            this.setState({ answer: "Again?", score: 0 });
+                                            wrongCount++;
+                                            if (wrongCount > 2) {
+
+                                                this.updateWord();
+                                            }
+                                        } else {
+                                            this.setState({ answer: "Again?", score: this.state.score - 1 });
+                                            wrongCount++;
+                                            if (wrongCount > 2) {
+                                                this.updateWord();
+                                            }
+                                        }
+                                    }
+                                }} />
+                            </div>
+                        )}
+                    </div>
+
+
+                </div>
                 <div className="row">
-                    {this.state.imgLocation.map((letter) =>
-                        <div className="scrabbleChar" >
-                            <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
-                                wordGuessedArr.push(letter.value);
-                                wordGuess = wordGuessedArr.join('');
-                                this.updateAnswer(wordGuess);
-                            }
-                            } width="40px" />
-                        </div>
-                    )}
+                    <div className="col-lg-12 spellBackCol">
+                        <footer className="spellFooter">
+                            <Link to="/Learn">
+                                <Back />
+                            </Link>
+                        </footer>
+                    </div>
                 </div>
-               
 
-                {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
-                    if (wordGuess === this.state.choosenWord) {
-                        wordGuessedArr.length = 0;
-                        this.updateWord();
-                        alert("You are correct");
-                        this.setState({ answer: "" });
-                    } else {
-                        alert("try again");
-                    }
-                }}>Submit</button> */}
 
-                {/* <button type="button" class="btn btn-success spellButton" onClick={() => {
-                    wordGuessedArr.length = 0;
-                    this.setState({ answer: "" });
-                }
-                }>Clear</button> */}
-
-                <footer className="spellFooter">
-                <Link to="/Learn">
-                        <Back />
-                </Link>
-                </footer>
             </div>
         )
     }

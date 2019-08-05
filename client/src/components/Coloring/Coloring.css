@@ -1,6 +1,7 @@
 .draw-coloring-area {
     border: solid 2px black;
     touch-action: none;
+    cursor: none;
 }
 .undo-coloring-button {
     margin: 0 0 10px 5px;
@@ -68,6 +69,16 @@
     right: 110px;
 }
 
+.colorFooter{
+    margin-top: 20px;
+    width: 100%;
+}
+
+.colorBackCol{
+    margin: auto;
+    width: 30%;
+}
+
 @media only screen and (max-width: 1219px) {
     .pangolin-coloring-text {
         padding: 0px;
@@ -90,6 +101,12 @@
     font-size: 14px;
     margin: 2px 0 10px 2px;
     padding: 0px;
+    
+}
+
+.colorBackCol{
+    margin: 0%;
+    width: 100%;
 }
 }
 
@@ -102,5 +119,11 @@
     .arr-right {
         font-size: 42px;
         right: 80px;
+    }
+
+    .colorBackCol{
+        margin: 0;
+        margin-top: 0;
+        width: 100%;
     }
 }

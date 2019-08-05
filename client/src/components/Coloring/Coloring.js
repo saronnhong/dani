@@ -5,6 +5,9 @@ import './Coloring.css';
 import API from "../../utils/API"
 import withAuth from './../withAuth';
 import coloringBook from "./coloringbook.json"
+import Back from "../Back"
+import { Link } from "react-router-dom";
+
 
 class Coloring extends Component {
     state = {
@@ -63,16 +66,16 @@ class Coloring extends Component {
 
     componentWillMount = () => {
         if (window.innerHeight < 800) {
-            this.setState({height: window.innerHeight - 142})
+            this.setState({ height: window.innerHeight - 142 })
         }
         if (window.innerWidth > 1199) {
-            this.setState({width: window.innerWidth -120})
+            this.setState({ width: window.innerWidth - 120 })
         }
         if (window.innerWidth < 1200 && window.innerWidth > 600) {
-            this.setState({width: window.innerWidth -100})
+            this.setState({ width: window.innerWidth - 100 })
         }
         if (window.innerWidth < 600) {
-            this.setState({width: window.innerWidth -75})
+            this.setState({ width: window.innerWidth - 75 })
         }
         if (localStorage.ColoringBookPage) {
             let savedPage = parseInt(localStorage.getItem("ColoringBookPage"))
@@ -111,7 +114,7 @@ class Coloring extends Component {
         if (this.state.clickFlag >= 1) window.location.reload();
         setTimeout(() => { this.setState({ clickFlag: 0 }) }, 1000);
     }
-    
+
     render() {
         return (
             <div className=" text-center">
@@ -148,6 +151,16 @@ class Coloring extends Component {
                         brushSizeDown={this.brushSizeDown}
                     />
                 </div>
+                <div className="row">
+                    <div className="column-lg-12 colorBackCol">
+                        <footer className="colorFooter">
+                            <Link to="/Learn">
+                                <Back />
+                            </Link>
+                        </footer>
+                    </div>
+                </div>
+
             </div>
         )
     }

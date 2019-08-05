@@ -5,6 +5,19 @@
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
 
 }
+
+.animalFooter{
+  margin: auto;
+  width: 60%;
+  margin-bottom: 0%;
+  height: 20%;
+}
+
+.animalBackCol{
+  width: 100%;
+  height: 5%;
+}
+
 .cardAnimals:hover {
     -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
     -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);

@@ -77,6 +77,12 @@
     backface-visibility: hidden;
     perspective: 1000px;
   }
+
+  .spellFooter{
+    padding: 25px;
+    margin-top: 50%;
+    width: 100%;
+  }
   
   @keyframes shake {
     10%, 90% {

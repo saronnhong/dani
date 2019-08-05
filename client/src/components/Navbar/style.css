@@ -27,6 +27,10 @@
     display: inline;
     text-align: center;
    }
+
+   .navbar{
+       width: 100%;
+   }
    li.nav-item{
        display: inline-block;
        padding: 8px;
@@ -47,4 +51,8 @@
     .puzzlePieces{
         width: 50px;
     }
+    .navbar{
+        width: 100%;
+    }
+
 }

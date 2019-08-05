@@ -20,7 +20,6 @@
 
 .containerAbout{
   font-family: 'Pangolin', cursive;
-  
   color: white;
   text-shadow: 2px 2px green;
 }
@@ -32,8 +31,7 @@
 }
 
 .aboutContent{
-  background-color: white;
-  opacity: 0.5;
+  background-color: #FCD000;
   margin: auto;
   width: 60%;
 }
@@ -41,11 +39,12 @@
 .aboutParagraph{
   color: green;
   text-shadow: none;
-  font-weight: bold;
-  font-size: 30px;
+  text-align: center;
+  font-size: 20px;
   margin-top: 3%;
   margin-bottom: 6%;
 }
+
 .danielGif{
   opacity: 0.9;
   height: 550px;
@@ -57,10 +56,45 @@
 .gifDescription{
   color: green;
   text-shadow: none;
-  font-size: 25px;
+  font-size: 15px;
   display: block;
   text-align: center;
+  font-style: italic;
   margin-top: 2%;
+}
+
+.Profile .pangolin-text-title {
+  text-shadow: 1px 1px 1px black;
+  text-align: center;
+  display: block;
+}
+
+.metrics-list-display, .metrics-pie-display {
+  font-family: 'Pangolin', cursive;
+    display: inline-flex;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 1px black;
+    color: rgb(0, 175, 66);
+    border-radius: 25px;
+    box-shadow: 0px 0px 5px 3px rgb(0, 175, 66);
+}
+
+.centered-btn {
+  text-align: center;
+}
+
+.is-hidden-element {
+  display: none
+}
+
+.metrics-list-container {
+  border-radius: 5px;
+  border: 2px solid rgb(0, 175, 66);
+  display: block;
+}
+
+.metrics-list-display:hover {
+  box-shadow: 0px 0px 9px 3px blueviolet;
 }
 
 @keyframes App-logo-spin {
@@ -69,11 +103,22 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .aboutContent{
-    background-color: white;
-    opacity: 0.5;
+  .aboutContent {
     margin: auto;
     width: 100%;
     font-size: 12px;
   }
+}
+
+/* Login and Signup pages styling */
+.page-title-name {
+  color: green;
+  font-family: 'Pangolin', cursive;
+  text-shadow: 2px 2px white;
+}
+
+.form-title-text {
+  color: green;
+  font-family: 'Pangolin', cursive;
+  font-weight: bold;
 }

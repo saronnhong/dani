@@ -1,11 +1,14 @@
 import React, { Component } from "react";
-
+// import {Link} from "react-router-dom";
+// import AlphabetCard from "./components/AlphabetCard";
+import { Link } from "react-router-dom";
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import EasyWords from "./easyWordList.json";
 import MedWords from "./medWordList.json";
 import HardWords from "./hardWordList.json";
 import Alphabet from "./alphabet.json";
+import Back from "../Back"
 import "./style.css";
 
 var wordGuessedArr = [];
@@ -226,6 +229,12 @@ class Spelling extends Component {
                         </div>
                     )}
                 </div>
+
+                <footer className="spellFooter">
+                <Link to="/Learn">
+                        <Back />
+                </Link>
+                </footer>
             </div>
         )
     }

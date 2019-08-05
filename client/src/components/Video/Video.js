@@ -70,8 +70,8 @@ class Video extends Component {
                                 </div>
                             )}
                         <div className="row">
-                            <div className="column-lg-12 360BackCol">
-                                <footer className="360Footer">
+                            <div className="column-lg-12 vidBackCol">
+                                <footer className="vidFooter">
                                     <Link to="/Look">
                                         <Back />
                                     </Link>

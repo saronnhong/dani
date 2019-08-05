@@ -1,8 +1,8 @@
 import React, { Component } from "react";
+import { Link } from 'react-router-dom';
 
 // import animals from "./animalSounds.json";
 import "./style.css";
-import Navbar from '../Navbar';
 
 // componentWillUnmount() {
 
@@ -10,28 +10,37 @@ import Navbar from '../Navbar';
 
 
 class Landing extends Component {
+
     render() {
+        console.log(this.props)
         return (
             <div>
+                <br /><br /><br />
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 mx-auto logoImg">
-                            <img className="puzzleImg" src="/img/green.png" alt="puzzleLogo" />
-                            <button type="button" class="btn btn-success signUpButton">Sign Up</button>
-                            <button type="button" class="btn btn-success logInButton">Log In</button>
+                            <img className="puzzleImg" src="https://www.stickpng.com/assets/images/588887b0bc2fc2ef3a1860a0.png" alt="puzzleLogo" />
+                            <br />
+                            <h1 className="brand-landing-text"> DANI</h1>
+                            <br></br>
+                            <Link className="btn btn-success signUpButton" to="/signup">Sign Up </Link>
+                            <Link className="btn btn-success logInButton" to="/login">Log In </Link>
+
                         </div>
                     </div>
-                    <div className="row">
+                    <br></br><br></br>
+                    <div className="mx-auto">
                         <h3 className="quote">"Developing And Nurturing Interface, A Place For Eager Minds To Stay Engaged"</h3>
                     </div>
                 </div>
-                <nav className="navbar navbar-expand-lg navbar-dark bg-success" >
-                    <div className="container">
-                        <div className="footerText">
-                            DANI developed by Max, Rebecca, Marina, and Saron
-                    </div>
-                    </div>
-                </nav>
+                <div className="footer-container">
+                    <p>
+                        DANI developed by <a className="footer-text-link" href="https://github.com/RhadMax"><i className="fab fa-github"></i> Max Patten,</a>
+                        <a className="footer-text-link" href="https://github.com/rschle"><i class="fab fa-github"></i> Rebecca Schleimer,</a>
+                        <a className="footer-text-link" href="https://github.com/marinadelkovamoro"><i class="fab fa-github"></i> Marina Delkova-Moro,</a> and
+                        <a className="footer-text-link" href="https://github.com/saronnhong"><i class="fab fa-github"></i> Saron Nhong</a>
+                    </p>
+                </div>
             </div>
         )
     }

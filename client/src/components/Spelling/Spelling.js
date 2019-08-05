@@ -10,6 +10,8 @@ import "./style.css";
 
 var wordGuessedArr = [];
 var wordGuess;
+var wrongCount=0;
+
 class Spelling extends Component {
     state = {
         choosenWord: null,
@@ -38,6 +40,7 @@ class Spelling extends Component {
     }
 
     updateWord = () => {
+        wrongCount=0;
         if(this.state.score < 10){
             let randomNum = Math.floor((Math.random() * EasyWords.length));
         this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
@@ -199,16 +202,28 @@ class Spelling extends Component {
                                 wordGuessedArr.push(letter.value);
                                 wordGuess = wordGuessedArr.join('');
                                 this.updateAnswer(wordGuess);
+                                
                                 if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess === this.state.choosenWord)) {
                                     wordGuessedArr.length = 0;
                                     this.updateWord();
                                     this.setState({ score: this.state.score + 1 });
+                                    wrongCount=0;
                                 } else if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess !== this.state.choosenWord)) {
                                     wordGuessedArr.length = 0; 
+                                    // Makes sure the score doesn't drop below 0
                                     if(this.state.score <= 0){
                                         this.setState({answer: "Again?", score: 0});
+                                        wrongCount++;
+                                        if(wrongCount > 2){
+
+                                            this.updateWord();
+                                        }
                                     }else{
                                         this.setState({ answer: "Again?", score: this.state.score - 1 });
+                                        wrongCount++;
+                                        if(wrongCount > 2){
+                                            this.updateWord();
+                                        }
                                     }
                                 }
                             }} width="50px" height="50px"/>

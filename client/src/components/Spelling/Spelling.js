@@ -13,7 +13,7 @@ import "./style.css";
 
 var wordGuessedArr = [];
 var wordGuess;
-var wrongCount=0;
+var wrongCount = 0;
 
 class Spelling extends Component {
     state = {
@@ -43,18 +43,18 @@ class Spelling extends Component {
     }
 
     updateWord = () => {
-        wrongCount=0;
-        if(this.state.score < 10){
+        wrongCount = 0;
+        if (this.state.score < 10) {
             let randomNum = Math.floor((Math.random() * EasyWords.length));
-        this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
-            this.imageToLetter()
-        });
-        }else if(this.state.score >= 10 && this.state.score < 20){
+            this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
+                this.imageToLetter()
+            });
+        } else if (this.state.score >= 10 && this.state.score < 20) {
             let randomNum = Math.floor((Math.random() * MedWords.length));
             this.setState({ choosenWord: MedWords[randomNum].word, choosenImage: MedWords[randomNum].image, answerKeys: MedWords[randomNum].answerKeys }, () => {
                 this.imageToLetter()
             });
-        }else if(this.state.score >= 20){
+        } else if (this.state.score >= 20) {
             let randomNum = Math.floor((Math.random() * HardWords.length));
             this.setState({ choosenWord: HardWords[randomNum].word, choosenImage: HardWords[randomNum].image, answerKeys: HardWords[randomNum].answerKeys }, () => {
                 this.imageToLetter()
@@ -65,7 +65,7 @@ class Spelling extends Component {
 
     updateAnswer = (value) => {
         this.setState({ answer: value });
-        
+
     }
 
     myFunction = () => {
@@ -174,67 +174,76 @@ class Spelling extends Component {
 
     render() {
         return (
-            <div className="container spellContainer">
-                <div className="row">
-                    <div className="col-md-3">
-                        <div className="scoreText">Score: {this.state.score}</div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-12 guessedLetters">
-                        <div className="guessKey">{this.state.answer}</div>
-                    </div>
-                </div>
-                <div className="row">
-                    <div className="col-md-12 animalImg" >
-                        <div className="imgContainer" >
-                            <img className="spellImg"  alt="imagePic" src={this.state.choosenImage} />
+            <div>
+                <div className="container spellContainer">
+                    <div className="row">
+                        <div className="col-md-3">
+                            <div className="scoreText">Score: {this.state.score}</div>
                         </div>
                     </div>
-                </div>
+                    <div className="row">
+                        <div className="col-md-12 guessedLetters">
+                            <div className="guessKey">{this.state.answer}</div>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="col-md-12 animalImg" >
+                            <div className="imgContainer" >
+                                <img className="spellImg" alt="imagePic" src={this.state.choosenImage} />
+                            </div>
+                        </div>
+                    </div>
 
-                <div className="row groupKeys">
-                    {this.state.imgLocation.map((letter) =>
-                        <div className="scrabbleChar" >
-                            <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
-                                wordGuessedArr.push(letter.value);
-                                wordGuess = wordGuessedArr.join('');
-                                this.updateAnswer(wordGuess);
-                                
-                                if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess === this.state.choosenWord)) {
-                                    wordGuessedArr.length = 0;
-                                    this.updateWord();
-                                    this.setState({ score: this.state.score + 1 });
-                                    wrongCount=0;
-                                    setTimeout(()=>{ this.setState({ answer: "Winner!" }); }, 500);
-                                } else if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess !== this.state.choosenWord)) {
-                                    wordGuessedArr.length = 0; 
-                                    // Makes sure the score doesn't drop below 0
-                                    if(this.state.score <= 0){
-                                        this.setState({answer: "Again?", score: 0});
-                                        wrongCount++;
-                                        if(wrongCount > 2){
+                    <div className="row groupKeys">
+                        {this.state.imgLocation.map((letter) =>
+                            <div className="scrabbleChar" >
+                                <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
+                                    wordGuessedArr.push(letter.value);
+                                    wordGuess = wordGuessedArr.join('');
+                                    this.updateAnswer(wordGuess);
 
-                                            this.updateWord();
-                                        }
-                                    }else{
-                                        this.setState({ answer: "Again?", score: this.state.score - 1 });
-                                        wrongCount++;
-                                        if(wrongCount > 2){
-                                            this.updateWord();
+                                    if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess === this.state.choosenWord)) {
+                                        wordGuessedArr.length = 0;
+                                        this.updateWord();
+                                        this.setState({ score: this.state.score + 1 });
+                                        wrongCount = 0;
+                                        setTimeout(() => { this.setState({ answer: "Winner!" }); }, 500);
+                                    } else if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess !== this.state.choosenWord)) {
+                                        wordGuessedArr.length = 0;
+                                        // Makes sure the score doesn't drop below 0
+                                        if (this.state.score <= 0) {
+                                            this.setState({ answer: "Again?", score: 0 });
+                                            wrongCount++;
+                                            if (wrongCount > 2) {
+
+                                                this.updateWord();
+                                            }
+                                        } else {
+                                            this.setState({ answer: "Again?", score: this.state.score - 1 });
+                                            wrongCount++;
+                                            if (wrongCount > 2) {
+                                                this.updateWord();
+                                            }
                                         }
                                     }
-                                }
-                            }} />
-                        </div>
-                    )}
+                                }} />
+                            </div>
+                        )}
+                    </div>
+
+
+                </div>
+                <div className="row">
+                    <div className="col-lg-12 spellBackCol">
+                        <footer className="spellFooter">
+                            <Link to="/Learn">
+                                <Back />
+                            </Link>
+                        </footer>
+                    </div>
                 </div>
 
-                <footer className="spellFooter">
-                <Link to="/Learn">
-                        <Back />
-                </Link>
-                </footer>
+
             </div>
         )
     }

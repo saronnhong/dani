@@ -80,8 +80,13 @@
 
   .spellFooter{
     padding: 25px;
-    margin-top: 50%;
+    margin-top: 10%;
+    width: 60%;
+    margin: auto;
+  }
+  .spellBackCol{
     width: 100%;
+    margin: auto;
   }
   
   @keyframes shake {

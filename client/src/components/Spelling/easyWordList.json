@@ -82,5 +82,11 @@
     "word": "ox",
     "image": "/img/animals/ox.png",
     "answerKeys": "boxcari"
+  },
+  {
+    "id": 16,
+    "word": "ram",
+    "image": "/img/animals/ram.png",
+    "answerKeys": "marenid"
   }
 ] 

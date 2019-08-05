@@ -1,4 +1,5 @@
 [
+  
   {
     "id": 1,
     "word": "rabbit",
@@ -70,5 +71,107 @@
     "word": "squid",
     "image": "/img/animals/squid.png",
     "answerKeys": "dquosibe"
+  },
+  {
+    "id": 13,
+    "word": "donkey",
+    "image": "/img/animals/donkey.png",
+    "answerKeys": "kbeydwon"
+  },
+  {
+    "id": 14,
+    "word": "monkey",
+    "image": "/img/animals/monkey.png",
+    "answerKeys": "nomjkehy"
+  },
+  {
+    "id": 1,
+    "word": "bee",
+    "image": "/img/animals/bee1.png",
+    "answerKeys": "beozyxd"
+  },
+  {
+    "id": 2,
+    "word": "dog",
+    "image": "/img/animals/dog_shake.png",
+    "answerKeys": "wdpioyg"
+  },
+  {
+    "id": 3,
+    "word": "cat",
+    "image": "/img/animals/cat_bow.png",
+    "answerKeys": "octubax"
+  },
+  {
+    "id": 4,
+    "word": "pig",
+    "image": "/img/animals/pig2.png",
+    "answerKeys": "edpigud"
+  },
+  {
+    "id": 5,
+    "word": "bear",
+    "image": "/img/animals/bear3.png",
+    "answerKeys": "rqiuaeb"
+  },
+  {
+    "id": 6,
+    "word": "cow",
+    "image": "/img/animals/cow1.png",
+    "answerKeys": "copwmta"
+  },
+  {
+    "id": 7,
+    "word": "lion",
+    "image": "/img/animals/lion.png",
+    "answerKeys": "lihyton"
+  },
+  {
+    "id": 8,
+    "word": "frog",
+    "image": "/img/animals/frog.png",
+    "answerKeys": "goxjrfp"
+  },
+  {
+    "id": 9,
+    "word": "owl",
+    "image": "/img/animals/owl2.png",
+    "answerKeys": "owilnab"
+  },
+  {
+    "id": 10,
+    "word": "crab",
+    "image": "/img/animals/crab.png",
+    "answerKeys": "cbrainj"
+  },
+  {
+    "id": 12,
+    "word": "deer",
+    "image": "/img/animals/deer.png",
+    "answerKeys": "bvnerdo"
+  },
+  {
+    "id": 13,
+    "word": "fox",
+    "image": "/img/animals/fox.png",
+    "answerKeys": "toxwrfa"
+  },
+  {
+    "id": 14,
+    "word": "goat",
+    "image": "/img/animals/goat.png",
+    "answerKeys": "atoghen"
+  },
+  {
+    "id": 15,
+    "word": "ox",
+    "image": "/img/animals/ox.png",
+    "answerKeys": "boxcari"
+  },
+  {
+    "id": 16,
+    "word": "ram",
+    "image": "/img/animals/ram.png",
+    "answerKeys": "marenid"
   }
 ] 

@@ -52,7 +52,6 @@ class Profile extends Component {
           <div className="col-md">
             <br></br>
             <h1 className="pangolin-text-title" >Welcome to your DANI profile, {this.state.username} !</h1>
-            {/* <br></br><p className="pangolin-text-title">Your Email: {this.state.email}</p> */}
             <br></br><br></br>
             <h3 className="pangolin-text-title">Press one of the options below to see your stats</h3>
             <br></br><hr></hr>
@@ -80,7 +79,6 @@ class Profile extends Component {
           </ul>
         </div>
       </div>
-
     )
   }
 }

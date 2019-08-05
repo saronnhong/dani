@@ -44,6 +44,7 @@
   margin-top: 3%;
   margin-bottom: 6%;
 }
+
 .danielGif{
   opacity: 0.9;
   height: 550px;
@@ -76,20 +77,11 @@
     color: rgb(0, 175, 66);
     border-radius: 25px;
     box-shadow: 0px 0px 5px 3px rgb(0, 175, 66);
-       /* position: relative; */
 }
 
 .centered-btn {
   text-align: center;
 }
-
-/* .metrics-list-display {
-  left: 5%;
-}
-
-.metrics-pie-display { 
-  left: 30%;
-} */
 
 .is-hidden-element {
   display: none

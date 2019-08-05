@@ -36,35 +36,39 @@ class Video extends Component {
                         {this.state.playing ? (
                             <div className="container-fluid">
                                 <div className="row">
-                                    <div className="wrapper wrap-background">
-                                        {videos.map((video) =>
-                                            <div key={video.name} className="video-wrapper">
-                                                <p className="video-name">{video.name}</p>
-                                                <div>
-                                                    <ReactPlayer onClick={() =>
-                                                        this.setState({ playing: false })
-                                                    }
-                                                        url={video.video} playing />
-                                                </div>
-                                            </div>
-                                        )}
-                                    </div>
-                                </div>
-                            </div>) : (
-                                <div className="container-fluid">
-                                    <div className="row">
+                                    <div className="col-lg-12 videoColumn">
                                         <div className="wrapper wrap-background">
                                             {videos.map((video) =>
                                                 <div key={video.name} className="video-wrapper">
                                                     <p className="video-name">{video.name}</p>
                                                     <div>
                                                         <ReactPlayer onClick={() =>
-                                                            this.setState({ playing: true })
+                                                            this.setState({ playing: false })
                                                         }
-                                                            url={video.video} />
+                                                            url={video.video} playing />
                                                     </div>
                                                 </div>
                                             )}
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>) : (
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="col-lg-12 videoColumn">
+                                            <div className="wrapper wrap-background">
+                                                {videos.map((video) =>
+                                                    <div key={video.name} className="video-wrapper">
+                                                        <p className="video-name">{video.name}</p>
+                                                        <div>
+                                                            <ReactPlayer onClick={() =>
+                                                                this.setState({ playing: true })
+                                                            }
+                                                                url={video.video} />
+                                                        </div>
+                                                    </div>
+                                                )}
+                                            </div>
                                         </div>
                                     </div>
                                 </div>

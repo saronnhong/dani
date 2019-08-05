@@ -8,6 +8,16 @@
     color: rgb(0, 175, 66);
 }
 
+.videoColumn{
+  width: 100%;
+  margin: 0 auto;
+}
+
+.video-wrapper{
+  width: 60%;
+  margin: auto;
+}
+
 .vidFooter{
     margin: auto;
     width: 60%;
@@ -16,20 +26,36 @@
   }
 
   .vidBackCol{
-     
+    width: 100%;
     margin-top: 5%;
     margin-bottom: 2%;
   }
 
   @media only screen and (max-width: 600px) {
   
+.videoColumn{
+  width: 100%;
+  margin: 0 auto;
+  margin-left: 0;
+}
+
+.video-wrapper{
+  width: 60%;
+  margin: 0 auto;
+  margin-left: -5px;
+}
+
+
   .vidBackCol{
     width: 100%;
     margin-bottom: 0;
   }
 
   .vidFooter{
-    width: 100%;
+    width: 60%;
   }
 
+  iframe{
+    width: 325px;
+  }
   }

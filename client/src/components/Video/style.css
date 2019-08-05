@@ -15,3 +15,15 @@
     text-shadow: 2px 2px white;
     color: rgb(0, 175, 66);
 }
+
+.vidFooter{
+    margin: auto;
+    width: 60%;
+    margin-bottom: 0%;
+    height: 20%;
+  }
+
+  .vidBackCol{
+    width: 100%;
+    margin-top: 5%;
+  }

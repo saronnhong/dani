@@ -2,6 +2,8 @@ import React, { Component } from "react";
 
 import ReactPlayer from 'react-player'
 import videos from "./videos.json";
+import Back from "../Back"
+import { Link } from "react-router-dom"
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import "./style.css";
@@ -13,7 +15,7 @@ class Video extends Component {
         metricID: "",
         metrics: []
     }
-    
+
     componentDidMount() {
         API.getUser(this.props.user.id).then(res => {
             this.setState({
@@ -23,7 +25,7 @@ class Video extends Component {
             API.addToMetrics(res.data.metric, pageOn)
         });
     }
-    
+
     render() {
         return (
 
@@ -46,14 +48,25 @@ class Video extends Component {
                         <div className="wrapper wrap-background">
                             {videos.map((video) =>
                                 <div key={video.name} className="video-wrapper">
-                                     <p className="video-name">{video.name}</p>
+                                    <p className="video-name">{video.name}</p>
                                     <ReactPlayer onClick={() =>
                                         this.setState({ playing: true })
                                     }
                                         url={video.video} />
                                 </div>
                             )}
+
+                            <div className="row">
+                                <div className="column-lg-12 vidBackCol">
+                                    <footer className="vidFooter">
+                                        <Link to="/Look">
+                                            <Back />
+                                        </Link>
+                                    </footer>
+                                </div>
+                            </div>
                         </div>
+
 
                     )}
             </div>

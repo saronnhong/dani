@@ -20,7 +20,7 @@
   {
     "id": 4,
     "word": "narwhal",
-    "image": "/img/animals/narwhal.png",
+    "image": "/img/animals/narwhal1.png",
     "answerKeys": "narwhales"
   },
   {
@@ -137,16 +137,16 @@
     "image": "/img/animals/ostrich.png",
     "answerKeys": "ahistoric"
   },
-  {
-    "id": 24,
-    "word": "hippopotamus",
-    "image": "/img/animals/hippo.png",
-    "answerKeys": "hippopotamus"
-  },
+  // {
+  //   "id": 24,
+  //   "word": "hippopotamus",
+  //   "image": "/img/animals/hippo.png",
+  //   "answerKeys": "hipoptamus"
+  // },
   {
     "id": 1,
     "word": "rabbit",
-    "image": "/img/animals/bunny.png",
+    "image": "/img/animals/rabbit.png",
     "answerKeys": "birdbath"
   },
   {
@@ -216,12 +216,6 @@
     "answerKeys": "liquids"
   },
   {
-    "id": 13,
-    "word": "donkey",
-    "image": "/img/animals/donkey.png",
-    "answerKeys": "keynoted"
-  },
-  {
     "id": 14,
     "word": "monkey",
     "image": "/img/animals/monkey.png",
@@ -230,7 +224,7 @@
   {
     "id": 1,
     "word": "bee",
-    "image": "/img/animals/bee1.png",
+    "image": "/img/animals/bee2.png",
     "answerKeys": "bezelin"
   },
   {

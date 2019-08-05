@@ -16,7 +16,7 @@
   }
 
   .vidBackCol{
-    width: 60%;
+     
     margin-top: 5%;
     margin-bottom: 2%;
   }
@@ -25,6 +25,7 @@
   
   .vidBackCol{
     width: 100%;
+    margin-bottom: 0;
   }
 
   .vidFooter{

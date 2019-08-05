@@ -64,15 +64,19 @@ class Profile extends Component {
                 <button className="metrics-pie-display" onClick={() => this.comingSoon()}>Coming Soon! <i className="fas fa-wrench"></i></button>
               </div>
             </div>
+            <hr></hr>
           </div>
-          <hr></hr>
-          <ul>
+          <ul className="unorderedList col-md-12">
             <br />
-            <div className="metrics-list-container">
-              {this.state.metrics.map(metric =>
-                <li className="pangolin-text-title" key={metric}>Visits to {metric}</li>
-              )}
-            </div>
+            {this.state.metrics.length ? (
+              <div className="metrics-list-container">
+                <div className="row">
+                  <div className="col-md-12">{this.state.metrics.map(metric =>
+                    <li className="pangolin-text-title" key={metric}>Visits to {metric} </li>
+                  )} </div>
+                </div>
+              </div>
+            ) : (<div></div>)}
           </ul>
         </div>
       </div>

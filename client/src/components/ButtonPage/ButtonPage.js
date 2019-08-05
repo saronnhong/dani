@@ -44,14 +44,6 @@ class ButtonPage extends Component {
                     </div>
                 </div>
 
-                <footer>
-                    <div className="row">
-                            <Link to={this.props.backLink}>
-                                <div>{this.props.backButton}</div>
-                            </Link>
-                    </div>
-                </footer>
-
             </div>
         )
     }

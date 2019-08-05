@@ -1,0 +1,24 @@
+.panBackCol{
+    width: 100%;
+}
+
+.panFooter{
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+@media only screen and (max-width: 600px) {
+
+    .panBackCol{
+        width: 100%;
+    }
+    
+    .panFooter{
+        width: 100%;
+        margin: auto;
+        margin-top: 20px;
+    }
+    
+  }

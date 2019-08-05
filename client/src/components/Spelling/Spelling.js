@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 import API from './../../utils/API';
 import withAuth from './../withAuth';
-import Words from "./wordList.json";
+import EasyWords from "./easyWordList.json";
+import MedWords from "./medWordList.json";
+import HardWords from "./hardWordList.json";
 import Alphabet from "./alphabet.json";
 import "./style.css";
 
@@ -36,20 +38,41 @@ class Spelling extends Component {
     }
 
     updateWord = () => {
-        let randomNum = Math.floor((Math.random() * Words.length));
-        this.setState({ choosenWord: Words[randomNum].word, choosenImage: Words[randomNum].image, answerKeys: Words[randomNum].answerKeys }, () => {
+        if(this.state.score < 10){
+            let randomNum = Math.floor((Math.random() * EasyWords.length));
+        this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
             this.imageToLetter()
         });
+        }else if(this.state.score >= 10 && this.state.score < 20){
+            let randomNum = Math.floor((Math.random() * MedWords.length));
+            this.setState({ choosenWord: MedWords[randomNum].word, choosenImage: MedWords[randomNum].image, answerKeys: MedWords[randomNum].answerKeys }, () => {
+                this.imageToLetter()
+            });
+        }else if(this.state.score >= 20){
+            let randomNum = Math.floor((Math.random() * HardWords.length));
+            this.setState({ choosenWord: HardWords[randomNum].word, choosenImage: HardWords[randomNum].image, answerKeys: HardWords[randomNum].answerKeys }, () => {
+                this.imageToLetter()
+            });
+        }
+
+        // let randomNum = Math.floor((Math.random() * EasyWords.length));
+        // this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
+        //     this.imageToLetter()
+        // });
+
     }
 
     updateAnswer = (value) => {
         this.setState({ answer: value });
+        
     }
 
     myFunction = () => {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
     }
+
+
 
     imageToLetter = () => {
         var stringLetters = this.state.answerKeys;
@@ -146,6 +169,8 @@ class Spelling extends Component {
         this.setState({ imgLocation: imgLocation });
     }
 
+
+
     render() {
         return (
             <div className="container spellContainer">
@@ -161,36 +186,35 @@ class Spelling extends Component {
                 </div>
                 <div className="row">
                     <div className="col-md-2 animalImg" >
-                        <div className="imgContainer" onClick={() => {
-                            if (wordGuess === this.state.choosenWord) {
-                                wordGuessedArr.length = 0;
-                                this.updateWord();
-                                // alert("You are correct");
-                                this.setState({ answer: "Win!", score: this.state.score + 1 });
-
-                            } else {
-                                alert("try again");
-                                wordGuessedArr.length = 0;
-                                this.setState({ answer: "Again", score: this.state.score - 1 });
-                            }
-                        }}>
+                        <div className="imgContainer" >
                             <img className="spellImg" height="200px" alt="imagePic" src={this.state.choosenImage} />
                         </div>
                     </div>
                 </div>
 
                 <div className="row groupKeys">
-                            {this.state.imgLocation.map((letter) =>
-                                <div className="scrabbleChar" >
-                                    <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
-                                        wordGuessedArr.push(letter.value);
-                                        wordGuess = wordGuessedArr.join('');
-                                        this.updateAnswer(wordGuess);
+                    {this.state.imgLocation.map((letter) =>
+                        <div className="scrabbleChar" >
+                            <img alt="scrabbleLetter" className="scrabbleCharImg" src={letter.image} onClick={() => {
+                                wordGuessedArr.push(letter.value);
+                                wordGuess = wordGuessedArr.join('');
+                                this.updateAnswer(wordGuess);
+                                if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess === this.state.choosenWord)) {
+                                    wordGuessedArr.length = 0;
+                                    this.updateWord();
+                                    this.setState({ score: this.state.score + 1 });
+                                } else if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess !== this.state.choosenWord)) {
+                                    wordGuessedArr.length = 0; 
+                                    if(this.state.score <= 0){
+                                        this.setState({answer: "Again?", score: 0});
+                                    }else{
+                                        this.setState({ answer: "Again?", score: this.state.score - 1 });
                                     }
-                                    } width="40px" />
-                                </div>
-                            )}
-                   
+                                }
+                            }} width="50px" height="50px"/>
+                        </div>
+                    )}
+
                 </div>
 
             </div>

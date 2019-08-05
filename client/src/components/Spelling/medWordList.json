@@ -1,0 +1,74 @@
+[
+  {
+    "id": 1,
+    "word": "rabbit",
+    "image": "/img/animals/bunny.png",
+    "answerKeys": "obitewar"
+  },
+  {
+    "id": 2,
+    "word": "panda",
+    "image": "/img/animals/panda.png",
+    "answerKeys": "unapodeb"
+  },
+  {
+    "id": 3,
+    "word": "tiger",
+    "image": "/img/animals/tiger.png",
+    "answerKeys": "tisgdber"
+  },
+  {
+    "id": 4,
+    "word": "whale",
+    "image": "/img/animals/whale.png",
+    "answerKeys": "iwarhelo"
+  },
+  {
+    "id": 5,
+    "word": "sheep",
+    "image": "/img/animals/sheep.png",
+    "answerKeys": "petushow"
+  },
+  {
+    "id": 6,
+    "word": "horse",
+    "image": "/img/animals/horse.png",
+    "answerKeys": "erhkolsz"
+  },
+  {
+    "id": 7,
+    "word": "goose",
+    "image": "/img/animals/goose.png",
+    "answerKeys": "segoiqbj"
+  },
+  {
+    "id": 8,
+    "word": "shark",
+    "image": "/img/animals/shark.png",
+    "answerKeys": "krshomav"
+  },
+  {
+    "id": 9,
+    "word": "snail",
+    "image": "/img/animals/snail.png",
+    "answerKeys": "lisnaowb"
+  },
+  {
+    "id": 10,
+    "word": "turtle",
+    "image": "/img/animals/turtle.png",
+    "answerKeys": "leturhac"
+  },
+  {
+    "id": 11,
+    "word": "camel",
+    "image": "/img/animals/camel.png",
+    "answerKeys": "lemiucat"
+  },
+  {
+    "id": 12,
+    "word": "squid",
+    "image": "/img/animals/squid.png",
+    "answerKeys": "dquosibe"
+  }
+] 

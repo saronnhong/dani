@@ -58,11 +58,6 @@ class Spelling extends Component {
             });
         }
 
-        // let randomNum = Math.floor((Math.random() * EasyWords.length));
-        // this.setState({ choosenWord: EasyWords[randomNum].word, choosenImage: EasyWords[randomNum].image, answerKeys: EasyWords[randomNum].answerKeys }, () => {
-        //     this.imageToLetter()
-        // });
-
     }
 
     updateAnswer = (value) => {
@@ -230,9 +225,7 @@ class Spelling extends Component {
                             }} />
                         </div>
                     )}
-
                 </div>
-
             </div>
         )
     }

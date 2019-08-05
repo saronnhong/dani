@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-
 import natures from "./natureSounds.json";
-import "./style.css";
-
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import Player from "../Player";
+import "./style.css";
 
 class NatureSounds extends Component {
     state = {

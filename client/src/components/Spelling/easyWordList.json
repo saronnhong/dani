@@ -60,31 +60,31 @@
     "answerKeys": "crabtaco"
   },
   {
-    "id": 12,
+    "id": 11,
     "word": "deer",
     "image": "/img/animals/deer.png",
     "answerKeys": "crepedz"
   },
   {
-    "id": 13,
+    "id": 12,
     "word": "fox",
     "image": "/img/animals/fox.png",
     "answerKeys": "fauxosq"
   },
   {
-    "id": 14,
+    "id": 13,
     "word": "goat",
     "image": "/img/animals/goat.png",
     "answerKeys": "gelatok"
   },
   {
-    "id": 15,
+    "id": 14,
     "word": "ox",
     "image": "/img/animals/ox.png",
     "answerKeys": "boxcari"
   },
   {
-    "id": 16,
+    "id": 15,
     "word": "ram",
     "image": "/img/animals/ram.png",
     "answerKeys": "abnormal"

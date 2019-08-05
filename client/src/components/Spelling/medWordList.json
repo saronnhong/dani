@@ -72,97 +72,97 @@
     "answerKeys": "liquids"
   },
   {
-    "id": 14,
+    "id": 13,
     "word": "monkey",
     "image": "/img/animals/monkey.png",
     "answerKeys": "bookmeny"
   },
   {
-    "id": 1,
+    "id": 14,
     "word": "bee",
     "image": "/img/animals/bee2.png",
     "answerKeys": "bezelin"
   },
   {
-    "id": 2,
+    "id": 15,
     "word": "dog",
     "image": "/img/animals/dog_shake.png",
     "answerKeys": "geodes"
   },
   {
-    "id": 3,
+    "id": 16,
     "word": "cat",
     "image": "/img/animals/cat_bow.png",
     "answerKeys": "octapus"
   },
   {
-    "id": 4,
+    "id": 17,
     "word": "pig",
     "image": "/img/animals/pig2.png",
     "answerKeys": "spidergwen"
   },
   {
-    "id": 5,
+    "id": 18,
     "word": "bear",
     "image": "/img/animals/bear3.png",
     "answerKeys": "bakerys"
   },
   {
-    "id": 6,
+    "id": 19,
     "word": "cow",
     "image": "/img/animals/cow1.png",
     "answerKeys": "wetcorn"
   },
   {
-    "id": 7,
+    "id": 20,
     "word": "lion",
     "image": "/img/animals/lion.png",
     "answerKeys": "albino"
   },
   {
-    "id": 8,
+    "id": 21,
     "word": "frog",
     "image": "/img/animals/frog.png",
     "answerKeys": "fromage"
   },
   {
-    "id": 9,
+    "id": 22,
     "word": "owl",
     "image": "/img/animals/owl2.png",
     "answerKeys": "blownie"
   },
   {
-    "id": 10,
+    "id": 23,
     "word": "crab",
     "image": "/img/animals/crab.png",
     "answerKeys": "crabtaco"
   },
   {
-    "id": 12,
+    "id": 24,
     "word": "deer",
     "image": "/img/animals/deer.png",
     "answerKeys": "crepedz"
   },
   {
-    "id": 13,
+    "id": 25,
     "word": "fox",
     "image": "/img/animals/fox.png",
     "answerKeys": "fauxosq"
   },
   {
-    "id": 14,
+    "id": 26,
     "word": "goat",
     "image": "/img/animals/goat.png",
     "answerKeys": "gelatok"
   },
   {
-    "id": 15,
+    "id": 27,
     "word": "ox",
     "image": "/img/animals/ox.png",
     "answerKeys": "boxcari"
   },
   {
-    "id": 16,
+    "id": 28,
     "word": "ram",
     "image": "/img/animals/ram.png",
     "answerKeys": "abnormal"

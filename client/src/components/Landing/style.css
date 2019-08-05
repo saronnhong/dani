@@ -1,7 +1,6 @@
 
 
 .logoImg {
-
   display: block;
 }
 
@@ -10,7 +9,6 @@
     float:right;
 }
 .puzzleImg {
-
     justify-content: center;
     width: 100%;
 }
@@ -71,3 +69,11 @@
     transform: translate3d(4px, 0, 0);
   }
 }
+
+
+/* @media only screen and (max-width: 420px) {
+  .puzzle-landing-image {
+    width: 100%;
+    margin: 0 auto;
+}
+} */

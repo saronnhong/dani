@@ -179,18 +179,18 @@ class Spelling extends Component {
             <div className="container spellContainer">
                 <div className="row">
                     <div className="col-md-3">
-                        <h2>Score: {this.state.score}</h2>
+                        <div className="scoreText">Score: {this.state.score}</div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-5 guessedLetters">
-                        <h1 className="guessKey">{this.state.answer}</h1>
+                    <div className="col-md-4 guessedLetters">
+                        <div className="guessKey">{this.state.answer}</div>
                     </div>
                 </div>
                 <div className="row">
                     <div className="col-md-2 animalImg" >
                         <div className="imgContainer" >
-                            <img className="spellImg" height="200px" alt="imagePic" src={this.state.choosenImage} />
+                            <img className="spellImg"  alt="imagePic" src={this.state.choosenImage} />
                         </div>
                     </div>
                 </div>
@@ -208,25 +208,26 @@ class Spelling extends Component {
                                     this.updateWord();
                                     this.setState({ score: this.state.score + 1 });
                                     wrongCount=0;
+                                    setTimeout(()=>{ this.setState({ answer: "Winner!" }); }, 500);
                                 } else if ((wordGuessedArr.length >= this.state.choosenWord.length) && (wordGuess !== this.state.choosenWord)) {
                                     wordGuessedArr.length = 0; 
                                     // Makes sure the score doesn't drop below 0
                                     if(this.state.score <= 0){
-                                        this.setState({answer: "Again?", score: 0});
+                                        this.setState({answer: "Try again?", score: 0});
                                         wrongCount++;
                                         if(wrongCount > 2){
 
                                             this.updateWord();
                                         }
                                     }else{
-                                        this.setState({ answer: "Again?", score: this.state.score - 1 });
+                                        this.setState({ answer: "Try again?", score: this.state.score - 1 });
                                         wrongCount++;
                                         if(wrongCount > 2){
                                             this.updateWord();
                                         }
                                     }
                                 }
-                            }} width="50px" height="50px"/>
+                            }} />
                         </div>
                     )}
 

@@ -3,79 +3,79 @@
     "id": 1,
     "word": "bee",
     "image": "/img/animals/bee1.png",
-    "answerKeys": "beozyxd"
+    "answerKeys": "bezelin"
   },
   {
     "id": 2,
     "word": "dog",
     "image": "/img/animals/dog_shake.png",
-    "answerKeys": "wdpioyg"
+    "answerKeys": "geodes"
   },
   {
     "id": 3,
     "word": "cat",
     "image": "/img/animals/cat_bow.png",
-    "answerKeys": "octubax"
+    "answerKeys": "octapus"
   },
   {
     "id": 4,
     "word": "pig",
     "image": "/img/animals/pig2.png",
-    "answerKeys": "edpigud"
+    "answerKeys": "spidergwen"
   },
   {
     "id": 5,
     "word": "bear",
     "image": "/img/animals/bear3.png",
-    "answerKeys": "rqiuaeb"
+    "answerKeys": "bakerys"
   },
   {
     "id": 6,
     "word": "cow",
     "image": "/img/animals/cow1.png",
-    "answerKeys": "copwmta"
+    "answerKeys": "wetcorn"
   },
   {
     "id": 7,
     "word": "lion",
     "image": "/img/animals/lion.png",
-    "answerKeys": "lihyton"
+    "answerKeys": "albino"
   },
   {
     "id": 8,
     "word": "frog",
     "image": "/img/animals/frog.png",
-    "answerKeys": "goxjrfp"
+    "answerKeys": "fromage"
   },
   {
     "id": 9,
     "word": "owl",
     "image": "/img/animals/owl2.png",
-    "answerKeys": "owilnab"
+    "answerKeys": "blownie"
   },
   {
     "id": 10,
     "word": "crab",
     "image": "/img/animals/crab.png",
-    "answerKeys": "cbrainj"
+    "answerKeys": "crabtaco"
   },
   {
     "id": 12,
     "word": "deer",
     "image": "/img/animals/deer.png",
-    "answerKeys": "bvnerdo"
+    "answerKeys": "crepedz"
   },
   {
     "id": 13,
     "word": "fox",
     "image": "/img/animals/fox.png",
-    "answerKeys": "toxwrfa"
+    "answerKeys": "fauxosq"
   },
   {
     "id": 14,
     "word": "goat",
     "image": "/img/animals/goat.png",
-    "answerKeys": "atoghen"
+    "answerKeys": "gelatok"
   },
   {
     "id": 15,
@@ -87,6 +87,6 @@
     "id": 16,
     "word": "ram",
     "image": "/img/animals/ram.png",
-    "answerKeys": "marenid"
+    "answerKeys": "abnormal"
   }
 ] 

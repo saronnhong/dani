@@ -29,52 +29,52 @@ class Video extends Component {
         return (
 
             <div className="container">
-                {/* turnary */}
-                {this.state.playing ? (
+                <div className="row">
+                    <div className="col-md">
 
-                    <div className="wrapper wrap-background" >
-                        {videos.map((video) =>
-                            <div className="container">
+                        {/* turnary */}
+                        {this.state.playing ? (
+                            <div className="container-fluid">
                                 <div className="row">
-                                    <div className="col-md-3 offset-md-3">
-                                        <div key={video.name} className="video-wrapper">
-                                            <p className="video-name">{video.name}</p>
-                                            <div className="video-player">
-                                                <ReactPlayer onClick={() =>
-                                                    this.setState({ playing: false })
-                                                }
-                                                    url={video.video} playing />
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-                    </div>) : (
-                        <div className="wrapper wrap-background">
-                            {videos.map((video) =>
-                                <div className="container">
-                                    <div className="row">
-                                        <div className="col-md-3 offset-md-3">
+                                    <div className="wrapper wrap-background">
+                                        {videos.map((video) =>
                                             <div key={video.name} className="video-wrapper">
                                                 <p className="video-name">{video.name}</p>
-                                                <div className="video-player">
+                                                <div>
                                                     <ReactPlayer onClick={() =>
-                                                        this.setState({ playing: true })
+                                                        this.setState({ playing: false })
                                                     }
-                                                        url={video.video} />
+                                                        url={video.video} playing />
                                                 </div>
                                             </div>
+                                        )}
+                                    </div>
+                                </div>
+                            </div>) : (
+                                <div className="container-fluid">
+                                    <div className="row">
+                                        <div className="wrapper wrap-background">
+                                            {videos.map((video) =>
+                                                <div key={video.name} className="video-wrapper">
+                                                    <p className="video-name">{video.name}</p>
+                                                    <div>
+                                                        <ReactPlayer onClick={() =>
+                                                            this.setState({ playing: true })
+                                                        }
+                                                            url={video.video} />
+                                                    </div>
+                                                </div>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
                             )}
-                        </div>
-                    )}
-
-                <button type="button" className="btn btn-success" >
-                    <Link className="back-btn" to="/Look"> BACK </Link>
-                </button>
+<br />
+                        <button type="button" className="btn btn-success">
+                            <Link className="back-btn" to="/Look"> BACK </Link>
+                        </button>
+                    </div>
+                </div>
             </div>
         )
     }

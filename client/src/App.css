@@ -55,7 +55,7 @@
 .gifDescription{
   color: green;
   text-shadow: none;
-  font-size: 25px;
+  font-size: 15px;
   display: block;
   text-align: center;
   font-style: italic;
@@ -76,22 +76,27 @@
     color: rgb(0, 175, 66);
     border-radius: 25px;
     box-shadow: 0px 0px 5px 3px rgb(0, 175, 66);
-    position: relative;
+       /* position: relative; */
 }
 
-.metrics-list-display {
-  left: 30%;
+.centered-btn {
+  text-align: center;
+}
+
+/* .metrics-list-display {
+  left: 5%;
 }
 
 .metrics-pie-display { 
-  left: 50%;
-}
+  left: 30%;
+} */
 
 .is-hidden-element {
   display: none
 }
 
 .metrics-list-container {
+  border-radius: 5px;
   border: 2px solid rgb(0, 175, 66);
 }
 
@@ -105,11 +110,22 @@
 }
 
 @media only screen and (max-width: 1000px) {
-  .aboutContent{
-    background-color: white;
-    opacity: 0.5;
+  .aboutContent {
     margin: auto;
     width: 100%;
     font-size: 12px;
   }
+}
+
+/* Login and Signup pages styling */
+.page-title-name {
+  color: green;
+  font-family: 'Pangolin', cursive;
+  text-shadow: 2px 2px white;
+}
+
+.form-title-text {
+  color: green;
+  font-family: 'Pangolin', cursive;
+  font-weight: bold;
 }

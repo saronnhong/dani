@@ -183,12 +183,12 @@ class Spelling extends Component {
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-4 guessedLetters">
+                    <div className="col-md-12 guessedLetters">
                         <div className="guessKey">{this.state.answer}</div>
                     </div>
                 </div>
                 <div className="row">
-                    <div className="col-md-2 animalImg" >
+                    <div className="col-md-12 animalImg" >
                         <div className="imgContainer" >
                             <img className="spellImg"  alt="imagePic" src={this.state.choosenImage} />
                         </div>
@@ -213,14 +213,14 @@ class Spelling extends Component {
                                     wordGuessedArr.length = 0; 
                                     // Makes sure the score doesn't drop below 0
                                     if(this.state.score <= 0){
-                                        this.setState({answer: "Try again?", score: 0});
+                                        this.setState({answer: "Again?", score: 0});
                                         wrongCount++;
                                         if(wrongCount > 2){
 
                                             this.updateWord();
                                         }
                                     }else{
-                                        this.setState({ answer: "Try again?", score: this.state.score - 1 });
+                                        this.setState({ answer: "Again?", score: this.state.score - 1 });
                                         wrongCount++;
                                         if(wrongCount > 2){
                                             this.updateWord();

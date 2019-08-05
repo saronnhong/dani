@@ -55,17 +55,21 @@
 .guessKey {
     position: relative;
     font-size: 100px;
-    left: 70px;
+    /* left: 70px; */
 }
 
 .guessedLetters {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .animalImg{
   margin: 100px auto 30px auto;
   width: 100%;
 
+}
+.imgContainer{
+  display: flex;
+  justify-content: center;
 }
 .spellImg:hover {
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -109,7 +113,7 @@
   height: 100px;
   }
   .animalImg {
-    margin: 120px auto 80px 100px;
+    margin: 120px auto 80px auto;
   }
   .scrabbleCharImg{
     width: 30px;
@@ -136,7 +140,7 @@
   height: 100px;
   }
   .animalImg {
-    margin: 150px auto 80px 40%;
+    margin: 300px auto 80px auto;
   }
   .scrabbleCharImg{
     width: 40px;

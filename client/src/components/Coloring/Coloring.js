@@ -25,7 +25,6 @@ class Coloring extends Component {
 
     componentDidMount() {
         API.getUser(this.props.user.id).then(res => {
-            console.log(res)
             this.setState({
                 recentSave: res.data.colorings[res.data.colorings.length - 1],
                 metricID: res.data.metric
@@ -139,7 +138,6 @@ class Coloring extends Component {
                     <CanvasDraw
                         hideGrid
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
-                        // ref1={canvasDraw => (this.loadableCanvas = canvasDraw)}
                         saveData={""}
                         brushColor={this.state.color}
                         canvasHeight={this.state.height}

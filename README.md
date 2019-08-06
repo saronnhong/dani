@@ -9,7 +9,7 @@ The app itself is divided into three units: Look, Listen, Learn. Each of these u
 
 
 
-Homepage Preview
+Preview
 ------------
 
 ![ezgif-2-f388b3fe92de](https://user-images.githubusercontent.com/50416482/62571913-69479b00-b847-11e9-81d5-baeb11c4a07c.gif)

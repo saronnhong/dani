@@ -45,8 +45,8 @@ class SphereComponent extends Component {
           <div ref={node => (this.subDiv = node)} style={this.divStyle} />
         </div>
         <div className="row">
-          <div className="column-lg-12 360BackCol">
-            <footer className="360Footer">
+          <div className="column-lg-12 panBackCol">
+            <footer className="panFooter">
               <Link to="/Look">
                 <Back />
               </Link>

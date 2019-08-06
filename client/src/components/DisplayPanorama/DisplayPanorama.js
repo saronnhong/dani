@@ -16,9 +16,7 @@ class DisplayPanorama extends React.Component {
         <div className="m-5">
           <SphereComponent panorama={imageFile} />
         </div>
-        < button type="button" className="btn btn-success" >
-          <Link className="back-btn" to="/Images-360"> BACK </Link>
-        </button >
+       
       </div>
     )
   }

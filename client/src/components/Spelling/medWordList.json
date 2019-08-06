@@ -20,7 +20,7 @@
   {
     "id": 4,
     "word": "whale",
-    "image": "/img/animals/whale.png",
+    "image": "/img/animals/whale1.png",
     "answerKeys": "awhilepy"
   },
   {
@@ -116,7 +116,7 @@
   {
     "id": 20,
     "word": "lion",
-    "image": "/img/animals/lion.png",
+    "image": "/img/animals/lion2.png",
     "answerKeys": "albino"
   },
   {

@@ -32,14 +32,14 @@ class Panoramas extends React.Component {
                     {panoramas.map(image =>
                         <div className="col-md-4 panorama-style">
                             <Link to={"/Panoramas/" + image.name.toLowerCase()}>
-                                <img className=" image-style" src={process.env.PUBLIC_URL + '/img/panoramaImages/' + image.path} alt="city" />
+                                <img className=" image-style" src={process.env.PUBLIC_URL + '/img/panoramaImages-display/' + image.path} alt="city" />
                             </Link>
                         </div>
                     )}
                 </div>
                 <div className="row">
-                    <div className="column-lg-12 360BackCol">
-                        <footer className="360Footer">
+                    <div className="column-lg-12 panBackCol">
+                        <footer className="panFooter">
                             <Link to="/Look">
                                 <Back />
                             </Link>

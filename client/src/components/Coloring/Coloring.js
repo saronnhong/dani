@@ -32,6 +32,17 @@ class Coloring extends Component {
             let pageOn = this.props.history.location.pathname.replace("/", "")
             API.addToMetrics(res.data.metric, pageOn)
         });
+        this.colorArea.addEventListener("touchstart", function (event) { event.preventDefault() })
+        this.colorArea.addEventListener("touchmove", function (event) { event.preventDefault() })
+        this.colorArea.addEventListener("touchend", function (event) { event.preventDefault() })
+        this.colorArea.addEventListener("touchcancel", function (event) { event.preventDefault() })
+    }
+
+    componentWillUnmount() {
+        this.colorArea.removeEventListener("touchstart", function (event) { event.preventDefault() })
+        this.colorArea.removeEventListener("touchmove", function (event) { event.preventDefault() })
+        this.colorArea.removeEventListener("touchend", function (event) { event.preventDefault() })
+        this.colorArea.removeEventListener("touchcancel", function (event) { event.preventDefault() })
     }
 
     chooseColor = color => {
@@ -135,6 +146,7 @@ class Coloring extends Component {
                 <div className="d-flex draw-coloring-area">
                     <i className="fa fa-long-arrow-alt-left fa-5x arrows arr-left"
                         onClick={() => this.flipColoringBookLeft()}></i>
+                        <span ref={elem => this.colorArea = elem}>
                     <CanvasDraw
                         hideGrid
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
@@ -147,6 +159,7 @@ class Coloring extends Component {
                         imgSrc={"https://raw.githubusercontent.com/RhadMax/ColoringBookHoster/master/ColoringBook/"
                             + coloringBook[this.state.coloringImage].path}
                     />
+                    </span>
                     <i className="fa fa-long-arrow-alt-right fa-5x arrows arr-right"
                         onClick={() => this.flipColoringBookRight()}></i>
                     <ColoringPalette
@@ -156,15 +169,15 @@ class Coloring extends Component {
                         brushSizeDown={this.brushSizeDown}
                     />
                 </div>
-                
-                    <div className="column-lg-12 colorBackCol">
-                        <footer className="colorFooter">
-                            <Link to="/Learn">
-                                <Back />
-                            </Link>
-                        </footer>
-                    </div>
-                
+
+                <div className="column-lg-12 colorBackCol">
+                    <footer className="colorFooter">
+                        <Link to="/Learn">
+                            <Back />
+                        </Link>
+                    </footer>
+                </div>
+
 
             </div>
         )

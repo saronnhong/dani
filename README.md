@@ -16,10 +16,17 @@ Homepage Preview
 
 Technologies
 ------------
-* React
-* HTML
 * Javascript
+* React
+* React Canvas Draw
+* React Player
+* Node and Express server
+* MongoDB & Mongoose
+* MVC
+* Heroku
+* Robo3t
+* Reddit API
+* Photo Sphere Viewer
 * Node.js
 * Bootstrap
 * CSS
-* etc.

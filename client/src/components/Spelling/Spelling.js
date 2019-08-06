@@ -25,18 +25,17 @@ class Spelling extends Component {
         score: 0,
         metricID: "",
         metrics: []
-
     }
 
-    componentDidMount() {
-        API.getUser(this.props.user.id).then(res => {
-            this.setState({
-                metricID: res.data.metric
-            })
-            let pageOn = this.props.history.location.pathname.replace("/", "")
-            API.addToMetrics(res.data.metric, pageOn)
-        });
-    }
+    // componentDidMount() {
+    //     API.getUser(this.props.user.id).then(res => {
+    //         this.setState({
+    //             metricID: res.data.metric
+    //         })
+    //         let pageOn = this.props.history.location.pathname.replace("/", "")
+    //         API.addToMetrics(res.data.metric, pageOn)
+    //     });
+    // }
 
     componentWillMount() {
         this.updateWord();
@@ -60,7 +59,6 @@ class Spelling extends Component {
                 this.imageToLetter()
             });
         }
-
     }
 
     updateAnswer = (value) => {
@@ -72,8 +70,6 @@ class Spelling extends Component {
         var popup = document.getElementById("myPopup");
         popup.classList.toggle("show");
     }
-
-
 
     imageToLetter = () => {
         var stringLetters = this.state.answerKeys;
@@ -162,15 +158,12 @@ class Spelling extends Component {
                 case "z":
                     imgLocation[i] = { "image": Alphabet[25].image, "value": Alphabet[25].letter };
                     break;
-
                 default:
                     console.log("no match")
             }
         }
         this.setState({ imgLocation: imgLocation });
     }
-
-
 
     render() {
         return (
@@ -193,7 +186,6 @@ class Spelling extends Component {
                             </div>
                         </div>
                     </div>
-
                     <div className="row groupKeys">
                         {this.state.imgLocation.map((letter) =>
                             <div className="scrabbleChar" >
@@ -215,7 +207,6 @@ class Spelling extends Component {
                                             this.setState({ answer: "Again?", score: 0 });
                                             wrongCount++;
                                             if (wrongCount > 2) {
-
                                                 this.updateWord();
                                             }
                                         } else {
@@ -230,8 +221,6 @@ class Spelling extends Component {
                             </div>
                         )}
                     </div>
-
-
                 </div>
                 <div className="row">
                     <div className="col-lg-12 spellBackCol">
@@ -242,8 +231,6 @@ class Spelling extends Component {
                         </footer>
                     </div>
                 </div>
-
-
             </div>
         )
     }

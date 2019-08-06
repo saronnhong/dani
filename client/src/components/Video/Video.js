@@ -1,21 +1,17 @@
 import React, { Component } from "react";
 import { Link } from 'react-router-dom';
-
 import ReactPlayer from 'react-player'
 import videos from "./videos.json";
 import Back from "../Back"
 import API from './../../utils/API';
 import withAuth from './../withAuth';
 import "./style.css";
-
-
 class Video extends Component {
     state = {
         playing: false,
         metricID: "",
         metrics: []
     }
-
     componentDidMount() {
         API.getUser(this.props.user.id).then(res => {
             this.setState({
@@ -25,13 +21,11 @@ class Video extends Component {
             API.addToMetrics(res.data.metric, pageOn)
         });
     }
-
     render() {
         return (
             <div className="container">
                 <div className="row">
                     <div className="col-md">
-
                         {/* turnary */}
                         {this.state.playing ? (
                             <div className="container-fluid">
@@ -88,5 +82,4 @@ class Video extends Component {
         )
     }
 }
-
 export default withAuth(Video);

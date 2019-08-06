@@ -57,6 +57,30 @@
     }
 }
 
+@media only screen and (max-width: 975px) {
+    .pangolin-text {
+        margin: 0px 5px;
+        clear: left;
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 682px) {
+    .pangolin-text {
+        font-size: 20px;
+        margin: 0px;
+    }
+    .pangolin-text-title {
+        margin: 5px, 10px, 5px, 10px;
+    }
+}
+
+@media only screen and (max-width: 612px) {
+    .undo-button {
+        margin-right: 37px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
   .pangolin-text {
     font-size: 14px;
@@ -65,11 +89,12 @@
     margin-top: 5px;
   }
   .pangolin-text-title {
-    font-size: 18px;
+    font-size: 27px;
+    margin-right: 25px;
   }
   .undo-button {
     font-size: 14px;
-    margin: 2px 0 10px 2px;
+    margin: 2px 50 10px 50px;
     padding: 0px;
 }
 }

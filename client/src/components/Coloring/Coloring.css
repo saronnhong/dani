@@ -88,6 +88,23 @@
     }
 }
 
+@media only screen and (max-width: 975px) {
+    .pangolin-coloring-text {
+        margin: 0px 5px;
+        clear: left;
+        font-size: 24px;
+    }
+}
+@media only screen and (max-width: 682px) {
+    .pangolin-coloring-text {
+        font-size: 20px;
+        margin: 0px;
+    }
+    .pangolin-coloring-text-title {
+        margin: 5px, 10px, 5px, 10px;
+    }
+}
+
 @media only screen and (max-width: 600px) {
   .pangolin-coloring-text {
     font-size: 14px;
@@ -106,8 +123,8 @@
 }
 
 .colorBackCol{
-    margin: 0%;
-    width: 100%;
+    margin: 0 auto;
+    width: 75%;
 }
 }
 

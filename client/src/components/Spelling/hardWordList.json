@@ -164,7 +164,7 @@
   {
     "id": 28,
     "word": "whale",
-    "image": "/img/animals/whale.png",
+    "image": "/img/animals/whale1.png",
     "answerKeys": "awhilepy"
   },
   {
@@ -243,7 +243,7 @@
     "id": 41,
     "word": "pig",
     "image": "/img/animals/pig2.png",
-    "answerKeys": "spidergwen"
+    "answerKeys": "typing"
   },
   {
     "id": 42,
@@ -255,12 +255,12 @@
     "id": 43,
     "word": "cow",
     "image": "/img/animals/cow1.png",
-    "answerKeys": "wetcorn"
+    "answerKeys": "cookware"
   },
   {
     "id": 44,
     "word": "lion",
-    "image": "/img/animals/lion.png",
+    "image": "/img/animals/lion2.png",
     "answerKeys": "albino"
   },
   {
@@ -273,7 +273,7 @@
     "id": 46,
     "word": "owl",
     "image": "/img/animals/owl2.png",
-    "answerKeys": "blownie"
+    "answerKeys": "elbows"
   },
   {
     "id": 47,
@@ -297,7 +297,7 @@
     "id": 50,
     "word": "goat",
     "image": "/img/animals/goat.png",
-    "answerKeys": "gelatok"
+    "answerKeys": "gelato"
   },
   {
     "id": 51,

@@ -38,9 +38,9 @@ class Landing extends Component {
                 <div className="footer-container">
                     <p>
                         DANI developed by <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/RhadMax"><i className="fab fa-github"></i> Max Patten,</a>
-                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/rschle"><i class="fab fa-github"></i> Rebecca Schleimer,</a>
-                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/marinadelkovamoro"><i class="fab fa-github"></i> Marina Delkova-Moro,</a> and
-                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/saronnhong"><i class="fab fa-github"></i> Saron Nhong</a>
+                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/rschle"><i className="fab fa-github"></i> Rebecca Schleimer,</a>
+                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/marinadelkovamoro"><i className="fab fa-github"></i> Marina Delkova-Moro,</a> and
+                        <a target="_blank" rel="noopener noreferrer" className="footer-text-link" href="https://github.com/saronnhong"><i className="fab fa-github"></i> Saron Nhong</a>
                     </p>
                 </div>
             </div>

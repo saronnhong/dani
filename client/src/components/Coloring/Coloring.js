@@ -123,7 +123,7 @@ class Coloring extends Component {
 
     render() {
         return (
-            <div className=" text-center">
+            <div className="text-center">
                 <h2 className="pangolin-coloring-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
                 <h1 className="pangolin-coloring-text-title"> Let's Color!</h1>
                 <h2 className="pangolin-coloring-text" onClick={() => this.loadColoring()}>Load Coloring</h2>
@@ -156,7 +156,7 @@ class Coloring extends Component {
                         brushSizeDown={this.brushSizeDown}
                     />
                 </div>
-                <div className="row">
+                
                     <div className="column-lg-12 colorBackCol">
                         <footer className="colorFooter">
                             <Link to="/Learn">
@@ -164,7 +164,7 @@ class Coloring extends Component {
                             </Link>
                         </footer>
                     </div>
-                </div>
+                
 
             </div>
         )

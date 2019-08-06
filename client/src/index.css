@@ -15,10 +15,18 @@ body {
   font-family: 'Pangolin', cursive;
   font-size: 27px;
 }
+@media only screen and (max-width: 1200px) {
+  .menuButton{
+    font-size: 12px;
+    align-content: center;
+    margin: 50px 0 0 0;
+  }
+ }
 
 @media only screen and (max-width: 1000px) {
  .menuButton{
    width:100%;
    align-content: center;
+   margin: 50px 0 0 0;
  }
 }

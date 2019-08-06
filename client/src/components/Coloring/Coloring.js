@@ -25,7 +25,6 @@ class Coloring extends Component {
 
     componentDidMount() {
         API.getUser(this.props.user.id).then(res => {
-            console.log(res)
             this.setState({
                 recentSave: res.data.colorings[res.data.colorings.length - 1],
                 metricID: res.data.metric
@@ -124,7 +123,7 @@ class Coloring extends Component {
 
     render() {
         return (
-            <div className=" text-center">
+            <div className="text-center">
                 <h2 className="pangolin-coloring-text" onClick={() => this.saveColoring()}>Save Coloring</h2>
                 <h1 className="pangolin-coloring-text-title"> Let's Color!</h1>
                 <h2 className="pangolin-coloring-text" onClick={() => this.loadColoring()}>Load Coloring</h2>
@@ -139,7 +138,6 @@ class Coloring extends Component {
                     <CanvasDraw
                         hideGrid
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
-                        // ref1={canvasDraw => (this.loadableCanvas = canvasDraw)}
                         saveData={""}
                         brushColor={this.state.color}
                         canvasHeight={this.state.height}
@@ -158,7 +156,7 @@ class Coloring extends Component {
                         brushSizeDown={this.brushSizeDown}
                     />
                 </div>
-                <div className="row">
+                
                     <div className="column-lg-12 colorBackCol">
                         <footer className="colorFooter">
                             <Link to="/Learn">
@@ -166,7 +164,7 @@ class Coloring extends Component {
                             </Link>
                         </footer>
                     </div>
-                </div>
+                
 
             </div>
         )

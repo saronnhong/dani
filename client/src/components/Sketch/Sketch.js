@@ -112,7 +112,6 @@ class Sketch extends Component {
                     />
                 </div>
 
-                <div className="row">
                     <div className="column-lg-12 colorBackCol">
                         <footer className="colorFooter">
                             <Link to="/Learn">
@@ -120,7 +119,6 @@ class Sketch extends Component {
                             </Link>
                         </footer>
                     </div>
-                </div>
             </div>
         )
     }

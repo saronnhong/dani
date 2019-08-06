@@ -27,8 +27,8 @@ export default {
   },
 
 
-  startMetrics: () => {
-    return axios.post('api/startmetrics');
+  startMetrics: (id) => {
+    return axios.post('api/startmetrics/' + id);
   },
 
   getMetrics: (id) => {

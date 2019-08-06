@@ -20,15 +20,16 @@ class Signup extends Component {
     event.preventDefault();
     API.signUpUser(this.state.username, this.state.email, this.state.password)
       .then(res => {
+        console.log(res)
         // once the user has signed up
         // send them to the login page
-        this.startMetrics();
+        this.startMetrics(res.data._id);
       })
       .catch(err => alert(err));
   };
 
-  startMetrics = () => {
-    API.startMetrics()
+  startMetrics = (id) => {
+    API.startMetrics(id)
       .then(res => {
         this.props.history.replace('/login');
       }).catch(err => console.log(err))

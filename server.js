@@ -25,8 +25,12 @@ app.use(morgan('dev'));
 app.use(bodyParser.json({limit: '50mb'}));
 app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
+
 mongoose
-  .connect(process.env.MONGODB_URI || 'mongodb://user:password1@ds045598.mlab.com:45598/heroku_xt21mbhz', { useNewUrlParser: true, useCreateIndex: true })
+   // for the app to work as a deployed app with mLAB MongoDB provision on Heroku, use:
+   .connect(process.env.MONGODB_URI || 'mongodb://user:password1@ds045598.mlab.com:45598/heroku_xt21mbhz', { useNewUrlParser: true, useCreateIndex: true })
+   // for LOCAL Testing, use:
+   // .connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/appDB', { useNewUrlParser: true, useCreateIndex: true })
   .then(() => console.log("MongoDB Connected!"))
   .catch(err => console.error(err));
 
@@ -113,10 +117,10 @@ app.get('/api/loadcoloring/:id', (req, res) => {
 });
 
 //route for when metric add happens... puzzling it out still but atm im thinking it may start as a get? and in the .then it can do a post/put with an update to increase the value by one of the field corresponding to the metric being updated.
-app.post('/api/startmetrics', (req, res) => {
+app.post('/api/startmetrics/:id', (req, res) => {
   db.Metric.create({})
     .then(newMetric => {
-      return db.User.findOneAndUpdate({}, { $set: { metric: newMetric._id } }, { new: true })
+      return db.User.findOneAndUpdate({_id:req.params.id}, { $set: { metric: newMetric._id } }, { new: true })
     })
     .then(data => res.json(data))
     .catch(err => res.status(400).json(err));

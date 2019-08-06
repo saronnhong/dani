@@ -27,15 +27,15 @@ class Spelling extends Component {
         metrics: []
     }
 
-    componentDidMount() {
-        API.getUser(this.props.user.id).then(res => {
-            this.setState({
-                metricID: res.data.metric
-            })
-            let pageOn = this.props.history.location.pathname.replace("/", "")
-            API.addToMetrics(res.data.metric, pageOn)
-        });
-    }
+    // componentDidMount() {
+    //     API.getUser(this.props.user.id).then(res => {
+    //         this.setState({
+    //             metricID: res.data.metric
+    //         })
+    //         let pageOn = this.props.history.location.pathname.replace("/", "")
+    //         API.addToMetrics(res.data.metric, pageOn)
+    //     });
+    // }
 
     componentWillMount() {
         this.updateWord();

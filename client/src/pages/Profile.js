@@ -53,15 +53,15 @@ class Profile extends Component {
             <br></br>
             <h1 className="pangolin-text-title" >Welcome to your DANI profile, {this.state.username} !</h1>
             <br></br><br></br>
-            <h3 className="pangolin-text-title">Press one of the options below to see your stats</h3>
+            <h3 className="pangolin-text-title">Press the button below to see your stats</h3>
             <br></br><hr></hr>
             <div className="row">
-              <div className="col-md-6 centered-btn">
-                <button className="metrics-list-display" onClick={() => this.readMetrics()}>As a List <i className="fas fa-list"></i></button>
+              <div className="col-md-12 centered-btn">
+                <button className="metrics-list-display" onClick={() => this.readMetrics()}>As a List </button>
               </div>
-              <div className="col-md-6 centered-btn">
+              {/* <div className="col-md-6 centered-btn">
                 <button className="metrics-pie-display" onClick={() => this.comingSoon()}>Coming Soon! <i className="fas fa-wrench"></i></button>
-              </div>
+              </div> */}
             </div>
             <hr></hr>
           </div>

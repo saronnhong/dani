@@ -27,7 +27,18 @@ class Sketch extends Component {
             })
             let pageOn = this.props.history.location.pathname.replace("/", "")
             API.addToMetrics(res.data.metric, pageOn)
+            this.drawArea.addEventListener("touchstart", function (event) { event.preventDefault() })
+            this.drawArea.addEventListener("touchmove", function (event) { event.preventDefault() })
+            this.drawArea.addEventListener("touchend", function (event) { event.preventDefault() })
+            this.drawArea.addEventListener("touchcancel", function (event) { event.preventDefault() })
         });
+    }
+
+    componentWillUnmount() {
+        this.drawArea.removeEventListener("touchstart", function (event) { event.preventDefault() })
+        this.drawArea.removeEventListener("touchmove", function (event) { event.preventDefault() })
+        this.drawArea.removeEventListener("touchend", function (event) { event.preventDefault() })
+        this.drawArea.removeEventListener("touchcancel", function (event) { event.preventDefault() })
     }
 
     componentWillMount() {
@@ -43,6 +54,7 @@ class Sketch extends Component {
         if (window.innerWidth < 600) {
             this.setState({ width: window.innerWidth - 75 })
         }
+
     }
 
     chooseColor = color => {
@@ -92,8 +104,9 @@ class Sketch extends Component {
                         this.saveableCanvas.undo();
                     }}
                 >Oops! -<i className="fa fa-eraser"></i>- Undo</button>
-                <div className="d-flex draw-area">
+                <div className="d-flex draw-area" ref={elem => this.drawArea = elem}>
                     <CanvasDraw
+
                         hideGrid
                         ref={canvasDraw => (this.saveableCanvas = canvasDraw)}
                         saveData={""}
@@ -112,13 +125,13 @@ class Sketch extends Component {
                     />
                 </div>
 
-                    <div className="column-lg-12 colorBackCol">
-                        <footer className="colorFooter">
-                            <Link to="/Learn">
-                                <Back />
-                            </Link>
-                        </footer>
-                    </div>
+                <div className="column-lg-12 colorBackCol">
+                    <footer className="colorFooter">
+                        <Link to="/Learn">
+                            <Back />
+                        </Link>
+                    </footer>
+                </div>
             </div>
         )
     }

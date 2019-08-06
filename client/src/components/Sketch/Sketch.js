@@ -27,11 +27,11 @@ class Sketch extends Component {
             })
             let pageOn = this.props.history.location.pathname.replace("/", "")
             API.addToMetrics(res.data.metric, pageOn)
-            this.drawArea.addEventListener("touchstart", function (event) { event.preventDefault() })
-            this.drawArea.addEventListener("touchmove", function (event) { event.preventDefault() })
-            this.drawArea.addEventListener("touchend", function (event) { event.preventDefault() })
-            this.drawArea.addEventListener("touchcancel", function (event) { event.preventDefault() })
         });
+        this.drawArea.addEventListener("touchstart", function (event) { event.preventDefault() })
+        this.drawArea.addEventListener("touchmove", function (event) { event.preventDefault() })
+        this.drawArea.addEventListener("touchend", function (event) { event.preventDefault() })
+        this.drawArea.addEventListener("touchcancel", function (event) { event.preventDefault() })
     }
 
     componentWillUnmount() {
@@ -104,7 +104,8 @@ class Sketch extends Component {
                         this.saveableCanvas.undo();
                     }}
                 >Oops! -<i className="fa fa-eraser"></i>- Undo</button>
-                <div className="d-flex draw-area" ref={elem => this.drawArea = elem}>
+                <div className="d-flex draw-area" >
+                    <span ref={elem => this.drawArea = elem}>
                     <CanvasDraw
 
                         hideGrid
@@ -117,6 +118,7 @@ class Sketch extends Component {
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
                     />
+                    </span>
                     <Palette
                         undo={this.undoButton}
                         colorClick={this.chooseColor}

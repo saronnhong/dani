@@ -28,7 +28,7 @@ app.use(bodyParser.urlencoded({ limit: '50mb', extended: true }));
 
 mongoose
    // for the app to work as a deployed app with mLAB MongoDB provision on Heroku, use:
-   .connect(process.env.MONGODB_URI || "mongodb://user:password123@ds161517.mlab.com:61517/heroku_4d0p3zlf", { useNewUrlParser: true, useCreateIndex: true })
+   .connect(process.env.MONGODB_URI || 'mongodb://user:password1@ds045598.mlab.com:45598/heroku_xt21mbhz', { useNewUrlParser: true, useCreateIndex: true })
   //mongodb://<dbuser>:<dbpassword>@ds161517.mlab.com:61517/heroku_4d0p3zlf
    
    // for LOCAL Testing, use:

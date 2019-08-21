@@ -30,3 +30,9 @@ Technologies
 * Node.js
 * Bootstrap
 * CSS
+
+Test Account
+------------
+Email: test@test.com
+
+Password: test123

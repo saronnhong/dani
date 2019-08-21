@@ -156,6 +156,7 @@ class Coloring extends Component {
                         canvasWidth={this.state.width}
                         lazyRadius={this.state.lazyRadius}
                         brushRadius={this.state.brushRadius}
+                        
                         imgSrc={"https://raw.githubusercontent.com/RhadMax/ColoringBookHoster/master/ColoringBook/"
                             + coloringBook[this.state.coloringImage].path}
                     />

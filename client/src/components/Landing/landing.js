@@ -18,7 +18,7 @@ class Landing extends Component {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4 mx-auto logoImg">
-                            <img className="puzzleImg" src="https://www.stickpng.com/assets/images/588887b0bc2fc2ef3a1860a0.png" alt="puzzleLogo" />
+                            <img className="puzzleImg" src={process.env.PUBLIC_URL + '/dani_logo.png'} alt="puzzleLogo" />
                             <br />
                             <h1 className="brand-landing-text"> DANI</h1>
                             <br></br>
